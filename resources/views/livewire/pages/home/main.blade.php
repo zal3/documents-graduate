@@ -46,7 +46,7 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
             </div>
         </div>
         <!-- الدخول -->
-        <button type="submit" class="mb-12 text-white w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A] dark:bg-violet-400 dark:text-gray-900"> الدخول</button>
+        <a href="{{ route('login') }}" type="button"  class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A] dark:bg-violet-400 dark:text-gray-900"> الدخول</a>
     </div>
 </div>
 

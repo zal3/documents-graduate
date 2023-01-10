@@ -18,14 +18,16 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
         </div>
         <div>
             <!-- الصفحةالرئيسية -->
+
             <div class="svg-wrapper">
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="spot text-lg mt-1">الصفحةالرئيسية</span> </a>
+                        <a href="{{ route('document') }}"><span class="spot text-lg mt-1">الصفحةالرئيسية</span> </a>
                     </div>
                 </svg>
             </div>
+
             <!-- المطورين -->
             <div class="svg-wrapper">
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +48,7 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
             </div>
         </div>
         <!-- الدخول -->
-        <a href="{{ route('login') }}" type="button"  class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A] dark:bg-violet-400 dark:text-gray-900"> الدخول</a>
+        <a href="{{ route('login') }}" type="button" class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A] dark:bg-violet-400 dark:text-gray-900"> الدخول</a>
     </div>
 </div>
 

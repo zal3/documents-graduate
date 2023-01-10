@@ -35,32 +35,18 @@
     <script src="{{ mix('resources/js/app.js') }}" defer></script>
 </head>
 
-<body id="home" class="bg-white h-screen home " dir="rtl">
-    <x-jet-banner />
-    <div class="min-h-screen">
-
-        <!--  -->
-
-        <div >
-            @auth
-            <div class="grid grid-cols-3 justify-between  mx-auto ">
-            <div class="mx-0">@livewire('components.sidebar')</div>
+<body id="home" class=" h-screen home ">
+    <!-- <x-jet-banner /> -->
+    <div class="min-h-screen ">
+        <div class=" grid">
+            @if (Route::currentRouteName() != 'home')
+            @livewire('components.sidebar')
+            @endif
             <!-- Page Content -->
-            <main class="w-[1100px]">
+            <main class="@if (Route::currentRouteName() != 'home') mt-4 mr-96 @endif">
                 {{ $slot }}
             </main>
-            </div>
-            
-            @endauth
         </div>
-
-        <!-- @guest
-        <main>
-            {{ $slot }}
-        </main>
-        @endguest -->
-
-
     </div>
     @stack('modals')
     @livewireScripts
@@ -70,6 +56,7 @@
     <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>

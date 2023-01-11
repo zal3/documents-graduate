@@ -37,7 +37,7 @@
     <script src="{{ mix('resources/js/app.js') }}" defer></script>
 </head>
 
-<body id="home" class="h-screen  home">
+<body id="home" class="h-screen  home" dir="rtl">
     <!-- <x-jet-banner /> -->
     <div class="min-h-screen ">
         <div class="grid ">

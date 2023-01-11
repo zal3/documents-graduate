@@ -1,5 +1,5 @@
 <div class=" bg-[#FFFFFF] h-screen">
-    <div class=" " dir="rtl">
+    <div class=" " >
         <p class="font-semibold -mr-32 pt-10 mb-4 text-3xl text-[#000]">وثيقة تخرج باللغة العربية</p>
         <hr class=" max-w-6xl h-0.5 -mr-32 bg-gray-400  md:my-2 rounded-md border-0">
     </div>
@@ -16,7 +16,7 @@
                     wire:keydown.Arrow-down="incrementHighlight" wire:keydown.enter="selectStudent" list="students"
                     for="students"
                     class="form-input absolute bg-white py-4 -translate-y-4 mt-28 -mr-28  origin-[0] right-1 w-96  h-10  text-sm text-gray-900  rounded-lg border-1 border-gray-400 focus:ring-blue-500 focus:border-blue-500 block"
-                    dir="rtl" placeholder=" " /> -->
+                     placeholder=" " /> -->
 
 
                 <!-- @if (!empty($query))

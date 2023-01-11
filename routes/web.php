@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
     use App\Http\Livewire\Pages\{
         Home\Main as Home,
         Document\Main as Document,
+        Unid\Main as Unid,
+        Department\Main as Department,
     };
 
     use App\Http\Livewire\Pages\Document\{
@@ -15,6 +17,7 @@ use Illuminate\Support\Facades\Route;
         ShowArDoc as ShowArDoc,
         ShowEngDoc as ShowEngDoc,
     };
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +44,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document/master', MasterDoc::class)->name('master');
     Route::get('/document/show-ar-doc', ShowArDoc::class)->name('show-ar-doc');
     Route::get('/document/show-eng-doc', ShowEngDoc::class)->name('show-eng-doc');
+
+    //unid
+    Route::get('/unid', Unid::class)->name('unid');
+
+    //department
+    Route::get('/department', Department::class)->name('department');
 
 
     });

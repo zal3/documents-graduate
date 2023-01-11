@@ -1,5 +1,5 @@
 @foreach ($students as $student)
-    <form dir="rtl" class="mt-52">
+    <form  class="mt-52">
         @csrf
         <div class="absolute left-44	rounded   w-32 h-40 -mt-28 border border-black"></div>
         <h2 class="text-center text-2xl -mb-2  -mr-36 font-semibold">وثيقة تخرج</h2>

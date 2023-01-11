@@ -34,7 +34,7 @@
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.25 9.25V6L8 2.75L1.75 6L8 9.25l3.25-1.5v3.5c0 1-1.5 2-3.25 2s-3.25-1-3.25-2v-3.5" />
                         </svg>
 
-                        <span class="flex-1 ml-1 mr-3 whitespace-nowrap" sidebar-toggle-item>الأقسام العلمية</span>
+                        <span class="flex-1 ml-1 mr-3 whitespace-nowrap" sidebar-toggle-item> الخريجين</span>
 
                         <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -42,6 +42,30 @@
 
                     </button>
                     <ul id="dropdown-example" class="hidden py-4 mr-5 space-y-2">
+                        <li>
+                            <a href="{{ route('graduate') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> الخريجين </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('add-graduate') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> أضافة</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" lg:right-0 pr-2.5 mt-1">
+                    <button type="button" class="flex items-center text-[15px] font-normal rounded-lg transition duration-75 group hover:bg-[#FFC657]" aria-controls="dropdown-examplee" data-collapse-toggle="dropdown-examplee">
+
+                        <svg width="30" height="16" viewBox="0 0 16 16">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.25 9.25V6L8 2.75L1.75 6L8 9.25l3.25-1.5v3.5c0 1-1.5 2-3.25 2s-3.25-1-3.25-2v-3.5" />
+                        </svg>
+
+                        <span class="flex-1 ml-1 mr-3 whitespace-nowrap" sidebar-toggle-item>الأقسام العلمية</span>
+
+                        <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+
+                    </button>
+                    <ul id="dropdown-examplee" class="hidden py-4 mr-5 space-y-2">
                         <li>
                             <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white">علوم الحاسوب </a>
                         </li>

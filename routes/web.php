@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
         Document\Main as Document,
         Unid\Main as Unid,
         Department\Main as Department,
+        Graduate\Main as Graduate,
     };
 
     use App\Http\Livewire\Pages\Document\{
@@ -17,6 +18,11 @@ use Illuminate\Support\Facades\Route;
         ShowArDoc as ShowArDoc,
         ShowEngDoc as ShowEngDoc,
     };
+
+    use App\Http\Livewire\Pages\Graduate\{
+        Add as AddGraduate,
+    };
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +46,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document', Document::class)->name('document');
     Route::get('/document/arabic', ArabicDoc::class)->name('arabic');
     Route::get('/document/english', EnglishDoc::class)->name('english');
-    Route::get('/document/graduate', GraduateDoc::class)->name('graduate');
+    Route::get('/document/graduate', GraduateDoc::class)->name('graduate-doc');
     Route::get('/document/master', MasterDoc::class)->name('master');
     Route::get('/document/show-ar-doc', ShowArDoc::class)->name('show-ar-doc');
     Route::get('/document/show-eng-doc', ShowEngDoc::class)->name('show-eng-doc');
@@ -50,6 +56,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     //department
     Route::get('/department', Department::class)->name('department');
+
+    //graduate
+    Route::get('/graduate', Graduate::class)->name('graduate');
+    Route::get('/graduate/add', AddGraduate::class)->name('add-graduate');
 
 
     });

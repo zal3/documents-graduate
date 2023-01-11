@@ -1,12 +1,11 @@
-<div class=" countener
-grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-800 dark:text-gray-100">
-    <div class="flex flex-col justify-between items-center">
+<div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+    <div class="flex flex-col items-center justify-between">
         <div class="">
-            <h2 class="text-4xl font-bold leading-tight lg:text-5xl mt-4">وحدة وثائق التخرج</h2>
+            <h2 class="mt-4 text-4xl font-bold leading-tight lg:text-5xl">وحدة وثائق التخرج</h2>
         </div>
         <img src="{{ asset('img/home/5853.jpg') }}" alt="Contact" class="w-full mt-12 lg:mt-16">
     </div>
-    <div class="flex flex-col justify-between items-center  mt-0 ">
+    <div class="flex flex-col items-center justify-between mt-0 ">
         <div>
             <img src="{{ asset('img/home/college.png') }}" alt="Contact" class="w-full ">
 
@@ -23,7 +22,7 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href="{{ route('document') }}"><span class="spot text-lg mt-1">الصفحةالرئيسية</span> </a>
+                        <a href="{{ route('document') }}"><span class="mt-1 text-lg spot">الصفحةالرئيسية</span> </a>
                     </div>
                 </svg>
             </div>
@@ -33,7 +32,7 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="spot text-lg mt-1">المطورين</span> </a>
+                        <a href=""><span class="mt-1 text-lg spot">المطورين</span> </a>
                     </div>
                 </svg>
             </div>
@@ -42,13 +41,13 @@ grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg md:grid-cols
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="spot text-lg mt-1">حول الموقع</span> </a>
+                        <a href=""><span class="mt-1 text-lg spot">حول الموقع</span> </a>
                     </div>
                 </svg>
             </div>
         </div>
         <!-- الدخول -->
-        <a href="{{ route('login') }}" type="button" class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A] dark:bg-violet-400 dark:text-gray-900"> الدخول</a>
+        <a href="{{ route('login') }}" type="button" class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]"> الدخول</a>
     </div>
 </div>
 

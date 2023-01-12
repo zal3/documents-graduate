@@ -11,7 +11,7 @@
             font-family: 'Changa', sans-serif;
         }
     </style>
-    <link rel="icon" type="img/page.jpg" href="img/page.jpg">
+    <link rel="icon" type="img/ava.png" href="img/ava.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;605;700;800&display=swap" rel="stylesheet">

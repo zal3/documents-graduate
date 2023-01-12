@@ -1,5 +1,4 @@
 <div class=" ">
-
    <div class=" text-xl  text-center  text-white bg-[#071F63] py-3">
       الخريجيين
    </div>
@@ -55,8 +54,8 @@
                <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">{{$student->department->name_ar}}</td>
 
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">{{$student->gender == 0 ? 'ذكر' : 'أنثى'}}</td>
-                  <!-- //if stage -->
-                  <!-- @if($student->department->stage == 0)
+               <!-- //if stage -->
+               <!-- @if($student->department->stage == 0)
                   <span class="relative text-xs">اولى</span>
                   @elseif($student->department->stage == 1)
                   <span class="relative text-xs">ثانية</span>
@@ -70,7 +69,7 @@
                <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
                   <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                      <span aria-hidden class="absolute inset-0 @if($student->department->type == 1) bg-green-200 @else bg-red-200 @endif opacity-50 rounded-full"></span>
-                     
+
                      <span class="relative text-xs">{{ $student->department->type == 1 ? ' صباحي' : ' مسائي' }}
                      </span>
                </td>

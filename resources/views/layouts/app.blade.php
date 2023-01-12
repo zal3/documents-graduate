@@ -36,13 +36,13 @@
 
 <body id="home" class="h-screen  home" dir="rtl">
     <!-- <x-jet-banner /> -->
-    <div class="min-h-screen ">
+    <div class="min-h-screen  overflow-x-hidden overflow-y-hidden">
         <div class="grid ">
             @if (Route::currentRouteName() != 'home')
                 @livewire('components.sidebar')
             @endif
             <!-- Page Content -->
-            <main class="@if (Route::currentRouteName() != 'home') mt-4 mr-96 @endif">
+            <main class="@if (Route::currentRouteName() != 'home')  mr-[210px] @endif">
                 {{ $slot }}
             </main>
         </div>

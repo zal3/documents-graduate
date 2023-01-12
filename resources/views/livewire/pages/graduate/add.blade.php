@@ -1,9 +1,9 @@
 <div>
 
-    <div class=" " dir="rtl">
+    <div class=" " >
 
-        <p class="font-semibold -mr-32 mt-7 mb-4 text-3xl text-[#000]">معلومات الخريج</p>
-        <hr class=" max-w-6xl h-0.5 -mr-32 bg-gray-400  md:my-2 rounded-md border-0">
+        <p class="font-semibold  mt-7 mb-4 text-3xl text-[#000]">أضافة خريج</p>
+        <hr class="  h-0.5  bg-gray-400 ml-2 rounded-md border-0">
     </div>
 
     <div class="absolute left-3/4	rounded-lg   w-16 mt-11 border border-indigo-600">

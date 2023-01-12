@@ -19,8 +19,8 @@ class StudentSeeder extends Seeder
         for($i=1;$i<=10;$i++){
             Student::create([
                 'department_id' => Department::all()->random()->id,
-                'name_en' => 'Student '.$i,
-                'name_ar' => 'طالب '.$i,
+                'name_en' => 'Student '.$i . 'الاب والجد واللقب',
+                'name_ar' => 'طالب '.$i. 'الاب والجد واللقب',
                 'gender' => rand(0,1),
                 'graduation_year' => '2021',
                 'average' => rand(50,100),

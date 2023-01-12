@@ -1,4 +1,4 @@
-<div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+<div class="grid max-w-screen-xl grid-cols-1  gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
     <div class="flex flex-col items-center justify-between">
         <div class="">
             <h2 class="mt-4 text-4xl font-bold leading-tight lg:text-5xl">وحدة وثائق التخرج</h2>

@@ -23,46 +23,62 @@
       </div>
    </div>
 
-   <div class="align-middle inline-block min-w-full  overflow-hidden bg-white  px-8 pt-3 rounded-bl-lg rounded-br-lg">
-      <table class="min-w-full">
+   <div class="align-middle inline-block min-w-full  overflow-hidden bg-white   p-9 rounded-bl-lg rounded-br-lg">
+      <table class="min-w-full text-center">
          <thead>
             <tr>
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-[#071F63] tracking-wider">#</th>
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider">الاسم </th>
-               <!-- <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider"> الجنس </th> -->
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider">سنة التخرج </th>
-               <!-- <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider">المعدل</th> -->
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider"> القسم</th>
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider"> المرحلة</th>
-               <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-[#071F63] tracking-wider"> نوع الدراسة </th>
+               <th class="px-6 py-3 border-b-2 border-gray-300  leading-4 text-[#071F63] tracking-wider">#</th>
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">الاسم </th>
+               <!-- <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الجنس </th> -->
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">سنة التخرج </th>
+               <!-- <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">المعدل</th> -->
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> القسم</th>
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الجنس</th>
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> نوع الدراسة </th>
                <th class="px-6 py-3 border-b-2 border-gray-300"></th>
             </tr>
          </thead>
          <tbody class="bg-white">
+            @foreach ($students as $index => $student )
             <tr>
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                   <div class="flex items-center">
                      <div>
-                        <div class="text-sm leading-5 text-gray-800">#1</div>
+                        <div class="text-sm leading-5 text-gray-800">{{$loop->index + 1}}</div>
                      </div>
                   </div>
                </td>
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                  <div class="text-sm leading-5 text-blue-900">Damilare Anjorin</div>
+                  <div class="text-sm leading-5 text-blue-900">{{$student->name_ar}}</div>
                </td>
-               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">damilareanjorin1@gmail.com</td>
-               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">+2348106420637</td>
+               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">{{$student->graduation_year}}</td>
+               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">{{$student->department->name_ar}}</td>
+
+               <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">{{$student->gender == 0 ? 'ذكر' : 'أنثى'}}</td>
+                  <!-- //if stage -->
+                  <!-- @if($student->department->stage == 0)
+                  <span class="relative text-xs">اولى</span>
+                  @elseif($student->department->stage == 1)
+                  <span class="relative text-xs">ثانية</span>
+                  @elseif($student->department->stage == 2)
+                  <span class="relative text-xs">ثالثة</span>
+                  @else
+                  <span class="relative text-xs">رابعة</span>
+                  @endif -->
+
+               </td>
                <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
                   <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                     <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                     <span class="relative text-xs">active</span>
-                  </span>
+                     <span aria-hidden class="absolute inset-0 @if($student->department->type == 1) bg-green-200 @else bg-red-200 @endif opacity-50 rounded-full"></span>
+                     
+                     <span class="relative text-xs">{{ $student->department->type == 1 ? ' صباحي' : ' مسائي' }}
+                     </span>
                </td>
-               <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
                <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
                   <button class="px-5 py-2 border-[#071F63] border text-[#071F63] rounded transition duration-300 hover:bg-[#071F63]  hover:text-white focus:outline-none">عرض التفاصيل </button>
                </td>
             </tr>
+            @endforeach
          </tbody>
       </table>
       <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-4 work-sans">

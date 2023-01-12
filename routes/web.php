@@ -23,6 +23,13 @@ use Illuminate\Support\Facades\Route;
         Add as AddGraduate,
     };
 
+    use App\Http\Livewire\Pages\Department\{
+        Student\Science as ScienceStudent,
+        Student\Information as InformationStudent,
+        Subject\Science as ScienceSubject,
+        Subject\Information as InformationSubject,
+    };
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +63,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     //department
     Route::get('/department', Department::class)->name('department');
+    Route::get('/department/science-student', ScienceStudent::class)->name('science-student');
+    Route::get('/department/information-student', InformationStudent::class)->name('information-student');
+    Route::get('/department/science-subject', ScienceSubject::class)->name('science-subject');
+    Route::get('/department/information-subject', InformationSubject::class)->name('information-subject');
 
     //graduate
     Route::get('/graduate', Graduate::class)->name('graduate');

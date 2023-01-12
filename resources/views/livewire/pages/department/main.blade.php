@@ -1,19 +1,5 @@
-<div dir="rtl">
-    {{-- <div>
-        <input type="text"
-            class="absolute bg-white py-4 -translate-y-4 mt-16 mr-64  origin-[0] right-1 w-96  h-12  text-sm text-gray-900  rounded-lg border-1 border  focus:ring-blue-500 focus:border-blue-500 block"
-            dir="rtl" placeholder="بحث " />
-    </div>
-
-
-    <button type="button"
-        class="text-black  border
-        border-[#FFC657] 
-        focus:ring-0 focus:outline-none focus:ring-yellow-300
-         rounded-lg   text-center  mr-60 z-10 font-semibold  mb-7 mt-12 w-52 h-12 text-xl ">اضافة</button>
-
-
- --}}
+<div >
+  
 
     <div class="mt-1 pr-14 pl-5">
         <table class="-mr-64 text-2xl  text-gray-500">

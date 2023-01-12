@@ -15,18 +15,27 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {   
-        //id = 1
-        Department::create([
-            'name_en' => 'Computer Science',
-            'name_ar' => 'علوم الحاسوب',
-            'type' => rand(0,1),
-        ]);
-        //id = 2
-        Department::create([
-            'name_en' => ' Information Technology',
-            'name_ar' => ' تكنولوجيا المعلومات',
-            'type' =>rand(0,1),
-        ]);
+        $departments = [
+            [
+                'name_en' => 'Computer Science',
+                'name_ar' => 'علوم الحاسوب',
+            ],
+            [
+                'name_en' => ' Information Technology',
+                'name_ar' => ' تكنولوجيا المعلومات',
+            ],
+        ];
+            
+
+        for($i=1;$i<=10;$i++){
+            Department::create([
+                //rand on department 0 or 1
+                'name_en' => $departments[rand(0,1)]['name_en'],
+                'name_ar' => $departments[rand(0,1)]['name_ar'],
+                'type' => rand(0,1),
+                'stage' => rand(0,3),
+            ]);
+        }
         
     }
 }

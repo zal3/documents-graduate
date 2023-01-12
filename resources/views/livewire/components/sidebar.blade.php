@@ -81,11 +81,11 @@
                                 </button>
                                 <ul id="dropdown-exampleee" class="hidden py-4 mr-5 space-y-2">
                                     <li>
-                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
+                                        <a href="{{ route('science-subject') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
+                                        <a href="{{ route('science-student') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
                                     </li>
                                 </ul>
                             </div>
@@ -107,11 +107,11 @@
                                 </button>
                                 <ul id="dropdown-exampleeee" class="hidden py-4 mr-5 space-y-2">
                                     <li>
-                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
+                                        <a href="{{ route('information-subject') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
                                     </li>
 
                                     <li>
-                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
+                                        <a href="{{ route('information-student') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
                                     </li>
                                 </ul>
                             </div>

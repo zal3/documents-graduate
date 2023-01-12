@@ -19,13 +19,13 @@ class DepartmentSeeder extends Seeder
         Department::create([
             'name_en' => 'Computer Science',
             'name_ar' => 'علوم الحاسوب',
-            'type' => 0|1,
+            'type' => rand(0,1),
         ]);
         //id = 2
         Department::create([
             'name_en' => ' Information Technology',
             'name_ar' => ' تكنولوجيا المعلومات',
-            'type' => 0|1,
+            'type' =>rand(0,1),
         ]);
         
     }

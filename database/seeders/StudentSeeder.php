@@ -16,6 +16,17 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-
+        for($i=1;$i<=10;$i++){
+            Student::create([
+                'department_id' => Department::all()->random()->id,
+                'name_en' => 'Student '.$i,
+                'name_ar' => 'طالب '.$i,
+                'gender' => rand(0,1),
+                'graduation_year' => '2021',
+                'average' => rand(50,100),
+                'round' => rand(0,2),
+                'image_path' => 'students/1.jpg',
+            ]);
+        }
     }
 }

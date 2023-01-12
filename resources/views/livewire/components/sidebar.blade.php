@@ -67,12 +67,56 @@
                     </button>
                     <ul id="dropdown-examplee" class="hidden py-4 mr-5 space-y-2">
                         <li>
-                            <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white">علوم الحاسوب </a>
+                            <div class=" lg:right-0 ">
+                                <button type="button" class="flex items-center  transition duration-75 group text-sm group text-gray-400 hover:text-white focus:text-white" aria-controls="dropdown-exampleee" data-collapse-toggle="dropdown-exampleee">
+
+                                   
+
+                                    <span class="flex-1 ml-1 mr-3 whitespace-nowrap" sidebar-toggle-item>علوم الحاسوب</span>
+
+                                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+
+                                </button>
+                                <ul id="dropdown-exampleee" class="hidden py-4 mr-5 space-y-2">
+                                    <li>
+                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
+                        
                         <li>
-                            <a href="{{ route('department') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white">تكنولوجيا المعلومات</a>
+                            <div class=" lg:right-0 ">
+                                <button type="button" class="flex items-center  transition duration-75 group text-sm group text-gray-400 hover:text-white focus:text-white" aria-controls="dropdown-exampleeee" data-collapse-toggle="dropdown-exampleeee">
+
+                                   
+
+                                    <span class="flex-1 ml-1 mr-3 whitespace-nowrap" sidebar-toggle-item>تكنولوجيا المعلومات</span>
+
+                                    <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+
+                                </button>
+                                <ul id="dropdown-exampleeee" class="hidden py-4 mr-5 space-y-2">
+                                    <li>
+                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm group text-gray-400 hover:text-white focus:text-white"> المناهج </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('department') }}" class="flex items-center w-full text-sm font-normal group text-gray-400 hover:text-white focus:text-white"> الخريجيين</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
+
                     </ul>
                 </div>
             </div>

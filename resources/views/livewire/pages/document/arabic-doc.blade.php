@@ -1,78 +1,31 @@
-<div class=" bg-[#FFFFFF] h-screen">
-    <div class=" " >
-        <p class="font-semibold -mr-32 pt-10 mb-4 text-3xl text-[#000]">وثيقة تخرج باللغة العربية</p>
-        <hr class=" max-w-6xl h-0.5 -mr-32 bg-gray-400  md:my-2 rounded-md border-0">
+<div class="">
+    <div class=" text-xl mr-2 px-9  text-white bg-[#071F63] py-4">
+        <h1>
+            وثيقة التخرج باللغة العربية </h1>
+
     </div>
-    <form  method="POST">
+    <form method="POST" class="m-20">
         @csrf
-        <div class="relative">
-            <div>
-                <!-- <label for=""
-                    class="absolute text-2xl text-[#000]  duration-300 transform -translate-y-4 scale-75 mt-24 -mr-44 z-10 origin-[0] right-2.5 "
-                    dir="ltr">الأسم الرباعي بالعربية</label><br>
+        <div>
+            <div class="flex flex-col mb-3">
+                <label for="" class=" text-2xl text-[#000]  duration-300 transform  ">الأسم الرباعي بالعربية</label><br>
 
                 <input type="text" name="student_name" wire:model="query" {{-- wire:keydown.escape="resetFunc" 
-                    wire:keydown.tab="resetFunc" --}} wire:keydown.Arrow-up="decrementHighlight"
-                    wire:keydown.Arrow-down="incrementHighlight" wire:keydown.enter="selectStudent" list="students"
-                    for="students"
-                    class="form-input absolute bg-white py-4 -translate-y-4 mt-28 -mr-28  origin-[0] right-1 w-96  h-10  text-sm text-gray-900  rounded-lg border-1 border-gray-400 focus:ring-blue-500 focus:border-blue-500 block"
-                     placeholder=" " /> -->
-
-
-                <!-- @if (!empty($query))
-                    <div wire:click="resetFunc"></div>
-                    @if (!empty($students))
-                        <div>
-                            <datalist id="students" >
-                            @foreach ($students as $i => $student) -->
-                                
-                                    <!-- <option onclick="setQuery({{ $student['name_ar'] }})" value="  {{ $student['name_ar'] }} "> -->
-
-                            <!-- @endforeach
-                        </datalist>
-                        </div>
-                    @endif
-                @endif -->
-
-
+                    wire:keydown.tab="resetFunc" --}} wire:keydown.Arrow-up="decrementHighlight" wire:keydown.Arrow-down="incrementHighlight" wire:keydown.enter="selectStudent" list="students" for="students" class=" w-96 h-12  bg-white  ext-sm text-gray-900  rounded-lg border border-3  border-gray-400 focus:ring-blue-500 focus:border-blue-500 block" placeholder=" " />
             </div>
-
-            <div>
-                <ul>
-                    <li>
-                        <!-- {{-- get sequence from database --}}
-
-                        
-
-                        {{-- @foreach ($students as $student) --}}
-                            <div
-                                class="flex items-center pl-4 rounded absolute -translate-y-4  scale-75 mt-48 -mr-36 z-10 origin-[0] right-2.5">
-                                <label class="py-4 ml-2 w-full mr-5 font-medium text-gray-900 text-2xl">وثيقة مع
-                                    تسلسل</label>
-                                <input  wire:click="seq" type="checkbox" type="checkbox" value="" name="bordered-checkbox"
-                                    class="   w-7 h-7  text-[#FFC657] bg-[#FFC657] rounded border-[#071F63] focus:ring-[#071F63]">
-
-                            </div>
-                        <!-- {{-- @endforeach --}} -->
-
-                    </li>
-
-                    <!-- {{-- <li>
-                    <div
-                        class="flex items-center pl-6 rounded absolute -translate-y-4  scale-75 mt-64 -mr-36 z-10 origin-[0] right-2.5">
-                        <label class="ml-2  w-full mr-5 font-medium text-gray-900 text-2xl">وثيقة مع درجات</label>
-                        <input checked="" type="checkbox" value="" name="bordered-checkbox"
-                            class="   w-7 h-7  text-[#FFC657] bg-[#FFC657] rounded border-[#071F63] focus:ring-[#071F63]">
-
-                    </div>
-                </li> --}} -->
-                </ul>
+            <div class="my-16">
+                <div class="flex items-center mb-4 gap-5">
+                    <input id="default-checkbox" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع تسلسل </label>
+                </div>
+                <div class="flex items-center  gap-5">
+                    <input checked id="checked-checkbox" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checked-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع درجات </label>
+                </div>
             </div>
 
 
-            <button type="submit"
-                class="absolute -translate-y-4  scale-75   -mr-28 z-10 origin-[0] -right-2 py-2 px-16  mb-2 mt-80 text-2xl  font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:z-10 focus:ring-4 ">طباعة</button>
+            <button type="submit" class="p-2 px-10 text-2xl  font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">طباعة</button>
         </div>
     </form>
-</div>
 </div>

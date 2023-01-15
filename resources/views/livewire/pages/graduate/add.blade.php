@@ -1,5 +1,5 @@
 <div>
-    <div class=" text-xl mr-2 px-9  text-white bg-[#071F63] py-3">
+    <div class=" text-xl mr-2 px-9  text-white bg-[#071F63] py-4">
         <h1>
             أضافة خريج
         </h1>

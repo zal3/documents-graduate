@@ -1,6 +1,6 @@
 <div class=" ">
 
-   <div class=" text-xl mr-2 px-9   text-white bg-[#071F63] py-3 flex justify-between items-center">
+   <div class=" text-xl mr-2 px-9   text-white bg-[#071F63] py-4 flex justify-between items-center">
       <div>
          الخريجيين
       </div>

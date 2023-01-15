@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('department_id')->nullable()->constrained('departments')->onDelete('cascade');
             $table->string('name_en');
             $table->string('name_ar');
+            $table->boolean('type')->default(0); //### Morning: 0, Evening:1
             $table->boolean('gender')->default(0);###   Male: 0, Female:1
             $table->integer('graduation_year');
             $table->float('average');

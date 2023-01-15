@@ -124,12 +124,12 @@
             <!-- </div> -->
 
             <div class="flex flex-col ">
-                <!-- <label for="department" class="text-sm text-gray-900 ">القسم</label>
-                <select id="department" wire:model.lazy="department" class="bg-white border   border-gray-500  text-gray-900 text-sm rounded-lg ">
+                <label for="department" class="text-sm text-gray-900 ">القسم</label>
+                <select id="department" wire:model.lazy="department_id" class="bg-white border   border-gray-500  text-gray-900 text-sm rounded-lg ">
                     <option value="">إختر القسم</option>
-                    <option value="0">علوم الحاسوب</option>
-                    <option value="1">نظم المعلومات الحاسوبية</option>
-                </select> -->
+                    <option value="1">علوم الحاسوب</option>
+                    <option value="2">نظم المعلومات الحاسوبية</option>
+                </select>
                 <!-- @error('department')
                         <span class="text-red-600">{{ $message }}</span>
                     @enderror -->
@@ -142,13 +142,13 @@
                     @enderror -->
             </div>
             <div class="flex flex-col">
-                <!-- <label for="study_type" class="text-sm text-gray-900 ">الدراسة</label>
-                <select id="study_type" wire:model.lazy="study_type" class=" bg-white border border-gray-500  text-gray-900 text-sm rounded-lg ">
+                <label for="type" class="text-sm text-gray-900 ">الدراسة</label>
+                <select id="type" wire:model.lazy="type" class=" bg-white border border-gray-500  text-gray-900 text-sm rounded-lg ">
                     <option value="">إختر الدراسة</option>
-                    <option value="0">الصباحية</option>
+                    <option value="0">الصباحية </option>
                     <option value="1">المسائية</option>
-                </select> -->
-                <!-- @error('study_type')
+                </select>
+                <!-- @error('type')
                         <span class="text-red-600">{{ $message }}</span>
                     @enderror -->
             </div>

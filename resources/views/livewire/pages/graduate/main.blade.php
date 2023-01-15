@@ -1,31 +1,24 @@
 <div class=" ">
-   <div class=" text-xl  text-center  text-white bg-[#071F63] py-3">
-      الخريجيين
-   </div>
-   <div class=" text-xl  text-center  text-white bg-[#FFC657] py-3">
-      <div class="align-middle inline-block w-full py-1 overflow-hidden  px-12">
-         <div class="flex justify-between">
-            <div class="inline-flex  w-4/12 px-2 lg:px-6 h-12 bg-transparent">
-               <div class="flex flex-wrap items-stretch w-full h-full mb-6 relative">
-                  <div class="flex">
-                     <span class="flex items-center leading-normal bg-transparent rounded rounded-r-none border border-r-0 border-none lg:px-3 py-2 whitespace-no-wrap text-grey-dark text-sm">
-                        <svg width="18" height="18" class="w-4 lg:w-auto" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M8.11086 15.2217C12.0381 15.2217 15.2217 12.0381 15.2217 8.11086C15.2217 4.18364 12.0381 1 8.11086 1C4.18364 1 1 4.18364 1 8.11086C1 12.0381 4.18364 15.2217 8.11086 15.2217Z" stroke="#455A64" stroke-linecap="round" stroke-linejoin="round" />
-                           <path d="M16.9993 16.9993L13.1328 13.1328" stroke="#455A64" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                     </span>
-                  </div>
-                  <input type="text" class="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin" placeholder="Search">
-               </div>
-            </div>
+
+   <div class=" text-xl mr-2 px-9   text-white bg-[#071F63] py-3 flex justify-between items-center">
+      <div>
+         الخريجيين
+      </div>
+      <div class="flex justify-between gap-3">
+         <svg width="18" height="18" class="w-4 lg:w-auto" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.11086 15.2217C12.0381 15.2217 15.2217 12.0381 15.2217 8.11086C15.2217 4.18364 12.0381 1 8.11086 1C4.18364 1 1 4.18364 1 8.11086C1 12.0381 4.18364 15.2217 8.11086 15.2217Z" stroke="#455A64" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16.9993 16.9993L13.1328 13.1328" stroke="#455A64" stroke-linecap="round" stroke-linejoin="round" />
+         </svg>
+         <div class="bg-white w-40 h-6 rounded ">
+
          </div>
       </div>
    </div>
 
-   <div class="align-middle inline-block min-w-full  overflow-hidden bg-white   p-9 rounded-bl-lg rounded-br-lg">
+   <div class="align-middle inline-block min-w-full  overflow-hidden bg-white    rounded-bl-lg rounded-br-lg">
       <table class="min-w-full text-center">
          <thead>
-            <tr>
+            <tr class=" bg-[#FFC657]">
                <th class="px-6 py-3 border-b-2 border-gray-300  leading-4 text-[#071F63] tracking-wider">#</th>
                <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">الاسم </th>
                <!-- <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الجنس </th> -->
@@ -33,15 +26,15 @@
                <!-- <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">المعدل</th> -->
                <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> القسم</th>
                <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الجنس</th>
-               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الدور  </th>
+               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> الدور </th>
 
                <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider"> نوع الدراسة </th>
                <th class="px-6 py-3 border-b-2 border-gray-300"></th>
             </tr>
          </thead>
-         <tbody class="bg-white">
+         <tbody class="bg-white p-9">
             @foreach ($students as $index => $student )
-            <tr>
+            <tr class="bg-white p-9">
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                   <div class="flex items-center">
                      <div>
@@ -52,11 +45,11 @@
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                   <div class="text-sm leading-5 text-blue-900">{{$student->name_ar}}</div>
                </td>
-               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">                    
+               <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
                   @if($student->graduation_year == 0) 2014-2015 @elseif($student->graduation_year == 1) 2015-2016 @elseif($student->graduation_year == 2) 2016-2017 @elseif($student->graduation_year == 3) 2017-2018 @elseif($student->graduation_year == 4) 2018-2019 @elseif($student->graduation_year == 5) 2019-2020 @elseif($student->graduation_year == 6) 2020-2021 @elseif($student->graduation_year == 7) 2021-2022 @elseif($student->graduation_year == 8) 2022-2023 @elseif($student->graduation_year == 9) 2023-2024 @elseif($student->graduation_year == 10) 2024-2025 @elseif($student->graduation_year == 11) 2025-2026 @elseif($student->graduation_year == 12) 2026-2027 @elseif($student->graduation_year == 13) 2027-2028 @elseif($student->graduation_year == 14) 2028-2029 @elseif($student->graduation_year == 15) 2029-2030 @endif
                </td>
                <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
-                  @if($student->department->id == 1) علوم الحاسوب  @else نظم المعلومات   @endif
+                  @if($student->department->id == 1) علوم الحاسوب @else نظم المعلومات @endif
                </td>
 
                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">{{$student->gender == 0 ? 'ذكر' : 'أنثى'}}</td>
@@ -66,9 +59,9 @@
                      <span aria-hidden class="absolute inset-0 @if($student->round == 0) bg-green-200 @elseif($student->round == 1) bg-red-200 @else bg-gray-200  @endif opacity-50 rounded-full"></span>
 
                      <span class="relative text-xs">
-@if($student->round == 0)   الاول @elseif($student->round == 1)   الثاني @else   الثالث @endif
+                        @if($student->round == 0) الاول @elseif($student->round == 1) الثاني @else الثالث @endif
                      </span>
-                  
+
 
                </td>
                <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">

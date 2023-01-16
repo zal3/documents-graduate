@@ -25,6 +25,7 @@ class StudentSeeder extends Seeder
                 'gender' => rand(0,1),
                 'graduation_year' => 0,
                 'average' => rand(50,100),
+                'average_written' => 'سبعة وسبعون',
                 'round' => rand(0,2),
                 'image_path' => 'students/1.jpg',
             ]);

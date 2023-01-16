@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('gender')->default(0);###   Male: 0, Female:1
             $table->integer('graduation_year');
             $table->float('average');
+            $table->string('average_written');
             $table->integer('round'); ### 0: First, 1: Second, 2: Third
             $table->string('image_path')->nullable();
 

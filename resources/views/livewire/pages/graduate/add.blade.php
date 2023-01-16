@@ -39,7 +39,7 @@
                 {{-- label1 --}}
                 <div class="flex flex-col gap-2">
                     <label for="name_ar" class=" text-sm  ">الأسم الرباعي بالعربية</label>
-                    <input id="name_ar" type="text" required wire:model.lazy="name_ar" class="   bg-white w-96   text-sm text-gray-900  rounded-lg border-2 border-gray-400 hover:border-[#FFC657] "  />
+                    <input id="name_ar" type="text" required wire:model.lazy="name_ar" class="   bg-white w-96   text-sm text-gray-900  rounded-lg border-2 border-gray-400 hover:border-[#FFC657] " />
                     <!-- @error('name_ar')
                 <span class="text-red-600">{{ $message }}</span>
                 @enderror -->
@@ -47,8 +47,19 @@
                 {{-- label2 --}}
                 <div class="flex flex-col gap-2">
                     <label for="name_en" class=" text-sm ">الأسم الرباعي بالأنجليزية</label>
-                    <input id="name_en" type="text" required wire:model.lazy="name_en" class="  bg-white   text-sm text-gray-900  rounded-lg border-2 border-gray-400 hover:border-[#FFC657] "  />
+                    <input id="name_en" type="text" required wire:model.lazy="name_en" class="  bg-white   text-sm text-gray-900  rounded-lg border-2 border-gray-400 hover:border-[#FFC657] " />
                     <!-- @error('name_en')
+                <span class="text-red-600">{{ $message }}</span>
+                @enderror -->
+                </div>
+                <div class="flex flex-col">
+                    <label name="gender" for="gender" class="text-sm text-gray-900 ">الجنس</label>
+                    <select id="gender" required wire:model.lazy="gender" class="bg-white border   border-gray-500 text-gray-900 text-sm rounded-lg ">
+                        <option value="">إختر الجنس</option>
+                        <option value="1">أنثى</option>
+                        <option value="0">ذكر</option>
+                    </select>
+                    <!-- @error('gender')
                 <span class="text-red-600">{{ $message }}</span>
                 @enderror -->
                 </div>
@@ -56,7 +67,7 @@
 
             <div class=" grid grid-cols-2 gap-6 px-20  mt-6  mb-10">
                 {{-- Select --}}
-                
+
                 {{-- Select --}}
                 <div class="flex flex-col">
                     <label for="round" class="    text-sm text-gray-900 ">الدور</label>
@@ -128,7 +139,7 @@
                         <span class="text-red-600">{{ $message }}</span>
                     @enderror -->
                 </div>
-                
+
                 <div class="flex flex-col">
                     <label for="type" class="text-sm text-gray-900 ">الدراسة</label>
                     <select id="type" required wire:model.lazy="type" class=" bg-white border border-gray-500  text-gray-900 text-sm rounded-lg ">
@@ -147,23 +158,20 @@
                         <span class="text-red-600">{{ $message }}</span>
                     @enderror -->
                 </div>
+                <!-- المعدل كتابه  -->
                 <div class="flex flex-col">
-                    <label name="gender" for="gender" class="text-sm text-gray-900 ">الجنس</label>
-                    <select id="gender" required wire:model.lazy="gender" class="bg-white border   border-gray-500 text-gray-900 text-sm rounded-lg ">
-                        <option value="">إختر الجنس</option>
-                        <option value="1">أنثى</option>
-                        <option value="0">ذكر</option>
-                    </select>
-                    <!-- @error('gender')
-                <span class="text-red-600">{{ $message }}</span>
-                @enderror -->
+                    <label for="average_written" class=" text-sm text-gray-900 ">المعدل كتابة</label>
+                    <input type="text" id="average_written" wire:model.lazy="average_written" class=" bg-white  text-sm text-gray-900  rounded-lg border-1 border-gray-400 " placeholder="إدخل المعدل كتابة" />
+                    <!-- @error('average_written')
+                        <span class="text-red-600">{{ $message }}</span>
+                    @enderror -->
+
                 </div>
+                <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
+                حفظ
+            </button>
             </div>
 
-        </div>
-
-        <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
-            حفظ
-        </button>
+            
     </form>
 </div>

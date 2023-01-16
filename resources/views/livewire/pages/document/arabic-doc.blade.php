@@ -4,24 +4,43 @@
             وثيقة التخرج باللغة العربية </h1>
 
     </div>
-    <form method="POST" class="m-20">
+    <form  wire:submit.prevent="createardoc" class="m-20">
         @csrf
         <div>
-            <div class="flex flex-col mb-3">
+            <!-- <div class="flex flex-col mb-3">
                 <label for="" class=" text-2xl text-[#000]  duration-300 transform  ">الأسم الرباعي بالعربية</label><br>
 
-                <input type="text" name="student_name" wire:model="query" {{-- wire:keydown.escape="resetFunc" 
-                    wire:keydown.tab="resetFunc" --}} wire:keydown.Arrow-up="decrementHighlight" wire:keydown.Arrow-down="incrementHighlight" wire:keydown.enter="selectStudent" list="students" for="students" class=" w-96 h-12  bg-white  ext-sm text-gray-900  rounded-lg border border-3  border-gray-400 focus:ring-blue-500 focus:border-blue-500 block" placeholder=" " />
-            </div>
+                <input type="text" name="student_name" wire:model="query" wire:keydown.Arrow-up="decrementHighlight" wire:keydown.Arrow-down="incrementHighlight" wire:keydown.enter="selectStudent" list="students" for="students" class=" w-96 h-12  bg-white  ext-sm text-gray-900  rounded-lg border border-3  border-gray-400 focus:ring-blue-500 focus:border-blue-500 block" placeholder=" " />
+            </div> -->
+            <div>
+                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">
+                            اختر الطالب </label>
+                        </label>
+                        <div class="flex w-2/3 gap-2">
+                            <input wire:model="search" type="text" class="block w-2/3 p-2 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="اسم الطالب">
+
+                            @if ($search)
+                            <select wire:model="student_id" class="border border-gray-300 px-9 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option value="" selected>اختر الطالب </option>
+                                @foreach ($students as $student)
+                                <option value="{{$student->id}}">{{$student->name_ar}}</option>
+                                @endforeach
+                            </select>
+                            @endif
+                        </div>
+                        <!-- @error('task.project_id')
+                        <p class="text-red-500 text-s ">{{__('ui.this_field_is_required')}}</p>
+                        @enderror -->
+                    </div>
             <div class="my-16">
                 <div class="flex items-center mb-4 gap-5">
-                    <input id="default-checkbox" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <input  id="default-checkbox" wire:model="cclick" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="default-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع تسلسل </label>
                 </div>
-                <div class="flex items-center  gap-5">
+                <!-- <div class="flex items-center  gap-5">
                     <input checked id="checked-checkbox" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع درجات </label>
-                </div>
+                </div> -->
             </div>
 
 

@@ -55,7 +55,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document/english', EnglishDoc::class)->name('english');
     Route::get('/document/graduate', GraduateDoc::class)->name('graduate-doc');
     Route::get('/document/master', MasterDoc::class)->name('master');
-    Route::get('/document/show-ar-doc', ShowArDoc::class)->name('show-ar-doc');
+    Route::get('/document/show-ar-doc/{student_id}', ShowArDoc::class)->name('show-ar-doc');
     Route::get('/document/show-eng-doc', ShowEngDoc::class)->name('show-eng-doc');
 
     //unid

@@ -13,7 +13,7 @@ class Add extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $name_en ,$name_ar ,$gender ,$graduation_year ,$average ,$round ,$image_path ,$department_id ;
+    public $name_en, $name_ar, $gender,$average_written, $graduation_year, $average, $round, $image_path, $department_id , $departments ,$type;
     protected $rules = [
         'name_en' => 'required',
         'name_ar' => 'required',
@@ -21,41 +21,42 @@ class Add extends Component
         'graduation_year' => 'required',
         'average' => 'required',
         'round' => 'required',
-        // 'department_id' => 'required',
+        'department_id' => 'required',
+        'type' => 'required',
+        'average_written' => 'required',
     ];
 
     public function add(Student $student)
     {
-        
+
         $this->validate();
+        $student = Student::create(
+            [
+                'name_en' => $this->name_en,
+                'name_ar' => $this->name_ar,
+                'gender' => $this->gender,
+                'graduation_year' => $this->graduation_year,
+                'average' => $this->average,
+                'round' => $this->round,
+                'image_path' => $this->image_path,
+                'department_id' => $this->department_id,
+                'type' => $this->type,
+                'average_written' => $this->average_written,
+            ]
+        );
 
-        $data = [
-            'name_en' => $this->name_en,
-            'name_ar' => $this->name_ar,
-            'gender' => $this->gender,
-            'graduation_year' => $this->graduation_year,
-            'average' => $this->average,
-            'round' => $this->round,
-            'image_path' => $this->image_path,
-            // 'department_id' => $this->department_id,
-        ];
-        //  dd($data);
-            $student = new Student();
-            $student->add($data);
+        if ($this->image_path)
+            $student->add_image($this->image_path); 
+        $this->reset();
 
-                
-            if ($this->image_path)
-                $student->add_image($this->image_path); 
-            $this->reset();
+        $this->alert('success', 'تمت الاضافة', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+    // redirect()->route('students');
 
-            $this->alert('success', 'تمت الاضافة', [
-                'position' => 'top',
-                'timer' => 3000,
-                'toast' => true,
-            ]);
-        }
-        // redirect()->route('students');
-    
     public function render()
     {
         return view('livewire.pages.graduate.add');

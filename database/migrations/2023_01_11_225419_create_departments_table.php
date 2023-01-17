@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name_en');
             $table->string('name_ar');
             $table->integer('stage')->default(0); //### first: 0, second:1, third:2 , fourth:3
-            $table->boolean('type')->default(0); //### Morning: 0, Evening:1
             $table->timestamps();
         });
     }

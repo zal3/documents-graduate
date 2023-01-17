@@ -63,7 +63,7 @@ class Edit extends Component
         
         
         $this->alert('success', 'تم التعديل', [
-            'position' => 'center',
+            'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);

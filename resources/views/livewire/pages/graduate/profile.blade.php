@@ -26,8 +26,10 @@
                     @endif
                 </div>
             </div>
-            <div class="gap-3 flex justify-between mt-32 md:mt-0 md:justify-center"><button class="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> Edit</button>
-                <button class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> Delete</button>
+            <div class="gap-3 flex justify-between mt-32 md:mt-0 md:justify-center">
+            <a href="{{ route('edit-graduate' , ['id' => $student->id]) }}"  class="text-white pm-2 pt-3 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> Edit</a>
+                <!-- <button class="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> Edit</button> -->
+                <button wire:click="confirm({{ $student->id }})" class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"> Delete</button>
             </div>
         </div>
         <div class="mt-20 text-center border-b pb-12">

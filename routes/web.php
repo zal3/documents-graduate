@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
     use App\Http\Livewire\Pages\Graduate\{
         Add as AddGraduate,
+        Edit as EditGraduate,
         Profile as ProfileGraduate,
     };
 
@@ -72,6 +73,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //graduate
     Route::get('/graduate', Graduate::class)->name('graduate');
     Route::get('/graduate/add', AddGraduate::class)->name('add-graduate');
+    Route::get('/graduate/edit/{id}', EditGraduate::class)->name('edit-graduate');
     Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
 
 

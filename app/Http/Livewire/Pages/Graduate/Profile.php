@@ -3,10 +3,17 @@
 namespace App\Http\Livewire\Pages\Graduate;
 use App\Models\Student;
 use Livewire\Component;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 
 class Profile extends Component
 {
+    use LivewireAlert;
+
     public $student_id , $student , $name_ar , $name_en , $gender , $graduation_year , $average , $round , $image_path , $department_id , $type , $average_written;
+    
+    protected $listeners = [ '$refresh','delete'];
+
     public function mount ($id){
         $this->student_id = $id;
         $this->student = Student::findOrFail($id);
@@ -21,6 +28,34 @@ class Profile extends Component
         $this->type = $this->student->type;
         $this->average_written = $this->student->average_written;
         
+    }
+    public function delete()
+    {
+        Student::findOrFail($this->student_id)->delete();
+        $this->alert('success', 'تم الحذف ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        $this->emitUp('$refresh');
+        $this->emitTo('pages.graduate.main', '$refresh');
+        redirect()->route('graduate');
+
+
+    }
+
+    public function confirm($id)
+    {
+        $this->student_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف الطالب؟', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
     }
     public function render()
     {

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     use HasFactory;
-    protected $fillable = ['department_id', 'student_id', 'name_en', 'name_ar', 'degree', 'course_ar', 'course_en'];
+    protected $fillable = ['department_id', 'student_id', 'name_en', 'name_ar', 'degree', 'course', 'stage'];
 
     ### Relation ###
     public function department()

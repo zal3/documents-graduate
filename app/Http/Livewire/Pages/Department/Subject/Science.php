@@ -6,7 +6,15 @@ use Livewire\Component;
 use App\Models\Subject;
 
 class Science extends Component
-{
+{    protected $listeners = ['$refresh', 'filterProjects'];
+    public   $stage , $course   ;
+
+    public function filterProjects($stage , $course )
+    {
+        $this->stage = $stage;
+        $this->course = $course;
+        
+    }
     public function render()
     {
         $subjects = Subject::where('department_id', 1)->get();

@@ -10,7 +10,7 @@
          </svg>
          <div class="bg-white w-40 h-6 rounded ">
          <div>
-      <livewire:ui.filter-projects />
+      <livewire:search />
    </div>
          </div>
       </div>

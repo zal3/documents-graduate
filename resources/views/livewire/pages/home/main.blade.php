@@ -44,6 +44,7 @@
                         <a href=""><span class="mt-1 text-lg spot">حول الموقع</span> </a>
                     </div>
                 </svg>
+                @livewire('pages.ui.filter-projects')
             </div>
         </div>
         <!-- الدخول -->

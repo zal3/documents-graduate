@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('name_en');
             $table->string('name_ar');
             $table->float('degree');
+            $table->string('course_ar');
+            $table->string('course_en');
             $table->timestamps();
         });
     }

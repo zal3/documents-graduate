@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name_en');
             $table->string('name_ar');
-            $table->integer('stage')->default(0); //### first: 0, second:1, third:2 , fourth:3
+            $table->integer('stage_ar')->default(1); //### first: 1, second:2, third:3 , fourth:4
+            $table->integer('stage_en')->default(1); //### first: 1, second:2, third:3 , fourth:4
             $table->timestamps();
         });
     }

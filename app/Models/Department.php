@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Department extends Model
 {
     use HasFactory;
-    protected $fillable = ['name_en', 'name_ar', 'stage'];
+    protected $fillable = ['name_en', 'name_ar', 'stage_ar', 'stage_en'];
 
     ### Relation ###
     public function students()

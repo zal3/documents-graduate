@@ -17,6 +17,14 @@ class SubjectSeeder extends Seeder
      */
     public function run()
     {
+        //lمواد قسم الحاسوب  الصف الاول
+        Subject::create([
+            'department_id' => Department::where('stage', 1)->where('name_en', 'Computer')->first()->id,
+            'course' => 'First',
+            'name_en' => 'Math',
+            'name_ar' => 'الرياضيات',
+            'degree' => 3,
+        ]);
         
     }
 }

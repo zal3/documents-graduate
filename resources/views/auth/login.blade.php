@@ -1,8 +1,12 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
+<x-guest-layout class="bg-white">
+    <x-jet-authentication-card class="bg-white">
+        <x-slot name="logo"  class="bg-white">
+            <div class="text-3xl font-bold text-center flex flex-col justify-centet items-center ">
+            <img src="{{ asset('img/it.png') }}" alt="logo" class="opacity-70" width="150" height="150">
 
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{ __('اهلا بك في وحدة الوثائق') }}
+
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -13,35 +17,38 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}"  dir="rtl">
             @csrf
 
             <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
+                <x-jet-label for="email" value="{{ __('البريد الالكتروني') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-label for="password" value="{{ __('كلمة المرور') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('تذكرني') }}</span>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-between mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                    {{ __('نسيت كلمة السر ؟') }}
                     </a>
                 @endif
+                <a class="text-md text-gray-600 underline hover:text-gray-900" href="{{ route('register') }}">
+                    انشاء حساب جديد
+                </a>
 
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('تسجيل دخول') }}
                 </x-jet-button>
             </div>
         </form>

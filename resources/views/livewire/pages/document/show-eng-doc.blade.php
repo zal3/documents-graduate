@@ -1,40 +1,69 @@
-@foreach ($students as $student)
-    <form  class="mt-52">
-        @csrf
-        <div class="absolute left-44	rounded   w-32 h-40 -mt-28 border border-black"></div>
-        <h2 class="text-center text-2xl -mb-2  -mr-36 font-semibold">وثيقة تخرج</h2>
-        <hr class=" absolute my-4 mx-96    w-48 h-0.5 bg-zinc-800 rounded border-0 md:my-5 ">
-        <h2 class="text-center text-2xl mt-4  -mr-36 font-semibold">الى/من يمهمه الامر</h2>
-
-        <p class=" mt-20">نؤيد لكم ان <span class="font-semibold"> {{ $student->name_en }} </span> الملصقة صورته اعلاه هو
-            احد خريجي
-            كليتنا للعام الدراسي 2020/2021 (الدور الاول), قد منح شهادة بكالوريوس العلوم في تكنولوجيا المعلومات/ علوم
-            الحاسوب/ الدراسة الصباحية حسب الأمر الجامعي ذي العدد(24969/13/3) في 2021/12/06 بتقدير (جيد) وبمعدل تخرج
-            (71,441)
-            واحد وسبعون و <br> أربعمائة وواحد وأربعون بالألف.</p>
-        <div class="mt-20">
-            <p class="text-right font-semibold ">ثمينة محمد خلف
-            <p> مسؤول وحدة الوثائق</p>
-            </p>
-            <div class="-mt-16 ml-24">
-                <p class="text-center">الأستاذ الدكتور
-                <p class=" font-semibold text-center">ميثم ابو الهيل شهيد</p>
-                <p class="text-center">معاون العميد للشؤون العلمية والدراسات العليا</p>
-                </p>
+<div class="container flex flex-col justify-between  mx-auto px-4">
+        <div class="grid grid-cols-3 items-end ">
+            <div> </div>
+            <div class="text-center items-center">
+                <h2 class="text-center text-xl  font-semibold">graduation document </h2>
+                <h2 class="text-center text-xl  font-semibold">
+                To/whom it may concern                </h2>
+                @if($selected)
+                Serial Number: <span class=" text-center font-semibold"> {{$student->id}}</span>
+                @endif
             </div>
-            <div class="-mt-16 ml-20 text-left">
-                <p class="ml-2 ">
-                    الأستاذ المساعد الدكتور
-                <p class=" font-semibold"> سلمى عبد الباقي محمود</p>
-                <p class="ml-12"> عميد الكلية</p>
-                </p>
-            </div>
-            {{-- 
-        @foreach ($students as $student)
-            {{ $student['name_ar'] }}
-            {{ $student['sequence'] }}
-        @endforeach
-        --}}
+            @if($student->gender == 1)
+            <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
+            @else
+            <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
+            @endif
+            
         </div>
-    </form>
-@endforeach
+        <div  class="flex mx-40">
+            <div class=" mt-20 text-md text-left left-0">
+            We support you that
+                            <span class="font-semibold"> {{$student->name_en}}</span>
+            <span class="text-lg text-left">
+                whose picture is pasted above
+                
+                is one of our college graduates for the academic year
+                @if($student->graduation_year == 0) 2014-2015 @elseif($student->graduation_year == 1) 2015-2016 @elseif($student->graduation_year == 2) 2016-2017 @elseif($student->graduation_year == 3) 2017-2018 @elseif($student->graduation_year == 4) 2018-2019 @elseif($student->graduation_year == 5) 2019-2020 @elseif($student->graduation_year == 6) 2020-2021 @elseif($student->graduation_year == 7) 2021-2022 @elseif($student->graduation_year == 8) 2022-2023 @elseif($student->graduation_year == 9) 2023-2024 @elseif($student->graduation_year == 10) 2024-2025 @elseif($student->graduation_year == 11) 2025-2026 @elseif($student->graduation_year == 12) 2026-2027 @elseif($student->graduation_year == 13) 2027-2028 @elseif($student->graduation_year == 14) 2028-2029 @elseif($student->graduation_year == 15) 2029-2030 @endif
+                (
+                @if($student->round ==0)
+                the first round
+                                @elseif($student->round ==1)
+                the second round                @else
+                the third round                @endif
+                )
+                who was awarded a Bachelor of Science degree in information technology / computer science /
+                @if($student->type == 0)
+                Morning study                @else
+                Evening study                @endif
+                according to the university order number (3/13/24969) On the date of
+                {{date('Y-m-d')}}
+                with a grade of (
+                @if($student->average <= 50) Weak @elseif($student->average <= 60) Acceptable @elseif($student->average <= 70) middle @elseif($student->average <= 80) good @elseif($student->average <= 90)  very good @elseif($student->average <= 100) Excellent @endif )
+                and a graduation rate of ( {{$student->average}} ) 
+         </span>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 mt-24 justify-between  text-center items-end">
+            <div class="">
+                <p class=" font-semibold mb-2 "> Thamina Mohammed Khalaf </p>
+                <p>   Documentation Unit Officer</p>
+            </div>
+            <div class="">
+                <p class="mb-2"> Prof. Dr
+                <p class=" font-semibold mb-2">   Zainab Ali Khalaf</p>
+                <p class="">Associate Dean for Scientific Affairs and Postgraduate Studies</p>
+                </p>
+            </div>
+            <div class="">
+                <p class="mb-2 ">
+                Assistant Professor Dr
+                                <p class=" font-semibold mb-2"> Salma Abdel-Baqi Mahmoud</p>
+                <p class=""> Dean of the College </p>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>

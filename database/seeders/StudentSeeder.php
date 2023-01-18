@@ -16,10 +16,18 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
+
+        if(Student::where('gender' , 0)->first()){
+            $img = 'img/male.png';
+        }
+        
+        else
+        $img = 'img/female.png';
+
         for($i=1;$i<=10;$i++){
             Student::create([
                 'department_id' => Department::all()->random()->id,
-                'name_en' => 'Student '.$i . 'الاب والجد واللقب',
+                'name_en' => 'Student '.$i . '  father, grandfather and surname',
                 'name_ar' => 'طالب '.$i. 'الاب والجد واللقب',
                 'type' => rand(0,1),
                 'gender' => rand(0,1),
@@ -27,8 +35,10 @@ class StudentSeeder extends Seeder
                 'average' => rand(50,100),
                 'average_written' => 'سبعة وسبعون',
                 'round' => rand(0,2),
-                'image_path' => 'students/1.jpg',
+                'image_path' => $img,
             ]);
         }
+        //if gender = 0 or 1
+        
     }
 }

@@ -1,20 +1,23 @@
     <div class="container flex flex-col justify-between  mx-auto px-4">
         <div class="grid grid-cols-3 items-end ">
             <div> </div>
-            <div>
+            <div class="text-center items-center">
                 <h2 class="text-center text-xl  font-semibold">وثيقة تخرج</h2>
                 <h2 class="text-center text-xl  font-semibold">الى/من يمهمه الامر</h2>
+                @if($selected)
+                رقم التسلسل : <span class=" text-center font-semibold"> {{$student->id}}</span>
+                @endif
             </div>
             @if($student->gender == 1)
             <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
             @else
             <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
             @endif
-
+            
         </div>
         <div  class="flex mx-40">
             <div class=" mt-20 text-md">نؤيد لكم ان <span class="font-semibold"> {{$student->name_ar}}</span>
-                
+               
             <span class="text-lg">
                 @if($student->gender ==1)
                 الملصقة

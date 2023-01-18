@@ -9,10 +9,14 @@ class ShowArDoc extends Component
 {
     public $student_id;
     public $student;
-    public function mount($student_id)
+    public $selected ;
+    public function mount($student_id, $selected)
     {
         $this->student_id = $student_id;
         $this->student = Student::findOrFail($student_id);
+        // $this->selected = $this->student->documents->pluck('id')->toArray();
+        $this->selected = $selected;
+        // dd($this->selected);
     }
     public function render()
     {

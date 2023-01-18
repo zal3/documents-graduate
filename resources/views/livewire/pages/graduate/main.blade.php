@@ -72,7 +72,7 @@
                      </span>
                </td>
                <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
-                  <button class="px-5 py-2 border-[#071F63] border text-[#071F63] rounded transition duration-300 hover:bg-[#071F63]  hover:text-white focus:outline-none">عرض التفاصيل </button>
+               <a href="{{ route('profile-graduate' , $student->id) }}" class="px-5 py-2 border-[#071F63] border text-[#071F63] rounded transition duration-300 hover:bg-[#071F63]  hover:text-white focus:outline-none">عرض التفاصيل </a>
                </td>
             </tr>
             @endforeach

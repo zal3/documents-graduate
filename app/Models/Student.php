@@ -32,10 +32,10 @@ class Student extends Model
     ### End add ###
 
     ### edit ###
-    // public function edit($data)
-    // {
-    //     $this->update($data);
-    // }
+    public function edit($data)
+    {
+        $this->update($data);
+    }
     ### End edit ###
 
 

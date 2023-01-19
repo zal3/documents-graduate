@@ -26,6 +26,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -34,6 +35,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -43,6 +45,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -51,6 +54,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -60,6 +64,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -68,6 +73,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
 
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الاول ###########
@@ -78,6 +84,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -86,42 +93,43 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' english 2',
-            'name_ar' => 'الانكليزي 2
-                    ',
+            'name_ar' => 'الانكليزي 2      ',
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' advanced structures',
-            'name_ar' => 'الهياكل المتقدمة 
-                    ',
+            'name_ar' => 'الهياكل المتقدمة    ',
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' principles of information technology',
-            'name_ar' => 'مبادى تكنولوجيا المعلومات
-                    ',
+            'name_ar' => 'مبادى تكنولوجيا المعلومات  ',
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' computer applications',
-            'name_ar' => 'تطبيقات الحاسوب  
-                    ',
+            'name_ar' => 'تطبيقات الحاسوب        ',
             'course' => 2,
             'degree' => 3,
             'stage' => 1,
+            'unit' => 3,
         ]);
 
         ############# الكورس الاول مواد قسم الحاسوب  الصف الثاني ###########
@@ -132,6 +140,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -140,6 +149,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -148,6 +158,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -156,6 +167,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -164,6 +176,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -172,6 +185,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 2,
         ]);
 
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الثاني ###########
@@ -182,6 +196,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -190,6 +205,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
 
         Subject::create([
@@ -199,15 +215,16 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
-
             'name_en' => ' Analysis and design of systems',
             'name_ar' => 'تحليل وتصميم النظم ',
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -216,6 +233,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -224,6 +242,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 2,
+            'unit' => 3,
         ]);
 
         ############# الكورس الاول مواد قسم الحاسوب  الصف الثالث ###########
@@ -234,6 +253,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -242,6 +262,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -250,6 +271,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -258,6 +280,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -266,6 +289,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -274,6 +298,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
 
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الثالث ###########
@@ -284,6 +309,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -292,6 +318,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -300,6 +327,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -308,6 +336,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -316,7 +345,18 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 3,
             'stage' => 3,
+            'unit' => 3,
         ]);
+        Subject::create([
+            'department_id' => Department::first()->id,
+            'name_en' => '  Translators',
+            'name_ar' => ' مترجمات  ',
+            'course' => 2,
+            'degree' => 3,
+            'stage' => 3,
+            'unit' => 3,
+        ]);
+
 
         ############# الكورس الاول مواد قسم الحاسوب  الصف الرابع ###########
         Subject::create([
@@ -326,6 +366,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -334,6 +375,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -342,6 +384,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -350,6 +393,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -358,6 +402,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -366,6 +411,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -374,6 +420,7 @@ class SubjectSeeder extends Seeder
             'course' => 1,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
 
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الرابع ###########
@@ -384,6 +431,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -392,6 +440,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -400,6 +449,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -408,6 +458,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -416,6 +467,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
         Subject::create([
             'department_id' => Department::first()->id,
@@ -424,6 +476,7 @@ class SubjectSeeder extends Seeder
             'course' => 2,
             'degree' => 4,
             'stage' => 4,
+            'unit' => 3,
         ]);
     }
 }

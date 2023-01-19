@@ -9,19 +9,35 @@
             <path d="M16.9993 16.9993L13.1328 13.1328" stroke="#455A64" stroke-linecap="round" stroke-linejoin="round" />
          </svg>
          <div class="bg-white w-40 h-6 rounded ">
-         <div>
-      <livewire:search />
-   </div>
+            
          </div>
       </div>
    </div>
    <div class="align-middle inline-block min-w-full  overflow-hidden bg-white    rounded-bl-lg rounded-br-lg">
       <table class="min-w-full text-center">
          <thead>
-            <tr class=" bg-[#FFC657]">
-               <th class="px-6 py-3 border-b-2 border-gray-300  leading-4 text-[#071F63] tracking-wider">#</th>
-               <th class="px-6 py-3 border-b-2 border-gray-300  text-sm leading-4 text-[#071F63] tracking-wider">
+            <tr class=" ">
+               <div class=" bg-[#FFC657] p-3">
 
+                  <div class=" rounded-lg ">
+                     <div>
+                        <div class="grid grid-cols-6 items-start  mr-9">
+                           <select wire:model="stage" class=" py-2 w-40    border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                              <option value="0">المرحلة </option>
+                              <option value="1">الاولى </option>
+                              <option value="2"> الثانية</option>
+                              <option value="3"> الثالثة</option>
+                              <option value="4"> الرابعة</option>
+                           </select>
+                           <select wire:model="course" class=" py-2 w-40  border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                              <option value="0">الكورس</option>
+                              <option value="1">الاول</option>
+                              <option value="2"> الثاني</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
                </th>
             </tr>
          </thead>

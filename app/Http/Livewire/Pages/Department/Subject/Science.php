@@ -17,7 +17,12 @@ class Science extends Component
     }
     public function render()
     {
-        $subjects = Subject::where('department_id', 1)->get();
+        if($this->stage && $this->course){
+            $subjects = Subject::where('department_id', 1)->where('stage', $this->stage)->where('course', $this->course)->get();
+        }
+        else{
+            $subjects = [];
+        }
         return view('livewire.pages.department.subject.science', compact('subjects'));
     }
 }

@@ -6,7 +6,7 @@ use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\WithFileUploads;
 use App\Models\Student;
-
+use App\Models\Subject;
 
 class Add extends Component
 {
@@ -59,6 +59,15 @@ class Add extends Component
 
     public function render()
     {
-        return view('livewire.pages.graduate.add');
+        $subjects = Subject::where('stage',1)->where('course',1)->get();
+        $subjects1 = Subject::where('stage',1)->where('course',2)->get();
+        $subjects2 = Subject::where('stage',2)->where('course',1)->get();
+        $subjects3 = Subject::where('stage',2)->where('course',2)->get();
+        $subjects4 = Subject::where('stage',3)->where('course',1)->get();
+        $subjects5 = Subject::where('stage',3)->where('course',2)->get();
+        $subjects6 = Subject::where('stage',4)->where('course',1)->get();
+        $subjects7= Subject::where('stage',4)->where('course',2)->get();
+        // $subjects8 = Subject::where('student_id',$this->student_id)->get();
+        return view('livewire.pages.graduate.add', compact('subjects','subjects1','subjects2','subjects3','subjects4','subjects5','subjects6','subjects7'));
     }
 }

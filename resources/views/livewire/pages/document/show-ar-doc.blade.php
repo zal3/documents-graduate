@@ -3,7 +3,7 @@
             <div> </div>
             <div class="text-center items-center">
                 <h2 class="text-center text-xl  font-semibold">وثيقة تخرج</h2>
-                <h2 class="text-center text-xl  font-semibold">الى/من يمهمه الامر</h2>
+                <h2 class="text-center text-xl  font-semibold">الى/من يهمه الامر</h2>
                 @if($selected)
                 رقم التسلسل : <span class=" text-center font-semibold"> {{$student->id}}</span>
                 @endif

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title> وثائق التخرج</title>
+    <title> وحدة الوثائق </title>
     <style>
         .home {
             font-family: 'Changa', sans-serif;

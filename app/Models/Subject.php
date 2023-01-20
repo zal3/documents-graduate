@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     use HasFactory;
-    protected $fillable = ['department_id', 'student_id', 'name_en', 'name_ar', 'degree'];
+    protected $fillable = ['department_id', 'student_id', 'name_en', 'name_ar', 'degree', 'course', 'stage', 'unit'];
 
     ### Relation ###
     public function department()
@@ -21,4 +21,19 @@ class Subject extends Model
         return $this->belongsToMany(Student::class);
     }
     ### End Relation ###
+
+    ### add ###
+    public function add($data)
+    {
+        $this->fill($data);
+        $this->save();
+    }
+    ### End add ###
+
+    ### edit ###
+    public function edit($data)
+    {
+        $this->update($data);
+    }
+    ### End edit ###
 }

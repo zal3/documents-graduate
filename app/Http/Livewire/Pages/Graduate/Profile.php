@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Pages\Graduate;
 use App\Models\Student;
+use App\Models\Subject;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
@@ -10,7 +11,7 @@ class Profile extends Component
 {
     use LivewireAlert;
 
-    public $student_id , $student , $name_ar , $name_en , $gender , $graduation_year , $average , $round , $image_path , $department_id , $type , $average_written;
+    public $student_id , $student ,$show , $name_ar , $name_en , $gender , $graduation_year , $average , $round , $image_path , $department_id , $type , $average_written;
     
     protected $listeners = [ '$refresh','delete'];
 
@@ -59,6 +60,16 @@ class Profile extends Component
     }
     public function render()
     {
-        return view('livewire.pages.graduate.profile');
+        
+        $subjects = Subject::where('stage',1)->where('course',1)->get();
+        $subjects1 = Subject::where('stage',1)->where('course',2)->get();
+        $subjects2 = Subject::where('stage',2)->where('course',1)->get();
+        $subjects3 = Subject::where('stage',2)->where('course',2)->get();
+        $subjects4 = Subject::where('stage',3)->where('course',1)->get();
+        $subjects5 = Subject::where('stage',3)->where('course',2)->get();
+        $subjects6 = Subject::where('stage',4)->where('course',1)->get();
+        $subjects7= Subject::where('stage',4)->where('course',2)->get();
+        $subjects8 = Subject::where('student_id',$this->student_id)->get();
+        return view('livewire.pages.graduate.profile',compact('subjects','subjects1','subjects2','subjects3','subjects4','subjects5','subjects6','subjects7','subjects8'));
     }
 }

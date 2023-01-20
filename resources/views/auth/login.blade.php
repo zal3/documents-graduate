@@ -43,9 +43,9 @@
                     {{ __('نسيت كلمة السر ؟') }}
                     </a>
                 @endif
-                <a class="text-md text-gray-600 underline hover:text-gray-900" href="{{ route('register') }}">
+                <!-- <a class="text-md text-gray-600 underline hover:text-gray-900" href="{{ route('register') }}">
                     انشاء حساب جديد
-                </a>
+                </a> -->
 
                 <x-jet-button class="ml-4">
                     {{ __('تسجيل دخول') }}

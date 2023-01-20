@@ -25,6 +25,8 @@ class Add extends Component
         'department_id' => 'required',
         'type' => 'required',
         'average_written' => 'required',
+        'subject_id' => 'required',
+        'degree' => 'required',
     ];
 
     public function add(Student $student)
@@ -45,15 +47,6 @@ class Add extends Component
                 'average_written' => $this->average_written,
             ]
         );
-        //attach  subject.degree
-        //  $student->subjects()->attach($this->subject_id, ['degree' => $this->degree]);
-
-        // foreach ($this->studentSubjects as $subjects) {
-        //     if(!$student->subjects()->wherePivot('id', $subjects['id'])->exists())
-        //     $student->subjects()->attach($subjects['id']);
-        // }
-        
-        
         if ($this->image_path)
             $student->add_image($this->image_path); 
            
@@ -66,6 +59,23 @@ class Add extends Component
             'toast' => true,
         ]);
     }
+
+    public function add_subject()
+    {
+        $this->validate([
+            'subject_id' => 'required',
+            'degree' => 'required',
+        ]);
+        $student = Student::find($this->student_id);
+        $student->subjects()->attach($this->subject_id, ['degree' => $this->degree]);
+        $this->reset();
+        $this->alert('success', 'تمت الاضافة', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+
     // redirect()->route('students');
 
     public function render()

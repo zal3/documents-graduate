@@ -5,7 +5,7 @@
         </h1>
 
     </div>
-    <form wire:submit.prevent="add" class="container mx-auto px-16 py-12">
+    <!-- <form wire:submit.prevent="add" class="container mx-auto px-16 py-12"> -->
         <div class="flex gap-3 items-center">
             <div class="rounded-lg w-16  border border-indigo-600">
                 <!-- <img src="{{ asset($student->image_path ?? 'img/ava.png') }}" class="w-16 h-16 rounded-lg" alt=""> -->
@@ -178,7 +178,7 @@
                 </svg>
                 <span>اضافة درجات الطالب</span>
         </button>
-        <div id="dropdownFilterHome" class="hidden right-46 left-0 ">
+        <!-- <div id="dropdownFilterHome" class="hidden right-46 left-0 "> -->
             <div class="flex flex-col mb-10">
                 <div class="flex flex-col gap-4 items-center justify-center ">
                     <div class="flex justify-between gap-56">
@@ -209,7 +209,8 @@
                                             {{$subject->unit }}
                                         </td>
                                         <td class="  bg-gray-50 dark:bg-gray-800">
-                                            <input type="text" wire:model.lazy="degree"
+                                            <!-- //add degree to subject id = 1 -->
+                                            <input type="text" wire:model.lazy="degree.{{$subject->id}}"
                                              class=" bg-white w-14 h-10 text-sm text-gray-900  rounded-lg border-1 border-gray-400 " placeholder=" " />
                                         </td>
                                         @endforeach
@@ -239,12 +240,16 @@
                                             {{$subject->unit }}
                                         </td>
                                         <td class="  bg-gray-50 dark:bg-gray-800">
-                                            <input type="text" wire:model.lazy="degree" class=" bg-white w-14 h-10 text-sm text-gray-900  rounded-lg border-1 border-gray-400 " placeholder=" " />
-                                        </td>
+                                            <input type="text" wire:model.lazy="degree.{{$subject->id}}"  
+                                             class=" bg-white w-14 h-10 text-sm text-gray-900  rounded-lg border-1 border-gray-400 " placeholder=" " />
+                                             {{$subject->degree }}
+                                            </td>
                                         @endforeach
                                 </tbody>
                             </table>
-                        </div>
+                        </div><button wire:click="add_subject()" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
+                إضافة
+            </button>
                     </div>
 
                 </div>
@@ -252,10 +257,10 @@
             </div>
             
            
-            <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
+            <!-- <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
                 إضافة
-            </button>
-        </div>
+            </button> -->
+        <!-- </div> -->
 
 
     </form>

@@ -25,8 +25,8 @@ use App\Http\Livewire\Pages\{
 // });
 //home
 Route::get('/', Home::class)->name('home');
-Route::get('/about', About::class)->name('About');
-Route::get('/developers', Developers::class)->name('Developers');
+Route::get('/about', About::class)->name('about');
+Route::get('/developers', Developers::class)->name('developers');
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document', Document::class)->name('document');
 });

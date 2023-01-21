@@ -24,7 +24,6 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -43,7 +42,7 @@
                 @livewire('components.sidebar')
             @endif
             <!-- Page Content -->
-            <main class="@if (Route::currentRouteName() != 'home')  mr-[210px] @endif">
+            <main class="@if (Route::currentRouteName() != 'home') mr-[210px] @endif">
                 {{ $slot }}
             </main>
         </div>

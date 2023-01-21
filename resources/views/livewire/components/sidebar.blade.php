@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="leading-9 text-gray-100 hover:bg-black hover:bg-opacity-30">
-                <a href="{{ route('about') }}" class=" lg:right-0 pr-2.5 mt-1 flex items-center">
+                <a href="{{ route('developers') }}" class=" lg:right-0 pr-2.5 mt-1 flex items-center">
                     <div class="pl-3">
                         <svg width="30" height="20" viewBox="0 0 110 70" fill="none"
                             xmlns="http://www.w3.org/2000/svg">

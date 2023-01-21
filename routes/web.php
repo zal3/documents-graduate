@@ -32,6 +32,8 @@ use Illuminate\Support\Facades\Route;
         Student\Information as InformationStudent,
         Subject\Science as ScienceSubject,
         Subject\Information as InformationSubject,
+        Subject\Add as AddSubject,
+        Subject\Add2 as AddSubject2,
     };
 
 
@@ -73,6 +75,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/department/information-student', InformationStudent::class)->name('information-student');
     Route::get('/department/science-subject', ScienceSubject::class)->name('science-subject');
     Route::get('/department/information-subject', InformationSubject::class)->name('information-subject');
+    Route::get('/department/add-subject', AddSubject::class)->name('add-subject');
+    Route::get('/department/add-subject2', AddSubject2::class)->name('add-subject2');
 
     //graduate
     Route::get('/graduate', Graduate::class)->name('graduate');

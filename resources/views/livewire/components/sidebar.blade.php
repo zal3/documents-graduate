@@ -1,8 +1,7 @@
 <aside dir="rtl">
     <div>
         <div class="text-white pt-5 fixed top-0 bottom-0 lg:right-0 w-[220px] bg-[#1E458A]">
-
-            <div class="text-gray-100 leading-9">
+            <div class="leading-9 text-gray-100">
                 <a href="{{ route('document') }}" class=" lg:right-0 pr-2.5 mt-1 flex items-center">
                     <div class="pl-3">
                         <svg width="30" height="15" viewBox="0 0 512 512">
@@ -12,8 +11,6 @@
                     </div>
                     <h1 class="lg:right-0 text-gray-200 text-[15px] ml-2">الصفحة الرئيسية</h1>
                 </a>
-
-            
             </div>
         </div>
     </div>

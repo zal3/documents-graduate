@@ -32,7 +32,7 @@
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="mt-1 text-lg spot">المطورين</span> </a>
+                        <a href="{{ route('Developers') }}"><span class="mt-1 text-lg spot">المطورين</span> </a>
                     </div>
                 </svg>
             </div>
@@ -41,7 +41,7 @@
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="mt-1 text-lg spot">حول الموقع</span> </a>
+                        <a href="{{ route('About') }}"><span class="mt-1 text-lg spot">حول الموقع</span> </a>
                     </div>
                 </svg>
             </div>

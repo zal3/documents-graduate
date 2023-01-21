@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Pages\{
-    Home\Main as Home,};
+    Home\Main as Home,
+    About\Main as About,
+    Document\Main as Document,
+    Developers\Main as Developers,
+};
 
-    use App\Http\Livewire\Pages\{
-        Document\Main as Document,};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +25,8 @@ use App\Http\Livewire\Pages\{
 // });
 //home
 Route::get('/', Home::class)->name('home');
+Route::get('/about', About::class)->name('About');
+Route::get('/developers', Developers::class)->name('Developers');
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document', Document::class)->name('document');
-
-    });
-
+});

@@ -134,14 +134,14 @@
         </div>
 
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 mr-6">
         <button class="my-6" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
             <img src="{{ asset('img/thm2.png') }}" class="w-14 " alt="">
         </button>
-        <div id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top" class="z-10 items-center hidden bg-white divide-y divide-gray-100 rounded-md ">
+        <div id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top" class="z-10 items-center hidden mr-6 bg-white divide-y divide-gray-100 rounded-md ">
             <form method="POST" action="{{ route('logout') }}" class="" x-data>
                 @csrf
-                <button type="submit" class="block px-4  py-2 w-full text-center text-blue-500 hover:bg-[#071F63]  rounded-md hover:text-white ">
+                <button type="submit" class="block px-4   py-2 w-full text-center text-blue-500 hover:bg-[#071F63]  rounded-md hover:text-white ">
                     تسجيل خروج </button>
             </form>
         </div>

@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Graduate;
-use App\Models\Student;
-use App\Models\Subject;
+use App\Models\{Student,  Degree, Subject};
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
@@ -60,7 +59,7 @@ class Profile extends Component
     }
     public function render()
     {
-        
+        //get degree
         $subjects = Subject::where('stage',1)->where('course',1)->get();
         $subjects1 = Subject::where('stage',1)->where('course',2)->get();
         $subjects2 = Subject::where('stage',2)->where('course',1)->get();
@@ -70,6 +69,8 @@ class Profile extends Component
         $subjects6 = Subject::where('stage',4)->where('course',1)->get();
         $subjects7= Subject::where('stage',4)->where('course',2)->get();
         $subjects8 = Subject::where('student_id',$this->student_id)->get();
-        return view('livewire.pages.graduate.profile',compact('subjects','subjects1','subjects2','subjects3','subjects4','subjects5','subjects6','subjects7','subjects8'));
+        //get degree
+        
+        return view('livewire.pages.graduate.profile',compact('subjects','subjects1','subjects2','subjects3','subjects4','subjects5','subjects6','subjects7','subjects8',));
     }
 }

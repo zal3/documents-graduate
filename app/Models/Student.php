@@ -16,11 +16,16 @@ class Student extends Model
         return $this->belongsTo(Department::class);
     }
 
-    public function subjects()
+    public function degrees()
     {
-        return $this->belongsToMany(Subject::class);
+        return $this->hasMany(Degree::class);
     }
 
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class)->withPivot('degree');
+    }
+    
     ### End Relation ###
 
     ### add ###
@@ -29,6 +34,7 @@ class Student extends Model
         $this->fill($data);
         $this->save();
     }
+    
     ### End add ###
 
     ### edit ###

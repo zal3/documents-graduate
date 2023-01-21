@@ -5,17 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title> وثائق التخرج</title>
+    <title> وحدة الوثائق </title>
     <style>
         .home {
             font-family: 'Changa', sans-serif;
         }
     </style>
-    <!-- <link rel="icon" type="image/png" href="img/lg2.png"> -->
-    <link rel="stylesheet" href="/resources/css/swiper-bundle.min.css">
+    <link rel="icon" type="img/ava.png" href="img/ava.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    {{-- swiper --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;605;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@807&display=swap" rel="stylesheet">
@@ -38,15 +35,15 @@
     <script src="{{ mix('resources/js/app.js') }}" defer></script>
 </head>
 
-<body id="home" class="h-screen home">
+<body id="home" class="h-screen home" dir="rtl">
     <!-- <x-jet-banner /> -->
-    <div class="min-h-screen ">
+    <div class="min-h-screen overflow-x-hidden overflow-y-hidden">
         <div class="grid ">
             @if (Route::currentRouteName() != 'home')
                 @livewire('components.sidebar')
             @endif
             <!-- Page Content -->
-            <main class="@if (Route::currentRouteName() != 'home') mt-4 mr-96 @endif">
+            <main class="@if (Route::currentRouteName() != 'home')  mr-[210px] @endif">
                 {{ $slot }}
             </main>
         </div>

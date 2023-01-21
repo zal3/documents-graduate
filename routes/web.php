@@ -2,12 +2,38 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Livewire\Pages\{
-    Home\Main as Home,
-    About\Main as About,
-    Document\Main as Document,
-    Developers\Main as Developers,
-};
+    use App\Http\Livewire\Pages\{
+        Home\Main as Home,
+        Document\Main as Document,
+        About\Main as About,
+        Developers\Main as Developers,
+        Unid\Main as Unid,
+        Department\Main as Department,
+        Graduate\Main as Graduate,
+    };
+
+    use App\Http\Livewire\Pages\Document\{
+        ArabicDoc as ArabicDoc,
+        EnglishDoc as EnglishDoc,
+        GraduateDoc as GraduateDoc ,
+        MasterDoc as MasterDoc,
+        ShowArDoc as ShowArDoc,
+        ShowEngDoc as ShowEngDoc,
+    };
+
+    use App\Http\Livewire\Pages\Graduate\{
+        Add as AddGraduate,
+        Edit as EditGraduate,
+        Profile as ProfileGraduate,
+    };
+
+    use App\Http\Livewire\Pages\Department\{
+        Student\Science as ScienceStudent,
+        Student\Information as InformationStudent,
+        Subject\Science as ScienceSubject,
+        Subject\Information as InformationSubject,
+    };
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +54,31 @@ Route::get('/', Home::class)->name('home');
 Route::get('/about', About::class)->name('about');
 Route::get('/developers', Developers::class)->name('developers');
 Route::middleware(['auth:sanctum'])->group(function () {
+
+    //document
     Route::get('/document', Document::class)->name('document');
+    Route::get('/document/arabic', ArabicDoc::class)->name('arabic');
+    Route::get('/document/english', EnglishDoc::class)->name('english');
+    Route::get('/document/graduate', GraduateDoc::class)->name('graduate-doc');
+    Route::get('/document/master', MasterDoc::class)->name('master');
+    Route::get('/document/show-ar-doc/[{student_id}]/[{selected}]', ShowArDoc::class)->name('show-ar-doc');
+    Route::get('/document/show-eng-doc/[{student_id}]/[{selected}]', ShowEngDoc::class)->name('show-eng-doc');
+
+    //unid
+    Route::get('/unid', Unid::class)->name('unid');
+
+    //department
+    Route::get('/department', Department::class)->name('department');
+    Route::get('/department/science-student', ScienceStudent::class)->name('science-student');
+    Route::get('/department/information-student', InformationStudent::class)->name('information-student');
+    Route::get('/department/science-subject', ScienceSubject::class)->name('science-subject');
+    Route::get('/department/information-subject', InformationSubject::class)->name('information-subject');
+
+    //graduate
+    Route::get('/graduate', Graduate::class)->name('graduate');
+    Route::get('/graduate/add', AddGraduate::class)->name('add-graduate');
+    Route::get('/graduate/edit/{id}', EditGraduate::class)->name('edit-graduate');
+    Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
+
+
 });

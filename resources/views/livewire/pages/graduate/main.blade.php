@@ -4,8 +4,9 @@
       <div>
          الخريجيين
       </div>
-      <div class="flex justify-between gap-3">
-        <livewire:pages.ui.search />
+      <div class="flex justify-between gap-2">
+        <livewire:pages.ui.search /> 
+        <livewire:pages.ui.filter-students class=""/>
       </div>
    </div>
 

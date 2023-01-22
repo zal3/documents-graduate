@@ -1,4 +1,5 @@
-<div class="grid max-w-screen-xl grid-cols-1  gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+<div
+    class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
     <div class="flex flex-col items-center justify-between">
         <div class="">
             <h2 class="mt-4 text-4xl font-bold leading-tight lg:text-5xl">وحدة وثائق التخرج</h2>
@@ -32,7 +33,7 @@
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="mt-1 text-lg spot">المطورين</span> </a>
+                        <a href="{{ route('developers') }}"><span class="mt-1 text-lg spot">المطورين</span> </a>
                     </div>
                 </svg>
             </div>
@@ -41,13 +42,15 @@
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
                     <div id="text">
-                        <a href=""><span class="mt-1 text-lg spot">حول الموقع</span> </a>
+                        <a href="{{ route('about') }}"><span class="mt-1 text-lg spot">حول الموقع</span> </a>
                     </div>
                 </svg>
             </div>
         </div>
         <!-- الدخول -->
-        <a href="{{ route('login') }}" type="button" class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]"> الدخول</a>
+        <a href="{{ route('login') }}" type="button"
+            class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]">
+            الدخول</a>
     </div>
 </div>
 

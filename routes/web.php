@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
     use App\Http\Livewire\Pages\{
         Home\Main as Home,
         Document\Main as Document,
+        About\Main as About,
+        Developers\Main as Developers,
         Unid\Main as Unid,
         Department\Main as Department,
         Graduate\Main as Graduate,
@@ -30,6 +32,8 @@ use Illuminate\Support\Facades\Route;
         Student\Information as InformationStudent,
         Subject\Science as ScienceSubject,
         Subject\Information as InformationSubject,
+        Subject\Add as AddSubject,
+        Subject\Add2 as AddSubject2,
     };
 
 
@@ -49,6 +53,8 @@ use Illuminate\Support\Facades\Route;
 // });
 //home
 Route::get('/', Home::class)->name('home');
+Route::get('/about', About::class)->name('about');
+Route::get('/developers', Developers::class)->name('developers');
 Route::middleware(['auth:sanctum'])->group(function () {
 
     //document
@@ -69,6 +75,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/department/information-student', InformationStudent::class)->name('information-student');
     Route::get('/department/science-subject', ScienceSubject::class)->name('science-subject');
     Route::get('/department/information-subject', InformationSubject::class)->name('information-subject');
+    Route::get('/department/add-subject', AddSubject::class)->name('add-subject');
+    Route::get('/department/add-subject2', AddSubject2::class)->name('add-subject2');
 
     //graduate
     Route::get('/graduate', Graduate::class)->name('graduate');
@@ -77,5 +85,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
 
 
-    });
-
+});

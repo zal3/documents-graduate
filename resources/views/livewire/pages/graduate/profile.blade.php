@@ -71,6 +71,7 @@
                         </thead>
                         <tbody>
                             @foreach ($subjects as $index => $subject )
+
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium font-bold text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
                                     {{$subject->name_ar }}
@@ -78,8 +79,9 @@
                                 <td class="px-6 py-4">
                                     {{$subject->unit }}
                                 </td>
+
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -112,7 +114,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -149,7 +151,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -182,7 +184,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -196,7 +198,7 @@
     <div class="p-8 border border-gray-200 rounded-md bg-white shadow mt-20">
         <div class="grid grid-cols-2 gap-9 md:grid-cols-2 ">
             <div class="flex flex-col gap-4 items-center justify-center ">
-                <div class="">السنة الثالثة  - الفصل الاول </div>
+                <div class="">السنة الثالثة - الفصل الاول </div>
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table class="w-full text-sm text-left text-center text-gray-500 dark:text-gray-400">
                         <thead class="text-lg uppercase text-gray-700 font-bold">
@@ -219,7 +221,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -252,7 +254,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -289,7 +291,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
@@ -322,7 +324,7 @@
                                     {{$subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree }}
+                                    {{$subject->degree->degree}}
                                 </td>
                             </tr>
                             @endforeach

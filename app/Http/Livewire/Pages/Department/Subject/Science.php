@@ -6,9 +6,13 @@ use Livewire\Component;
 use App\Models\Subject;
 
 class Science extends Component
-{    protected $listeners = ['$refresh', 'filterProjects'];
+{    protected $listeners = ['$refresh','search', 'filterProjects'];
     public   $stage , $course , $name_ar , $name_en , $unit;
-
+    public $search ;
+    public function search($search)
+    {
+        $this->search = $search;
+    }  
     public function filterProjects($stage , $course )
     {
         $this->stage = $stage;
@@ -38,7 +42,8 @@ class Science extends Component
     public function render()
     {
         if($this->stage && $this->course){
-            $subjects = Subject::where('department_id', 1)->where('stage', $this->stage)->where('course', $this->course)->get();
+            $subjects = Subject::where('department_id', 1)->where('stage', $this->stage)->where('course', $this->course)
+            ->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
         }
         else{
             $subjects = [];

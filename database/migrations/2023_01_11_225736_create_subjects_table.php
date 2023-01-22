@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('student_id')->nullable()->constrained('students')->onDelete('cascade');
             $table->string('name_en');
             $table->string('name_ar');
-            $table->float('degree')->nullable();
+            // $table->float('degree')->nullable();
             $table->integer('course')->default(1); //### first: 1, second:2
             $table->integer('stage')->default(1); //### first: 1, second:2, third:3 , fourth:4
             $table->integer('unit')->default(1); //### first: 1, second:2, third:3 , fourth:4

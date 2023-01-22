@@ -22,6 +22,7 @@ class SubjectSeeder extends Seeder
         ############# الكورس الاول مواد قسم الحاسوب  الصف الاول ###########
         Subject::create([
             'department_id' => Department::first()->id,
+            // 'student_id' => Student::first()->id,
             'name_en' => 'Programming 1',
             'name_ar' => 'البرمجة ١ ',
             'course' => 1,

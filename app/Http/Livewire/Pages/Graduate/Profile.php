@@ -10,7 +10,7 @@ class Profile extends Component
 {
     use LivewireAlert;
 
-    public $student_id , $student ,$show , $name_ar , $name_en , $gender , $graduation_year , $average , $round , $image_path , $department_id , $type , $average_written;
+    public $student_id ,$degree, $student ,$show , $name_ar , $name_en , $gender , $graduation_year , $average , $round , $image_path , $department_id , $type , $average_written;
     
     protected $listeners = [ '$refresh','delete'];
 
@@ -21,13 +21,12 @@ class Profile extends Component
         $this->name_en = $this->student->name_en;
         $this->gender = $this->student->gender;
         $this->graduation_year = $this->student->graduation_year;
-        $this->average = $this->student->average;
+        // $this->average = $this->student->average;
         $this->round = $this->student->round;
         $this->image_path = $this->student->image_path;
         $this->department_id = $this->student->department_id;
         $this->type = $this->student->type;
         $this->average_written = $this->student->average_written;
-        
     }
     public function delete()
     {
@@ -59,18 +58,18 @@ class Profile extends Component
     }
     public function render()
     {
-        //get degree
-        $subjects = Subject::where('stage',1)->where('course',1)->get();
-        $subjects1 = Subject::where('stage',1)->where('course',2)->get();
-        $subjects2 = Subject::where('stage',2)->where('course',1)->get();
-        $subjects3 = Subject::where('stage',2)->where('course',2)->get();
-        $subjects4 = Subject::where('stage',3)->where('course',1)->get();
-        $subjects5 = Subject::where('stage',3)->where('course',2)->get();
-        $subjects6 = Subject::where('stage',4)->where('course',1)->get();
-        $subjects7= Subject::where('stage',4)->where('course',2)->get();
-        $subjects8 = Subject::where('student_id',$this->student_id)->get();
-        //get degree
+        // average of degree tow boints 
+        $this->average = Degree::where('student_id', $this->student_id, function($query){$query->where('department_id', $this->student->department_id);})->avg('degree');
+        $degrees = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',1)->where('course',1)->where('department_id', $this->student->department_id);})->get();
+        $degrees1 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',1)->where('course',2)->where('department_id', $this->student->department_id);})->get();
+        $degrees2 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',2)->where('course',1)->where('department_id', $this->student->department_id);})->get();
+        $degrees3 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',2)->where('course',2)->where('department_id', $this->student->department_id);})->get();
+        $degrees4 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',3)->where('course',1)->where('department_id', $this->student->department_id);})->get();
+        $degrees5 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',3)->where('course',2)->where('department_id', $this->student->department_id);})->get();
+        $degrees6 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',4)->where('course',1)->where('department_id', $this->student->department_id);})->get();
+        $degrees7= Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',4)->where('course',2)->where('department_id', $this->student->department_id);})->get();
+        $degrees8 = Subject::where('student_id',$this->student_id)->where('department_id', $this->student->department_id)->with('degree')->get();
         
-        return view('livewire.pages.graduate.profile',compact('subjects','subjects1','subjects2','subjects3','subjects4','subjects5','subjects6','subjects7','subjects8',));
+        return view('livewire.pages.graduate.profile',compact('degrees', 'degrees1', 'degrees2', 'degrees3', 'degrees4', 'degrees5', 'degrees6', 'degrees7', 'degrees8'));
     }
 }

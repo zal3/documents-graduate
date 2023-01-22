@@ -21,8 +21,8 @@ return new class extends Migration
             $table->boolean('type')->default(0); //### Morning: 0, Evening:1
             $table->boolean('gender')->default(0);###   Male: 0, Female:1
             $table->integer('graduation_year');
-            $table->float('average');
-            $table->string('average_written');
+            $table->float('average')->nullable();
+            $table->string('average_written')->nullable();
             $table->integer('round'); ### 0: First, 1: Second, 2: Third
             $table->string('image_path')->nullable();
 

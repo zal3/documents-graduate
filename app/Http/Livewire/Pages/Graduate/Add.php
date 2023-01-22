@@ -12,18 +12,16 @@ class Add extends Component
 {
     use LivewireAlert;
     use WithFileUploads;
-    public $name_en, $name_ar, $gender, $average_written, $graduation_year, $average, $round, $image_path,
+    public $name_en, $name_ar, $gender, $graduation_year, $average , $round, $image_path,
         $department_id, $departments, $type, $student_id, $subject_id, $degree1 = [], $degree2 = [], $degree0 = [], $degree3 = [], $degree4 = [], $degree5 = [], $degree6 = [], $degree7 = [];
     protected $rules = [
         'name_en' => 'required',
         'name_ar' => 'required',
         'gender' => 'required',
         'graduation_year' => 'required',
-        'average' => 'required',
         'round' => 'required',
         'department_id' => 'required',
         'type' => 'required',
-        'average_written' => 'required',
     ];
     public function add(Student $student, Subject $subject)
     {
@@ -35,12 +33,12 @@ class Add extends Component
                 'name_ar' => $this->name_ar,
                 'gender' => $this->gender,
                 'graduation_year' => $this->graduation_year,
-                'average' => $this->average,
+                // 'average' => $this->average,
                 'round' => $this->round,
                 'image_path' => $this->image_path,
                 'department_id' => $this->department_id,
                 'type' => $this->type,
-                'average_written' => $this->average_written,
+                // 'average_written' => $this->average_written,
             ]
         );
 
@@ -124,14 +122,25 @@ class Add extends Component
 
     public function render()
     {
+        // if($this->department_id ==1 ){
         $subjects0 = Subject::where('stage', 1)->where('course', 1)->get();
         $subjects1 = Subject::where('stage', 1)->where('course', 2)->get();
-        $subjects2 = Subject::where('student_id', $this->student_id)->where('stage', 2)->where('course', 1)->get();
-        $subjects3 = Subject::where('student_id', $this->student_id)->where('stage', 2)->where('course', 2)->get();
-        $subjects4 = Subject::where('student_id', $this->student_id)->where('stage', 3)->where('course', 1)->get();
-        $subjects5 = Subject::where('student_id', $this->student_id)->where('stage', 3)->where('course', 2)->get();
-        $subjects6 = Subject::where('student_id', $this->student_id)->where('stage', 4)->where('course', 1)->get();
-        $subjects7 = Subject::where('student_id', $this->student_id)->where('stage', 4)->where('course', 2)->get();
+        $subjects2 = Subject::where('stage', 2)->where('course', 1)->get();
+        $subjects3 = Subject::where('stage', 2)->where('course', 2)->get();
+        $subjects4 = Subject::where('stage', 3)->where('course', 1)->get();
+        $subjects5 = Subject::where('stage', 3)->where('course', 2)->get();
+        $subjects6 = Subject::where('stage', 4)->where('course', 1)->get();
+        $subjects7 = Subject::where('stage', 4)->where('course', 2)->get();
+        // }else{
+        // $subjects0 = Subject::where('stage', 1)->where('course', 1)->where('department_id', 2)->get();
+        // $subjects1 = Subject::where('stage', 1)->where('course', 2)->where('department_id', 2)->get();
+        // $subjects2 = Subject::where('stage', 2)->where('course', 1)->where('department_id', 2)->get();
+        // $subjects3 = Subject::where('stage', 2)->where('course', 2)->where('department_id', 2)->get();
+        // $subjects4 = Subject::where('stage', 3)->where('course', 1)->where('department_id', 2)->get();
+        // $subjects5 = Subject::where('stage', 3)->where('course', 2)->where('department_id', 2)->get();
+        // $subjects6 = Subject::where('stage', 4)->where('course', 1)->where('department_id', 2)->get();
+        // $subjects7 = Subject::where('stage', 4)->where('course', 2)->where('department_id', 2)->get();
+        // }
         return view('livewire.pages.graduate.add', compact(
             'subjects0',
             'subjects1',

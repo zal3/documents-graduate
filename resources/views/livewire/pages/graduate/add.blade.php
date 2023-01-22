@@ -159,29 +159,30 @@
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
                 </div>
-                <div class="flex flex-col">
+                
+                <!-- <div class="flex flex-col">
                     <label for="average" class="text-sm text-gray-900 ">المعدل</label>
                     <input type="text" id="average" wire:model.lazy="average"
                         class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1"
-                        placeholder="إدخل المعدل" />
+                        placeholder="إدخل المعدل" /> -->
                     <!-- @error('average')
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
-                </div>
+                <!-- </div> -->
                 <!-- المعدل كتابه  -->
-                <div class="flex flex-col">
+                <!-- <div class="flex flex-col">
                     <label for="average_written" class="text-sm text-gray-900 ">المعدل كتابة</label>
                     <input type="text" id="average_written" wire:model.lazy="average_written"
                         class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1"
-                        placeholder="إدخل المعدل كتابة" />
+                        placeholder="إدخل المعدل كتابة" /> -->
                     <!-- @error('average_written')
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <!-- enter student subjects degree here -->
-        <button id="filterHome" data-dropdown-toggle="dropdownFilterHome" data-dropdown-placement="bottom-end"
+        <div type="button" id="filterHome" data-dropdown-toggle="dropdownFilterHome" data-dropdown-placement="bottom-end"
             class="p-2 py-1 text-gray-600 duration-150 ease-in delay-75 rounded-lg hover:text-gray-900">
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -190,7 +191,7 @@
                         clip-rule="evenodd" />
                 </svg>
                 <span>اضافة درجات الطالب</span>
-        </button>
+</div>
         <!-- <div id="dropdownFilterHome" class="left-0 hidden right-46 "> -->
         <div class="flex flex-col mb-10">
             <div class="flex flex-col items-center justify-center gap-4 ">

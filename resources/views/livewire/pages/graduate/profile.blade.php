@@ -3,7 +3,8 @@
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0">
                 <div>
-                    <p class="font-bold text-gray-700 text-xl">{{$student->average}}</p>
+                    <!-- //tow number after point  -->
+                    <p class="font-bold text-gray-700 text-xl"> {{ number_format($average, 2) }}</p>
                     <p class="text-gray-400">المعدل</p>
                 </div>
                 <div>
@@ -42,13 +43,13 @@
             <div>
                 <p class="text-gray-600  font-light px-2">الجنس: </p>
                 <p class="text-gray-600  font-light px-2">سنة التخرج: </p>
-                <p class="text-gray-600  font-light px-2"> المعدل : </p>
+                <p class="text-gray-600  font-light px-2"> النتيجة  : </p>
             </div>
             <div>
                 <p class="text-gray-600  font-light px-2">{{$student->gender == 0 ? 'ذكر' : 'أنثى'}}</p>
                 <p class="text-gray-600  font-light px-2"> @if($student->graduation_year == 0) 2014-2015 @elseif($student->graduation_year == 1) 2015-2016 @elseif($student->graduation_year == 2) 2016-2017 @elseif($student->graduation_year == 3) 2017-2018 @elseif($student->graduation_year == 4) 2018-2019 @elseif($student->graduation_year == 5) 2019-2020 @elseif($student->graduation_year == 6) 2020-2021 @elseif($student->graduation_year == 7) 2021-2022 @elseif($student->graduation_year == 8) 2022-2023 @elseif($student->graduation_year == 9) 2023-2024 @elseif($student->graduation_year == 10) 2024-2025 @elseif($student->graduation_year == 11) 2025-2026 @elseif($student->graduation_year == 12) 2026-2027 @elseif($student->graduation_year == 13) 2027-2028 @elseif($student->graduation_year == 14) 2028-2029 @elseif($student->graduation_year == 15) 2029-2030 @endif
                 </p>
-                <p class="text-gray-600  font-light px-2"> {{$student->average_written}}</p>
+                <p class="text-gray-600  font-light px-2"> @if($average >= 50) ناجح @else  غير ناجح @endif</p>
             </div>
 
         </div>
@@ -70,25 +71,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects as $index => $subject )
+                            @foreach ($degrees as $index => $degree )
 
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium font-bold text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                    {{$degree->subject->unit }}
                                 </td>
 
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                {{$subject->degree->degree}}
+                                {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div>النتيجة : ناجح</div>
             </div>
             <div class="flex flex-col gap-4 items-center justify-center">
                 <div class="">السنة الاولى - الفصل الثاني </div>
@@ -105,23 +105,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects1 as $index => $subject )
+                        @foreach ($degrees1 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="font-bold px-6 py-4 font-medium text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="">النتيجة : ناجح</div>
             </div>
         </div>
     </div>
@@ -142,23 +141,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects2 as $index => $subject )
+                        @foreach ($degrees2 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium font-bold text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div>النتيجة : ناجح</div>
             </div>
             <div class="flex flex-col gap-4 items-center justify-center">
                 <div class="">السنة الثانية - الفصل الثاني </div>
@@ -175,23 +173,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects3 as $index => $subject )
+                        @foreach ($degrees3 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="font-bold px-6 py-4 font-medium text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="">النتيجة : ناجح</div>
             </div>
         </div>
     </div>
@@ -212,23 +209,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects4 as $index => $subject )
+                        @foreach ($degrees4 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium font-bold text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div>النتيجة : ناجح</div>
             </div>
             <div class="flex flex-col gap-4 items-center justify-center">
                 <div class="">السنة الثالثة - الفصل الثاني </div>
@@ -245,23 +241,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects5 as $index => $subject )
+                        @foreach ($degrees5 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="font-bold px-6 py-4 font-medium text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="">النتيجة : ناجح</div>
             </div>
         </div>
     </div>
@@ -282,23 +277,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects6 as $index => $subject )
+                        @foreach ($degrees6 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="px-6 py-4 font-medium font-bold text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div>النتيجة : ناجح</div>
             </div>
             <div class="flex flex-col gap-4 items-center justify-center">
                 <div class="">السنة الرابعة - الفصل الثاني </div>
@@ -315,23 +309,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($subjects7 as $index => $subject )
+                        @foreach ($degrees7 as $index => $degree )
                             <tr class="border-b border-gray-200 dark:border-gray-700">
                                 <th scope="row" class="font-bold px-6 py-4 font-medium text-gray-600 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
-                                    {{$subject->name_ar }}
+                                    {{$degree->subject->name_ar}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{$subject->unit }}
+                                   {{$degree->subject->unit }}
                                 </td>
                                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                                    {{$subject->degree->degree}}
+                                    {{$degree->degree}}
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="">النتيجة : ناجح</div>
             </div>
         </div>
     </div>

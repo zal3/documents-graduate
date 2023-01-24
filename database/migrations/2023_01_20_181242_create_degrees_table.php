@@ -18,6 +18,9 @@ return new class extends Migration
             $table->foreignId('student_id')->nullable()->constrained('students')->onDelete('cascade');
             $table->foreignId('subject_id')->nullable()->constrained('subjects')->onDelete('cascade');
             $table->float('degree')->nullable();
+            // $table->float('average')->nullable();
+            // $table->string('average_written')->nullable();
+
             $table->timestamps();
         });
     }

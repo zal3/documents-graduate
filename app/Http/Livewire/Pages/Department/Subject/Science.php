@@ -4,10 +4,11 @@ namespace App\Http\Livewire\Pages\Department\Subject;
 
 use Livewire\Component;
 use App\Models\Subject;
-
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Science extends Component
-{    protected $listeners = ['$refresh','search', 'filterProjects'];
-    public   $stage , $course , $name_ar , $name_en , $unit;
+{      use LivewireAlert;
+    protected $listeners = ['$refresh','search', 'filterProjects','delete'];
+    public   $stage , $course , $name_ar , $name_en , $unit, $subject_id;
     public $search ;
     public function search($search)
     {
@@ -38,6 +39,34 @@ class Science extends Component
         $this->name_en = '';
         $this->unit = '';
         // $this->emit('refresh');
+    }
+    public function delete()
+    {   
+        Subject::findOrFail($this->subject_id)->delete();
+        $this->alert('success', 'تم الحذف ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        $this->emitUp('$refresh');
+        $this->emitTo('pages.science.subject', '$refresh');
+        redirect()->route('science-subject');
+
+
+    }
+
+    public function confirm($id)
+    {
+        $this->subject_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف المادة ؟ ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
     }
     public function render()
     {

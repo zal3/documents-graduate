@@ -1,15 +1,16 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Document;
+
 use App\Models\Student;
-use GuzzleHttp\Psr7\Request;
+
 use Livewire\Component;
 
-class ShowArDoc extends Component
+class ShowGrad extends Component
 {
     public $student_id;
     public $student;
-    public $selected ;
+    public $selected;
     public function mount($student_id, $selected)
     {
         $this->student_id = $student_id;
@@ -18,7 +19,6 @@ class ShowArDoc extends Component
     }
     public function render()
     {
-
-        return view('livewire.pages.document.show-ar-doc');
+        return view('livewire.pages.document.show-grad');
     }
 }

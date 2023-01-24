@@ -1,4 +1,4 @@
-<div class="mr-9">
+<div class="mr-56">
     <div class="">
         <div class="bg-white mt-9  ml-44 border-4 border-[#FFCA28]  hover:border-[#071F63]  w-3/4 max-h-28 rounded-lg hover:transform transition duration-500 ease-in-out transform  hover:scale-105">
             <a href="{{ route('arabic') }}">
@@ -18,12 +18,13 @@
                 </div>
             </a>
         </div>
+        
         <div class=" bg-white mt-9  ml-44 border-4 border-[#FFCA28]  hover:border-[#071F63]  w-3/4 max-h-28 rounded-lg hover:transform transition duration-500 ease-in-out transform  hover:scale-105">
             <a href="{{ route('graduate-doc') }}">
                 <div class="p-5 mr-24">
                     <img class="-mt-4 rounded-t-lg -mr-28" src="{{ asset('img/page.jpg') }}" alt="" />
                     <h5 class="mb-2 -mt-20 text-2xl font-bold tracking-tight text-gray-900">تأييد تخرج</h5>
-                    <p class="mb-3 font-normal text-gray-700 ">لغرض الدراسات</p>
+                    <p class="mb-3 font-normal text-gray-700 ">قبل و بعد الامر الجامعي</p>
                 </div>
             </a>
         </div>
@@ -32,7 +33,7 @@
                 <div class="p-5 mr-24">
                     <img class="-mt-4 rounded-t-lg -mr-28" src="{{ asset('img/page.jpg') }}" alt="" />
                     <h5 class="mb-2 -mt-20 text-2xl font-bold tracking-tight text-gray-900">تأييد تخرج</h5>
-                    <p class="mb-3 font-normal text-gray-700 ">قبل و بعد الامر الجامعي</p>
+                    <p class="mb-3 font-normal text-gray-700 ">لغرض الدراسات</p>
                 </div>
             </a>
         </div>

@@ -13,8 +13,10 @@ class Information extends Component
         $this->search = $search;
     }  
     public function render()
-    {
-        $students = Student::with('department')->where('department_id' , 2)->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
-        return view('livewire.pages.department.student.information', compact('students'));
+    {//unid where department_id = 1
+        $students = Student::whereHas('unid', function($query){
+            $query->where('department_id', 2);
+        })->with('unid')->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
+              return view('livewire.pages.department.student.information', compact('students'));
     }
 }

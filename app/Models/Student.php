@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $fillable = ['department_id','type' ,'average_written', 'name_en','name_ar','gender','graduation_year','average','round','image_path'];
+    protected $fillable = ['unid_id' ,'average_written', 'name_en','name_ar','gender','average','image_path'];
 
     ### Relation ###
-    public function department()
-    {
-        return $this->belongsTo(Department::class);
-    }
+    // public function department()
+    // {
+    //     return $this->belongsTo(Department::class);
+    // }
 
     public function degrees()
     {
@@ -24,6 +24,11 @@ class Student extends Model
     public function subjects()
     {
         return $this->belongsToMany(Subject::class)->withPivot('degree');
+    }
+
+    public function unid()
+    {
+        return $this->belongsTo(Unid::class);
     }
     
     ### End Relation ###

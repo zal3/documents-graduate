@@ -2,12 +2,11 @@
 
 namespace App\Http\Livewire\Pages\Document;
 use App\Models\Student;
-use GuzzleHttp\Psr7\Request;
+
 use Livewire\Component;
 
-class ShowArDoc extends Component
-{
-    public $student_id;
+class ShowMast extends Component
+{public $student_id;
     public $student;
     public $selected ;
     public function mount($student_id, $selected)
@@ -18,7 +17,6 @@ class ShowArDoc extends Component
     }
     public function render()
     {
-
-        return view('livewire.pages.document.show-ar-doc');
+        return view('livewire.pages.document.show-mast');
     }
 }

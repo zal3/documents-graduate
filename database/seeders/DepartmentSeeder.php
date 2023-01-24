@@ -15,10 +15,6 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        $type = [
-            'Morning',
-            'Evening',
-        ];
         $stage = [
             'First',
             'Second',

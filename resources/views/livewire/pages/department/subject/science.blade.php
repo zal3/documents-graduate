@@ -45,10 +45,10 @@
                             #
                         </th>
                         <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
-                            الوحدة
+                            اسم المادة
                         </th>
                         <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
-                            اسم المادة
+                            الوحدة
                         </th>
                     </tr>
                 </thead>
@@ -65,10 +65,10 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                            <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
+                            <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                            <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>
+                            <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
                         </td>
                     </tr>
                 @endforeach

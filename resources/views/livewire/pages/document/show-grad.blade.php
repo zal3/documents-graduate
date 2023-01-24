@@ -1,23 +1,23 @@
-    <div class="container flex flex-col justify-between  mx-auto px-4">
-        <div class="grid grid-cols-3 items-end ">
-            <div> </div>
-            <div class="text-center items-center">
-                <h2 class="text-center text-xl  font-semibold">وثيقة تخرج</h2>
-                <h2 class="text-center text-xl  font-semibold">الى/من يمهمه الامر</h2>
-                @if($selected)
+<div class="container flex flex-col justify-between  mx-auto px-4">
+    <div class="grid grid-cols-3 items-end ">
+        <div> </div>
+        <div class="text-center items-center">
+            <h2 class="text-center text-xl  font-semibold">تأييد تخرج </h2>
+            <h2 class="text-center text-xl  font-semibold">الى/من يمهمه الامر</h2>
+            <!-- @if($selected)
                 رقم التسلسل : <span class=" text-center font-semibold"> {{$student->id}}</span>
-                @endif
-            </div>
-            @if($student->gender == 1)
-            <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
-            @else
-            <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
-            @endif
-            
+                @endif -->
         </div>
-        <div  class="flex mx-40">
-            <div class=" mt-20 text-md">نؤيد لكم ان <span class="font-semibold"> {{$student->name_ar}}</span>
-               
+        @if($student->gender == 1)
+        <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
+        @else
+        <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt="" class="w-36 h-36 border-2  rounded-sm border-gray-900 p-1 mx-auto mt-10">
+        @endif
+
+    </div>
+    <div class="flex  mx-44">
+        <div class=" mt-20 text-md">نؤيد لكم ان <span class="font-semibold"> {{$student->name_ar}}</span>
+
             <span class="text-lg">
                 @if($student->gender ==1)
                 الملصقة
@@ -65,36 +65,28 @@
                 @else
                 الدراسة المسائية
                 @endif
-                حسب الأمر الجامعي ذي العدد
-( {{$student->unid->number}} )                في
-                <!-- timestamp -->
-                وتاريخ
-                {{date('Y-m-d')}}
-                بتقدير (
-                @if($student->average <= 50) ضعيف @elseif($student->average <= 60) مقبول @elseif($student->average <= 70) متوسط @elseif($student->average <= 80) جيد @elseif($student->average <= 90) جيد جدا @elseif($student->average <= 100) ممتاز @endif ) وبمعدل تخرج ( {{$student->average}} )
-            .</span>
-            </div>
+                في الفصل الدراسي للعام اعلاه ,ولا يعتبر هذا التأييد وثيقة تخرج
+                @if($selected)
+                لحين صدور الامر الجامعي الخاص بخريجي الدور على قسمه
+                @endif
+                وبناء على طلبه زود بهذا التأييد . </span>
         </div>
-        <div class="grid grid-cols-3 mt-24 justify-between  text-center items-end">
-            <div class="">
-                <p class=" font-semibold mb-2 ">ثمينة محمد خلف</p>
-                <p> مسؤول وحدة الوثائق</p>
-            </div>
-            <div class="">
-                <p class="mb-2">الأستاذ الدكتور
-                <p class=" font-semibold mb-2"> زينب علي خلف</p>
-                <p class="">معاون العميد للشؤون العلمية والدراسات العليا</p>
-                </p>
-            </div>
-            <div class="">
-                <p class="mb-2 ">
-                    الأستاذ المساعد الدكتور
-                <p class=" font-semibold mb-2"> سلمى عبد الباقي محمود</p>
-                <p class=""> عميد الكلية</p>
-                </p>
-            </div>
+    </div>
+    <div class="flex mx-auto mt-20"> مع التقدير</div>
+    <div class="grid grid-cols-2 mt-9 justify-between  text-center items-end">
+        <div class="">
+            <p class=" font-semibold mb-2 ">ثمينة محمد خلف</p>
+            <p> مسؤول وحدة الوثائق</p>
+        </div>
+        <div class="">
+            <p class="mb-2">الأستاذ الدكتور
+            <p class=" font-semibold mb-2"> زينب علي خلف</p>
+            <p class="">معاون العميد للشؤون العلمية والدراسات العليا</p>
+            </p>
         </div>
 
+    </div>
 
-    </div>
-    </div>
+
+</div>
+</div>

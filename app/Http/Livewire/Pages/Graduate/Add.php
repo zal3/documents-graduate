@@ -111,13 +111,12 @@ class Add extends Component
         if ($this->image_path)
             $student->add_image($this->image_path);
 
-        $this->reset();
-
         $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->reset();
     }
 
     public function render()

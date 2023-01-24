@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Graduate;
-use App\Models\Student;
+use App\Models\{Student, Unid};
 use Livewire\Component;
 
 class Main extends Component
 {
     protected $listeners = ['$refresh', 'search', 'filterStudents'];
-    public $search ,$type ,$round , $gender , $department_id , $graduation_year ;
+    public $search ,$type ,$round , $gender , $department_id , $graduation_year ,$name_ar;
     public function search($search)
     {
         $this->search = $search;
@@ -21,8 +21,8 @@ class Main extends Component
         $this->graduation_year = $graduation_year;
     }
     public function render()
-    {
-        $students = Student::with('department')->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
+    {$search = '%' . $this->search . '%';
+        $students = Student::with('unid')->where('name_ar' , 'like' , $search)->get();
         if($this->type){
             $students = $students->where('type', $this->type);
         }

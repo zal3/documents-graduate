@@ -40,7 +40,12 @@
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                             <!-- student name -->
-                            <div class="text-sm leading-5 text-blue-900">{{ $student->name_ar }}</div>
+                            <div class="text-sm leading-5 text-blue-900">
+                                @if($student->unid->round == 2 )
+                                *
+                                @endif
+                                
+                            {{ $student->name_ar }}</div>
                         </td>
                         <td
                             class="px-6 py-4 text-sm leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500">

@@ -159,13 +159,13 @@
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
                 </div>
-                
+
                 <!-- <div class="flex flex-col">
                     <label for="average" class="text-sm text-gray-900 ">المعدل</label>
                     <input type="text" id="average" wire:model.lazy="average"
                         class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1"
                         placeholder="إدخل المعدل" /> -->
-                    <!-- @error('average')
+                <!-- @error('average')
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
                 <!-- </div> -->
@@ -175,14 +175,15 @@
                     <input type="text" id="average_written" wire:model.lazy="average_written"
                         class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1"
                         placeholder="إدخل المعدل كتابة" /> -->
-                    <!-- @error('average_written')
+                <!-- @error('average_written')
     <span class="text-red-600">{{ $message }}</span>
 @enderror -->
                 <!-- </div> -->
             </div>
         </div>
         <!-- enter student subjects degree here -->
-        <div type="button" id="filterHome" data-dropdown-toggle="dropdownFilterHome" data-dropdown-placement="bottom-end"
+        <div type="button" id="filterHome" data-dropdown-toggle="dropdownFilterHome"
+            data-dropdown-placement="bottom-end"
             class="p-2 py-1 text-gray-600 duration-150 ease-in delay-75 rounded-lg hover:text-gray-900">
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -191,306 +192,306 @@
                         clip-rule="evenodd" />
                 </svg>
                 <span>اضافة درجات الطالب</span>
-</div>
-        <!-- <div id="dropdownFilterHome" class="left-0 hidden right-46 "> -->
-        <div class="flex flex-col mb-10">
-            <div class="flex flex-col items-center justify-center gap-4 ">
-                <div class="flex justify-between gap-56">
-                    <div class="">السنة الاولى - الفصل الاول </div>
-                    <div class="">السنة الاولى - الفصل الثاني </div>
-                </div>
-                <div class="flex justify-between ">
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects0 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree0.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
-                                @endforeach
-                            </tbody>
-                        </table>
+            </div>
+            <!-- <div id="dropdownFilterHome" class="left-0 hidden right-46 "> -->
+            <div class="flex flex-col mb-10">
+                <div class="flex flex-col items-center justify-center gap-4 ">
+                    <div class="flex justify-between gap-56">
+                        <div class="">السنة الاولى - الفصل الاول </div>
+                        <div class="">السنة الاولى - الفصل الثاني </div>
                     </div>
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
+                    <div class="flex justify-between ">
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects0 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree0.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects1 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree1.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects1 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree1.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex flex-col mb-10">
-            <div class="flex flex-col items-center justify-center gap-4 ">
-                <div class="flex justify-between gap-56">
-                    <div class="">السنة الثانية - الفصل الاول </div>
-                    <div class="">السنة الثانية - الفصل الثاني </div>
-                </div>
-                <div class="flex justify-between ">
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects2 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree2.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+            <div class="flex flex-col mb-10">
+                <div class="flex flex-col items-center justify-center gap-4 ">
+                    <div class="flex justify-between gap-56">
+                        <div class="">السنة الثانية - الفصل الاول </div>
+                        <div class="">السنة الثانية - الفصل الثاني </div>
                     </div>
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects3 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree3.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
+                    <div class="flex justify-between ">
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-col mb-10">
-            <div class="flex flex-col items-center justify-center gap-4 ">
-                <div class="flex justify-between gap-56">
-                    <div class="">السنة الثالثة - الفصل الاول </div>
-                    <div class="">السنة الثالثة - الفصل الثاني </div>
-                </div>
-                <div class="flex justify-between ">
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects4 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree4.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects2 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree2.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects5 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree5.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects3 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree3.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex flex-col mb-10">
-            <div class="flex flex-col items-center justify-center gap-4 ">
-                <div class="flex justify-between gap-56">
-                    <div class="">السنة الرابعة - الفصل الاول </div>
-                    <div class="">السنة الرابعة - الفصل الثاني </div>
-                </div>
-                <div class="flex justify-between ">
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects6 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree6.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+            <div class="flex flex-col mb-10">
+                <div class="flex flex-col items-center justify-center gap-4 ">
+                    <div class="flex justify-between gap-56">
+                        <div class="">السنة الثالثة - الفصل الاول </div>
+                        <div class="">السنة الثالثة - الفصل الثاني </div>
                     </div>
-                    <div class="relative overflow-x-auto border ">
-                        <table class="w-full text-sm text-center text-gray-500 ">
-                            <thead class="text-lg font-bold text-gray-700 uppercase">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        المادة </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        الوحدة </th>
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 ">
-                                        الدرجة </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($subjects7 as $subject)
-                                    <tr class="border-b border-gray-200 ">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
-                                            {{ $subject->name_ar }}
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            {{ $subject->unit }}
-                                        </td>
-                                        <td class=" bg-gray-50">
-                                            <input type="text" wire:model.lazy="degree7.{{ $subject->id }}"
-                                                class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
-                                                placeholder=" " />
-                                        </td>
+                    <div class="flex justify-between ">
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects4 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree4.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects5 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree5.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- </div> -->
-        <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
-            إضافة
-        </button>
+            <div class="flex flex-col mb-10">
+                <div class="flex flex-col items-center justify-center gap-4 ">
+                    <div class="flex justify-between gap-56">
+                        <div class="">السنة الرابعة - الفصل الاول </div>
+                        <div class="">السنة الرابعة - الفصل الثاني </div>
+                    </div>
+                    <div class="flex justify-between ">
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects6 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree6.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relative overflow-x-auto border ">
+                            <table class="w-full text-sm text-center text-gray-500 ">
+                                <thead class="text-lg font-bold text-gray-700 uppercase">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            المادة </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            الوحدة </th>
+                                        <th scope="col" class="px-6 py-3 bg-gray-50 ">
+                                            الدرجة </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($subjects7 as $subject)
+                                        <tr class="border-b border-gray-200 ">
+                                            <th scope="row"
+                                                class="px-6 py-4 font-bold text-gray-600 whitespace-nowrap bg-gray-50 ">
+                                                {{ $subject->name_ar }}
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                {{ $subject->unit }}
+                                            </td>
+                                            <td class=" bg-gray-50">
+                                                <input type="text" wire:model.lazy="degree7.{{ $subject->id }}"
+                                                    class="h-10 text-sm text-gray-900 bg-white border-gray-400 rounded-lg w-14 border-1"
+                                                    placeholder=" " />
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <button type="submit" class="flex px-16 mx-auto text-center  py-2 text-white rounded-md  bg-[#071F63] ">
+                إضافة
+            </button>
     </form>
 </div>

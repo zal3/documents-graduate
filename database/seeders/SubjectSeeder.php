@@ -18,7 +18,7 @@ class SubjectSeeder extends Seeder
      */
     public function run()
     {
-        /////// اضافة الكورسات والمواد للقسم الاول ###########
+        ////// اضافة الكورسات والمواد للقسم الاول ###########
         ############# الكورس الاول مواد قسم الحاسوب  الصف الاول ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -323,14 +323,12 @@ class SubjectSeeder extends Seeder
             'unit' => 3,
         ]);
 
-
         ############# الكورس الاول مواد قسم الحاسوب  الصف الرابع ###########
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' Data Mining',
             'name_ar' => 'تنقيب البيانات ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 2,
         ]);
@@ -339,7 +337,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Graduation Project',
             'name_ar' => 'مشروع التخرج ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 2,
         ]);
@@ -348,7 +345,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Operating Systems',
             'name_ar' => 'انظمة لتشغيل ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -357,7 +353,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Computer Vision',
             'name_ar' => 'الرؤيا بالحاسوب ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -366,7 +361,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Cloud Computing',
             'name_ar' => 'الحوسبة السحابية ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 2,
         ]);
@@ -375,7 +369,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Mobile Applications',
             'name_ar' => 'تطبيقات النقال ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -384,18 +377,15 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Computer Intelligence',
             'name_ar' => 'الذكاء الحاسوبي ',
             'course' => 1,
-
             'stage' => 4,
             'unit' => 3,
         ]);
-
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الرابع ###########
         Subject::create([
             'department_id' => Department::first()->id,
             'name_en' => ' Computer Security',
             'name_ar' => 'امنية الحاسوب ',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -404,7 +394,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Selected Topics',
             'name_ar' => 'مواضيع مختارة ',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -413,7 +402,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Human Computer Interaction',
             'name_ar' => 'تفاعل الانسان مع الحاسوب ',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -422,7 +410,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Computer Simulation',
             'name_ar' => 'المحاكاة بالحاسوب ',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -431,7 +418,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Communication Skills',
             'name_ar' => 'مهارات الاتصال ',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -440,7 +426,6 @@ class SubjectSeeder extends Seeder
             'name_en' => ' Knowledge Engineering',
             'name_ar' => 'هندسة المعرفة',
             'course' => 2,
-
             'stage' => 4,
             'unit' => 3,
         ]);
@@ -454,7 +439,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'برمجة الحاسوب 1',
             'course' => 1,
             'stage' => 1,
-            'unit' => 3,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -486,7 +471,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'اللغة الانكليزية 1',
             'course' => 1,
             'stage' => 1,
-            'unit' => 3,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -494,16 +479,16 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'الديمقراطية وحقوق الانسان',
             'course' => 1,
             'stage' => 1,
-            'unit' => 3,
+            'unit' => 2,
         ]);
-        
-        
+
+
         ############# الكورس الثاني مواد قسم تكنولوجيا المعلومات   الصف الاول ###########
-//         برمجة الحاسوب 2
-// تطبيقات الحاسوب في الأعمال
-// الهياكل المتقطعة
-// مبادئ نظم المعلومات
-// أساسيات تكنولوجيا المعلومات
+        //         برمجة الحاسوب 2
+        // تطبيقات الحاسوب في الأعمال
+        // الهياكل المتقطعة
+        // مبادئ نظم المعلومات
+        // أساسيات تكنولوجيا المعلومات
 
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -511,7 +496,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'برمجة الحاسوب 2',
             'course' => 2,
             'stage' => 1,
-            'unit' => 3,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -554,7 +539,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'البرمجة كائنيه التوجه',
             'course' => 1,
             'stage' => 2,
-            'unit' => 3,
+            'unit' => 4,
         ]);
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -594,7 +579,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'مهارات اللغة العربية',
             'course' => 1,
             'stage' => 2,
-            'unit' => 3,
+            'unit' => 2,
         ]);
 
         ############# الكورس الثاني مواد قسم تكنولوجيا المعلومات   الصف الثاني ###########
@@ -644,7 +629,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'اللغة الانكليزية 2',
             'course' => 2,
             'stage' => 2,
-            'unit' => 3,
+            'unit' => 2,
         ]);
 
 
@@ -695,7 +680,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'أخلاقيات الحاسوب',
             'course' => 1,
             'stage' => 3,
-            'unit' => 3,
+            'unit' => 2,
         ]);
 
 
@@ -785,13 +770,13 @@ class SubjectSeeder extends Seeder
         ]);
 
         ############# الكورس الثاني مواد قسم تكنولوجيا المعلومات   الصف الرابع ###########
- 
+
         // ضمان جودة البرمجيات
         // أمنية نظم المعلومات
         // نظم معلومات الأعمال
         // نظم المعلومات الجغرافية
         // السلوك التنظيمي
-      
+
         Subject::create([
             'department_id' => Department::find(2)->id,
             'name_en' => ' Software Quality Assurance',
@@ -822,7 +807,7 @@ class SubjectSeeder extends Seeder
             'name_ar' => 'نظم المعلومات الجغرافية',
             'course' => 2,
             'stage' => 4,
-            'unit' => 3,
+            'unit' => 2,
         ]);
         Subject::create([
             'department_id' => Department::find(2)->id,

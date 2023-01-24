@@ -14,14 +14,15 @@
             <!-- <p class="text-xl font-semibold ">اضافة صورة الخريج</p> -->
             <div class="flex justify-center rounded-md ">
                 <div class="space-y-1 text-center">
-                    <label class="w-full flex flex-col items-center px-2 py-6  @if ($image_path) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
+                    <label
+                        class="w-full flex flex-col items-center px-2 py-6  @if ($image_path) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
                         <div wire:target="image_path">
                         </div>
                         <span class="mt-2 text-base leading-normal">
                             @if ($image_path)
-                            تم اختيار الصورة
+                                تم اختيار الصورة
                             @else
-                            اضافة صورة الخريج
+                                اضافة صورة الخريج
                             @endif
                         </span>
                         <input wire:model.lazy="image_path" type="file" class="hidden" />

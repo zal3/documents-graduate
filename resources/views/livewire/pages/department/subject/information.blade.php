@@ -10,10 +10,10 @@
         <table class="min-w-full text-center">
             <thead>
                 <tr class="">
-                    <div class=" rounded-lg bg-[#FFC657] p-3 grid justify-between grid-cols-3  items-center ">
-                        <div class="grid items-start grid-cols-2  mr-9">
+                    <div class="bg-[#FFC657] p-3 grid justify-between grid-cols-3  items-center ">
+                        <div class="grid items-start grid-cols-2 mr-9">
                             <select wire:model="stage"
-                                class="w-40 py-2 text-sm border border-gray-900  focus:border-gray-500 focus:bg-white focus:ring-0">
+                                class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
                                 <option value="0">المرحلة </option>
                                 <option value="1">الاولى </option>
                                 <option value="2"> الثانية</option>
@@ -21,7 +21,7 @@
                                 <option value="4"> الرابعة</option>
                             </select>
                             <select wire:model="course"
-                                class="w-40 py-2 text-sm border border-gray-900  focus:border-gray-500 focus:bg-white focus:ring-0">
+                                class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
                                 <option value="0">الكورس</option>
                                 <option value="1">الاول</option>
                                 <option value="2"> الثاني</option>
@@ -38,6 +38,22 @@
                         </th>
                 </tr>
             </thead>
+
+            @if ($subjects)
+                <thead>
+                    <tr class="bg-[#FFC657] text-[#071f63]">
+                        <th class="px-6 py-3 leading-4 tracking-wider text-right border-b-2 border-gray-300">
+                            #
+                        </th>
+                        <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                            الوحدة
+                        </th>
+                        <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                            اسم المادة
+                        </th>
+                    </tr>
+                </thead>
+            @endif
             <tbody class="bg-white p-9">
                 @foreach ($subjects as $index => $subject)
                     <tr class="bg-white p-9">
@@ -47,6 +63,9 @@
                                     <div class="text-sm leading-5 text-gray-800">{{ $loop->index + 1 }}</div>
                                 </div>
                             </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                            <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                             <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>

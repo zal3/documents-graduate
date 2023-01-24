@@ -45,37 +45,37 @@
                         </td>
                         <td
                             class="px-6 py-4 text-sm leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500">
-                            @if ($student->unid->graduation_year == 0)
+                            @if ($student->unid->graduation_year == 1)
                                 2014-2015
-                            @elseif($student->unid->graduation_year == 1)
-                                2015-2016
                             @elseif($student->unid->graduation_year == 2)
-                                2016-2017
+                                2015-2016
                             @elseif($student->unid->graduation_year == 3)
-                                2017-2018
+                                2016-2017
                             @elseif($student->unid->graduation_year == 4)
-                                2018-2019
+                                2017-2018
                             @elseif($student->unid->graduation_year == 5)
-                                2019-2020
+                                2018-2019
                             @elseif($student->unid->graduation_year == 6)
-                                2020-2021
+                                2019-2020
                             @elseif($student->unid->graduation_year == 7)
-                                2021-2022
+                                2020-2021
                             @elseif($student->unid->graduation_year == 8)
-                                2022-2023
+                                2021-2022
                             @elseif($student->unid->graduation_year == 9)
-                                2023-2024
+                                2022-2023
                             @elseif($student->unid->graduation_year == 10)
-                                2024-2025
+                                2023-2024
                             @elseif($student->unid->graduation_year == 11)
-                                2025-2026
+                                2024-2025
                             @elseif($student->unid->graduation_year == 12)
-                                2026-2027
+                                2025-2026
                             @elseif($student->unid->graduation_year == 13)
-                                2027-2028
+                                2026-2027
                             @elseif($student->unid->graduation_year == 14)
-                                2028-2029
+                                2027-2028
                             @elseif($student->unid->graduation_year == 15)
+                                2028-2029
+                            @elseif($student->unid->graduation_year == 16)
                                 2029-2030
                             @endif
                         </td>

@@ -2,16 +2,7 @@
     <div class=" text-xl mr-2 px-9   text-white bg-[#071F63] py-4 flex justify-between items-center">
         <div>
             مواد قسم علوم الحاسوب </div>
-        <div class="flex justify-between gap-3">
-            <livewire:pages.ui.search />
-        </div>
-    </div>
-    <div class="inline-block min-w-full overflow-hidden align-middle bg-white rounded-bl-lg rounded-br-lg">
-        <table class="min-w-full text-center">
-            <thead>
-                <tr class="">
-                    <div class="bg-[#FFC657] p-3 grid justify-between grid-cols-3  items-center ">
-                        <div class="grid items-start grid-cols-2 mr-9">
+            <div class="grid items-start grid-cols-2 text-black mr-9">
                             <select wire:model="stage" class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
                                 <option value="0">المرحلة </option>
                                 <option value="1">الاولى </option>
@@ -26,15 +17,13 @@
                             </select>
                         </div>
                         <a href="{{ route('add-subject') }}">
-                            <button class=" mx-auto transition duration-150 ease-in-out hover:bg-blue-900  bg-[#071F63] rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm">اضافة
+                            <button class="bg-[#FFC657] mx-auto transition duration-150 ease-in-out  rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm">اضافة
                                 مادة </button>
                         </a>
-                        <!-- dont refresh model -->
-
-
-                        </th>
-                </tr>
-            </thead>
+    </div>
+    <div class="inline-block min-w-full overflow-hidden align-middle bg-white rounded-bl-lg rounded-br-lg">
+        <table class="min-w-full text-center">
+        
             @if ($subjects)
             <thead>
                 <tr class="bg-[#FFC657] text-[#071f63]">
@@ -46,6 +35,9 @@
                         اسم المادة
                     </th><th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
                         الوحدة
+                    </th>
+                    <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                        
                     </th>
                 </tr>
             </thead>
@@ -67,6 +59,11 @@
                     </td><td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                         <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
                     </td>
+                    <td
+                            class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                            <button wire:click="confirm({{ $subject->id }})">
+                                <i class="fa-regular fa-trash-can"></i></button>
+                        </td>
                 </tr>
                 @endforeach
             </tbody>

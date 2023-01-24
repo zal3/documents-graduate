@@ -39,7 +39,7 @@
             </a>
         </div>
         <div
-            class="leading-9 text-gray-100 hover:bg-black pr-3 hover:bg-opacity-30 {{ request()->is('graduate') ? '!bg-black !bg-opacity-30' : '' }}">
+            class="leading-9 text-gray-100 hover:bg-black pr-3 hover:bg-opacity-30 @if (request()->is('graduate') || request()->is('graduate/add')) !bg-black !bg-opacity-30 @endif">
             <button class="flex items-center text-[15px] font-normal rounded-lg transition duration-75 group"
                 aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                 <svg width="34" height="19" viewBox="0 0 16 16">
@@ -70,7 +70,10 @@
             </ul>
         </div>
         <div
-            class="leading-9 text-gray-100 hover:bg-black pr-3 hover:bg-opacity-30 {{ request()->is('science-subject') ? '!bg-black !bg-opacity-30' : '' }}">
+            class="leading-9 text-gray-100 hover:bg-black pr-3 hover:bg-opacity-30 @if (request()->is('department/science-subject') ||
+                    request()->is('department/science-student') ||
+                    request()->is('department/information-student') ||
+                    request()->is('department/information-subject')) !bg-black !bg-opacity-30 @endif">
             <button class="flex items-center text-[15px] font-normal rounded-lg transition duration-75 group"
                 aria-controls="dropdown-examplee" data-collapse-toggle="dropdown-examplee">
 

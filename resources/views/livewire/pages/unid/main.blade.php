@@ -67,7 +67,7 @@
                             class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
                             @if ($unid->type == 0)
                                 صباحي
-                            @else
+                            @elseif($unid->type == 1)
                                 مسائي
                             @endif
                         <td

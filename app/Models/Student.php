@@ -20,16 +20,14 @@ class Student extends Model
     {
         return $this->hasMany(Degree::class);
     }
-
-    public function subjects()
-    {
-        return $this->belongsToMany(Subject::class)->withPivot('degree');
-    }
-
     public function unid()
     {
         return $this->belongsTo(Unid::class);
     }
+    // public function subjects()
+    // {
+    //     return $this->belongsToMany(Subject::class , 'student_subject')->withPivot(['degree']);
+    // }
     
     ### End Relation ###
 

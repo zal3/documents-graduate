@@ -70,8 +70,11 @@
                 <!-- timestamp -->
                 وتاريخ
                 {{date('Y-m-d')}}
+                @if($average > 0)
                 بتقدير (
-                @if($student->average <= 50) ضعيف @elseif($student->average <= 60) مقبول @elseif($student->average <= 70) متوسط @elseif($student->average <= 80) جيد @elseif($student->average <= 90) جيد جدا @elseif($student->average <= 100) ممتاز @endif ) وبمعدل تخرج ( {{$student->average}} )
+                @if($student->average <= 50) ضعيف @elseif($student->average <= 60) مقبول @elseif($student->average <= 70) متوسط @elseif($student->average <= 80) جيد @elseif($student->average <= 90) جيد جدا @elseif($student->average <= 100) ممتاز @endif ) 
+                وبمعدل تخرج ( {{ number_format($average, 2) }})
+                @endif
             .</span>
             </div>
         </div>

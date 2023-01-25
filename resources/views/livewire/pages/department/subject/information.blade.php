@@ -36,6 +36,9 @@
                         <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
                             الوحدة
                         </th>
+                        <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                            
+                        </th>
                     </tr>
                 </thead>
             @endif
@@ -50,16 +53,17 @@
                         </div>
                     </td>
 
-                    <td
-                            class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
-                            <button wire:click="confirm({{ $subject->id }})">
-                                <i class="fa-regular fa-trash-can"></i></button>
-                        </td>
+                    
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                             <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                             <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
+                        </td>
+                        <td
+                            class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                            <button wire:click="confirm({{ $subject->id }})">
+                                <i class="fa-regular fa-trash-can"></i></button>
                         </td>
                     </tr>
                 @endforeach

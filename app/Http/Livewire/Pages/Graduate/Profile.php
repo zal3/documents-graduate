@@ -59,7 +59,9 @@ class Profile extends Component
     public function render()
     {
         // average of degree tow boints 
-        $this->average = Degree::where('student_id', $this->student_id, function($query){$query->where('department_id', $this->student->department_id);})->avg('degree');
+        // $this->average = Degree::where('student_id', $this->student_id, function($query){$query->where('department_id', $this->student->department_id);})->avg('degree');
+        $student = Student::find($this->student_id);
+        $this->average=  $student->degrees->avg('degree');
         // $degrees = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',1)->where('course',1)->where('department_id', $this->student->department_id);})->get();
         // $degrees1 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',1)->where('course',2)->where('department_id', $this->student->department_id);})->get();
         // $degrees2 = Degree::where('student_id',$this->student_id , function($query){$query->where('department_id', $this->student->department_id);})->whereHas('subject', function($query){$query->where('stage',2)->where('course',1)->where('department_id', $this->student->department_id);})->get();

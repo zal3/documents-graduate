@@ -25,22 +25,22 @@
         <select wire:model.lazy="department_id"
             class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر القسم</option>
-            <option value="1">علوم الحاسوب</option>
-            <option value="2">نظم المعلومات الحاسوبية</option>
+            <option value=" 1 ">علوم الحاسوب</option>
+            <option value=" 2 ">نظم المعلومات الحاسوبية</option>
         </select>
         <!-- الدور -->
         <select wire:model.lazy="round" required
             class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر الدور</option>
-            <option value="1">الأول</option>
-            <option value="2">الثاني</option>
-            <option value="3">الثالث</option>
+            <option value=" 1 ">الأول</option>
+            <option value=" 2 ">الثاني</option>
+            <option value=" 3 ">الثالث</option>
         </select>
         <!-- نوع الدراسة -->
         <select wire:model.lazy="type" class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر الدراسة</option>
-            <option value="0">الصباحية </option>
-            <option value="1">المسائية</option>
+            <option value=" 0 ">الصباحية</option>
+            <option value=" 1 ">المسائية</option>
         </select>
     </div>
 </div>

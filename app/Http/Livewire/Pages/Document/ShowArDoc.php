@@ -18,7 +18,8 @@ class ShowArDoc extends Component
     }
     public function render()
     {
-
-        return view('livewire.pages.document.show-ar-doc');
+        $student = Student::find($this->student_id);
+        $average=  $student->degrees->avg('degree');
+        return view('livewire.pages.document.show-ar-doc', compact('average'));
     }
 }

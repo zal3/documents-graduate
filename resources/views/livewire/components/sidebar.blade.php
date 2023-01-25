@@ -183,9 +183,10 @@
         </div>
 
     </div>
-    <div class="flex items-center gap-2 mr-6">
-        <button class="my-6" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
+    <button class="flex items-center gap-2 mr-6">
+        <button class="flex items-center my-6" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
             <img src="{{ asset('img/thm2.png') }}" class="w-14 " alt="">
+            <h1 class="mb-1 text-center">ثمينه محمد </h1>
         </button>
         <div id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top"
             class="z-10 items-center hidden mr-6 bg-white divide-y divide-gray-100 rounded-md ">
@@ -196,7 +197,6 @@
                     تسجيل خروج </button>
             </form>
         </div>
-        <h1 class="mb-1 text-center">ثمينه محمد </h1>
-    </div>
+    </button>
 
 </div>

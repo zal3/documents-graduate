@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('number');
             $table->date('date');
             $table->boolean('type')->default(0); //### Morning: 0, Evening:1
-            $table->integer('round'); ### 0: First, 1: Second, 2: Third
+            $table->integer('round'); ### 1: First, 2: Second, 3: Third
             $table->integer('graduation_year');
             $table->timestamps();
         });

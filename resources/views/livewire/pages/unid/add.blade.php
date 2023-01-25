@@ -65,22 +65,22 @@
                                 class="w-48 mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
                                 placeholder="">
                                 <option value="">إختر سنة التخرج</option>
-                                <option value="0">2014-2015</option>
-                                <option value="1">2015-2016</option>
-                                <option value="2">2016-2017</option>
-                                <option value="3">2017-2018</option>
-                                <option value="4">2018-2019</option>
-                                <option value="5">2019-2020</option>
-                                <option value="6">2020-2021</option>
-                                <option value="7">2021-2022</option>
-                                <option value="8">2022-2023</option>
-                                <option value="9">2023-2024</option>
-                                <option value="10">2024-2025</option>
-                                <option value="11">2025-2026</option>
-                                <option value="12">2026-2027</option>
-                                <option value="13">2027-2028</option>
-                                <option value="14">2028-2029</option>
-                                <option value="15">2029-2030</option>
+                                <option value="1">2014-2015</option>
+                                <option value="2">2015-2016</option>
+                                <option value="3">2016-2017</option>
+                                <option value="4">2017-2018</option>
+                                <option value="5">2018-2019</option>
+                                <option value="6">2019-2020</option>
+                                <option value="7">2020-2021</option>
+                                <option value="8">2021-2022</option>
+                                <option value="9">2022-2023</option>
+                                <option value="10">2023-2024</option>
+                                <option value="11">2024-2025</option>
+                                <option value="12">2025-2026</option>
+                                <option value="13">2026-2027</option>
+                                <option value="14">2027-2028</option>
+                                <option value="15">2028-2029</option>
+                                <option value="16">2029-2030</option>
                             </select>
                         </div>
                     </div>

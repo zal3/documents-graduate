@@ -2,44 +2,8 @@
     <div
         class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#edeac9] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
         {{-- * Head Compartment --}}
-        <div class="border-2 border-black border-dashed">
-            <div class="flex justify-between p-5 pb-0 ">
-                <img class="h-[100px]" src="/img/un.png" alt="UOB">
-                <div>
-                    <div class="flex flex-col items-center justify-center font-bold text-[14.5px] -mt-2">
-                        <p>جمهورية العراق</p>
-                        <p>Republic of Iraq</p>
-                        <p>وزارة التعليم و البحث العلمي</p>
-                        <p>Ministry of Higher Education & Scientific Reserach</p>
-                        <div class="flex gap-[100px]">
-                            <p>جامعة البصرة</p>
-                            <p>University of Basrah</p>
-                        </div>
-                        <div class="flex items-end gap-[20px]">
-                            <p>كلية علوم الحاسوب</p>
-                            <p>College of Computer Science</p>
-                        </div>
-                        <div class="flex gap-[30px]">
-                            <p>وتكنلوجيا المعلومات</p>
-                            <p>&Information Technology</p>
-                        </div>
-                        <div class="flex gap-[100px]">
-                            <p>وحدة الوثائق</p>
-                            <p>Documentation Office</p>
-                        </div>
-                    </div>
-                </div>
-                <img class="h-[100px]" src="/img/it.svg" alt="CSIT">
-            </div>
-            <div class="flex justify-between mx-3">
-                <p>العدد:</p>
-                <p>:Ref</p>
-            </div>
-            <div class="flex justify-between mx-3">
-                <p>التاريخ:</p>
-                <p>:Date</p>
-            </div>
-        </div>
+        <livewire:pages.ui.dochead />
+
         {{-- * Body Compartment --}}
         <div class="flex flex-col justify-between px-4 mx-auto ">
             <div class="grid items-end grid-cols-3 ">
@@ -165,12 +129,17 @@
                     </span>
                 </div>
             </div>
-            @if (!$selected2)
-                <livewire:pages.ui.docpeople :selected2="$selected2" />
-            @endif
-            <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
         </div>
+
+        {{-- * Tail Compartment --}}
+        @if (!$selected2)
+            <livewire:pages.ui.docpeople :selected2="$selected2" />
+        @endif
+        {{-- * WaterMark Compartment --}}
+        <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
     </div>
+
+    {{-- * Second Page --}}
     @if ($selected2)
         <div
             class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#edeac9] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
@@ -178,12 +147,15 @@
                 <div class="flex">
                     <livewire:pages.ui.doctable :student_id="$student_id" />
                 </div>
+
+                {{-- * Tail Compartment --}}
                 <div class="flex">
                     <livewire:pages.ui.docpeople :selected2="$selected2" />
                 </div>
-                <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg"
-                    alt="water Mark">
             </div>
+
+            {{-- * WaterMark Compartment --}}
+            <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
         </div>
     @endif
 </div>

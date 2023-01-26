@@ -41,13 +41,6 @@
     </form>
     @if ($selected2)
     <form wire:submit.prevent="add">
-        <!-- <div class="flex flex-col">
-            <label for="average_written" class="text-sm text-gray-900"> المعدل كتابة <label>
-                    <input type="text" id="average_written" wiremodel.lazy="average_written" class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1" placeholder="إدخل المعدل كتابة " />
-                    @error('average_written')
-                    <span class="text-red-600">{{ $message }}</span>
-                    @enderror
-        </div> -->
         @foreach ($subjects as $subject)
         <div class="flex flex-col">
             <label for="subject" class="text-sm text-gray-900"> {{ $subject->name_ar }} <label>
@@ -57,11 +50,7 @@
                     @enderror
         </div>
         @endforeach
-
         <button type="submit" class="p-2 px-10 text-2xl  font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">طباعة</button>
-
-
-
     </form>
     @endif
 </div>

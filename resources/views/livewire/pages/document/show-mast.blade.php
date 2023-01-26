@@ -143,7 +143,7 @@
                     , وحسب الامر الجامعي المرقم
                     {{ $student->unid->number }}
                     وبمعدل تخرج
-                    {{ $student->average }}
+                    ({{ $average }})
                     وبناء على طلبها زودت بهذه الوثيقة
                     .
 
@@ -153,7 +153,7 @@
         <div class="flex mx-auto mt-20 text-lg"> مع التقدير</div>
 
         {{-- * Tail Compartment --}}
-        <div class="absolute bottom-[10%] grid items-end justify-between grid-cols-3 mt-24 text-center ">
+        <div class="absolute bottom-[10%] grid items-end justify-between grid-cols-2 mt-24 text-center ">
             <div class="">
                 <p class="mb-2 font-semibold ">ثمينة محمد خلف</p>
                 <p> مسؤول وحدة الوثائق</p>

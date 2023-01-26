@@ -9,12 +9,13 @@ class ShowArDoc extends Component
 {
     public $student_id;
     public $student;
-    public $selected ;
-    public function mount($student_id, $selected)
+    public $selected , $selected2;
+    public function mount($student_id, $selected , $selected2)
     {
         $this->student_id = $student_id;
         $this->student = Student::findOrFail($student_id);
         $this->selected = $selected;
+        $this->selected2 = $selected2;
     }
     public function render()
     {

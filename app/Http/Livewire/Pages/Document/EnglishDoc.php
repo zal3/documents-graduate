@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class EnglishDoc extends Component
 {
-    public $search, $studentSearch, $student_id, $students, $selected = 0, $name_en;
+    public $search, $studentSearch, $student_id, $students, $selected = 0, $name_en , $selected2 = 0;
 
     protected $listeners = ['$refresh'];
 
@@ -23,8 +23,13 @@ class EnglishDoc extends Component
             $selected = 1;
         else
             $selected = 0;
+            $selected2 = $this->selected2;
+        if ($selected2)
+            $selected2 = 1;
+        else
+            $selected2 = 0;
         // dd($selected);     
-        return redirect()->route('show-eng-doc', ['student_id' => $student_id, 'selected' => $selected]);
+        return redirect()->route('show-eng-doc', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
     }
 
     public function render()

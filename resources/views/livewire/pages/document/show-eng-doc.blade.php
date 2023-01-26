@@ -52,10 +52,10 @@
                 @endif
             </div>
             @if ($student->gender == 1)
-                <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt=""
+                <img src="{{ asset($student->image_path ) }}" alt=""
                     class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @else
-                <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt=""
+                <img src="{{ asset($student->image_path ) }}" alt=""
                     class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @endif
         </div>

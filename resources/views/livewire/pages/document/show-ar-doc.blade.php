@@ -51,14 +51,15 @@
                 @endif
             </div>
             @if ($student->gender == 1)
-                <img src="{{ asset($student->image_path ?? 'img/female.png') }}" alt=""
+                <img src="{{ asset($student->image_path ) }}" alt=""
                     class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @else
-                <img src="{{ asset($student->image_path ?? 'img/male.png') }}" alt=""
+                <img src="{{ asset($student->image_path ) }}" alt=""
                     class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @endif
         </div>
-        <div class="flex mx-[100px]">
+        
+        <div class="flex mx-[100px] ">
             <div class="mt-20 text-md">نؤيد لكم ان <span class="font-semibold"> {{ $student->name_ar }}</span>
 
                 <span class="text-lg">
@@ -147,36 +148,24 @@
                     {{ date('Y-m-d') }}
                     @if($average > 0)
                 بتقدير (
-                @if($student->average <= 50) ضعيف @elseif($student->average <= 60) مقبول @elseif($student->average <= 70) متوسط @elseif($student->average <= 80) جيد @elseif($student->average <= 90) جيد جدا @elseif($student->average <= 100) ممتاز @endif ) 
+                @if($average <= 50) ضعيف @elseif($average <= 60) مقبول @elseif($average <= 70) متوسط @elseif($average <= 80) جيد @elseif($average <= 90) جيد جدا @elseif($average <= 100) ممتاز @endif ) 
                 وبمعدل تخرج ( {{ number_format($average, 2) }})
                 @endif
                     .
                 </span>
             </div>
         </div>
+<div class="flex">
+    @if($selected2)
+        <livewire:pages.ui.doctable :student_id="$student_id" />
+@endif
 
         {{-- * Tail Compartment --}}
-        <div class="absolute bottom-[10%] grid items-end justify-between grid-cols-3 mt-24 text-center ">
-            <div class="">
-                <p class="mb-2 font-semibold ">ثمينة محمد خلف</p>
-                <p> مسؤول وحدة الوثائق</p>
-            </div>
-            <div class="">
-                <p class="mb-2">الأستاذ الدكتور
-                <p class="mb-2 font-semibold "> زينب علي خلف</p>
-                <p class="">معاون العميد للشؤون العلمية والدراسات العليا</p>
-                </p>
-            </div>
-            <div class="">
-                <p class="mb-2 ">
-                    الأستاذ المساعد الدكتور
-                <p class="mb-2 font-semibold "> سلمى عبد الباقي محمود</p>
-                <p class=""> عميد الكلية</p>
-                </p>
-            </div>
-        </div>
+        <livewire:pages.ui.docpeople />
+        
+        
     </div>
-    <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
+    <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
 </page>
 
 <style scoped>

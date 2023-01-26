@@ -20,7 +20,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -57,7 +61,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -97,7 +105,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -134,7 +146,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -174,7 +190,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -211,7 +231,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -251,7 +275,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>
@@ -289,7 +317,11 @@
                                     <tr class="text-black border border-black ">
                                         <td class="px-4 py-1 border border-black">
                                             <div class="flex items-center text-md">
-                                                <p class="font-bold text-black text-md">{{ $subject->name_ar }}</p>
+                                                <p class="font-bold text-black text-md">@if (Route::currentRouteName() == 'show-eng-doc')
+                                                        {{ $subject->name_en }}
+                                                    @else
+                                                        {{ $subject->name_ar }}
+                                                    @endif</p>
                                             </div>
                                         </td>
                                         <td class="px-4 py-1 border border-black text-md">{{ $subject->unit }}</td>

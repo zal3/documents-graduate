@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <img class="h-[100px]" src="/img/it.png" alt="CSIT">
+            <img class="h-[100px]" src="/img/it.svg" alt="CSIT">
         </div>
         <div class="flex justify-between mx-3">
             <p>العدد:</p>
@@ -165,7 +165,7 @@
 
         </div>
     </div>
-    <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.png" alt="water Mark">
+    <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
 </page>
 
 <style scoped>

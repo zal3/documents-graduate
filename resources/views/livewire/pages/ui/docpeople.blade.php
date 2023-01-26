@@ -1,7 +1,7 @@
 <div class="flex">
     {{-- * Tail Compartment --}}
     <div
-        class="absolute bottom-[2%] left-[4.2%] @if ($selected2) bottom-[10%] @endif grid items-center justify-between grid-cols-3 mt-24 text-center ">
+        class="absolute bottom-[2%] left-[4.2%] @if (!$selected2) !bottom-[10%] @endif grid items-center justify-between grid-cols-3 mt-24 text-center ">
         <div class="">
             <p class="mb-2 font-semibold ">ثمينة محمد خلف</p>
             <p> مسؤول وحدة الوثائق</p>

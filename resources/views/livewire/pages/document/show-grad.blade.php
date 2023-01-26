@@ -165,7 +165,7 @@
 
         </div>
     </div>
-    <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.png" alt="water Mark">
+    <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
 </page>
 
 <style scoped>

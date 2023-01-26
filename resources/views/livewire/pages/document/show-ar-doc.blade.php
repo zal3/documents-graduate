@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <img class="h-[100px]" src="/img/it.png" alt="CSIT">
+            <img class="h-[100px]" src="/img/it.svg" alt="CSIT">
         </div>
         <div class="flex justify-between mx-3">
             <p>العدد:</p>

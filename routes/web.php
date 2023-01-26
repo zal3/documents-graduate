@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PdfController;
     use App\Http\Livewire\Pages\{
         Home\Main as Home,
         Document\Main as Document,
@@ -94,6 +95,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/graduate/add', AddGraduate::class)->name('add-graduate');
     Route::get('/graduate/edit/{id}', EditGraduate::class)->name('edit-graduate');
     Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
+
+    Route::get('pdf', [PdfController::class, 'index']);
 
 
 });

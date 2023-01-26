@@ -48,15 +48,13 @@
                 <h2 class="text-xl font-semibold text-center">
                     To/whom it may concern </h2>
                 @if ($selected)
-                    Serial Number: <span class="font-semibold text-center "> {{ $student->id }}</span>
+                Serial Number: <span class="font-semibold text-center "> {{ $student->id }}</span>
                 @endif
             </div>
             @if ($student->gender == 1)
-                <img src="{{ asset($student->image_path ) }}" alt=""
-                    class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
+            <img src="{{ asset($student->image_path ) }}" alt="" class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @else
-                <img src="{{ asset($student->image_path ) }}" alt=""
-                    class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
+            <img src="{{ asset($student->image_path ) }}" alt="" class="p-1 mx-auto mt-10 border-2 border-gray-900 rounded-sm w-36 h-36">
             @endif
         </div>
         <div class="flex mx-[100px]">
@@ -68,96 +66,74 @@
 
                     is one of our college graduates for the academic year
                     @if ($student->unid->graduation_year == 1)
-                        2014-2015
+                    2014-2015
                     @elseif($student->unid->graduation_year == 2)
-                        2015-2016
+                    2015-2016
                     @elseif($student->unid->graduation_year == 3)
-                        2016-2017
+                    2016-2017
                     @elseif($student->unid->graduation_year == 4)
-                        2017-2018
+                    2017-2018
                     @elseif($student->unid->graduation_year == 5)
-                        2018-2019
+                    2018-2019
                     @elseif($student->unid->graduation_year == 6)
-                        2019-2020
+                    2019-2020
                     @elseif($student->unid->graduation_year == 7)
-                        2020-2021
+                    2020-2021
                     @elseif($student->unid->graduation_year == 8)
-                        2021-2022
+                    2021-2022
                     @elseif($student->unid->graduation_year == 9)
-                        2022-2023
+                    2022-2023
                     @elseif($student->unid->graduation_year == 10)
-                        2023-2024
+                    2023-2024
                     @elseif($student->unid->graduation_year == 11)
-                        2024-2025
+                    2024-2025
                     @elseif($student->unid->graduation_year == 12)
-                        2025-2026
+                    2025-2026
                     @elseif($student->unid->graduation_year == 13)
-                        2026-2027
+                    2026-2027
                     @elseif($student->unid->graduation_year == 14)
-                        2027-2028
+                    2027-2028
                     @elseif($student->unid->graduation_year == 15)
-                        2028-2029
+                    2028-2029
                     @elseif($student->unid->graduation_year == 16)
-                        2029-2030
+                    2029-2030
                     @endif
                     (
                     @if ($student->unid->round == 0)
-                        the first round
+                    the first round
                     @elseif($student->unid->round == 1)
-                        the second round
+                    the second round
                     @else
-                        the third round
+                    the third round
                     @endif
                     )
                     who was awarded a Bachelor of Science degree in information technology / computer science /
                     @if ($student->unid->type == 0)
-                        Morning study
+                    Morning study
                     @else
-                        Evening study
+                    Evening study
                     @endif
                     according to the university order number
                     (
                     {{ $student->unid->number }} ) On the date of
                     {{ date('Y-m-d') }}
+                    @if($average > 0)
                     with a grade of (
-                    @if ($student->average <= 50)
-                        Weak
-                    @elseif($student->average <= 60)
-                        Acceptable
-                    @elseif($student->average <= 70)
-                        middle
-                    @elseif($student->average <= 80)
-                        good
-                    @elseif($student->average <= 90)
-                        very good
-                    @elseif($student->average <= 100)
-                        Excellent
-                    @endif ) and a graduation rate of ( {{ $student->average }} )
-                </span>
+                    @if ($average <= 50) Weak @elseif($average <=60) Acceptable @elseif($average <=70) middle @elseif($average <=80) good @elseif($average <=90) very good @elseif($average <=100) Excellent @endif ) and a graduation rate of ( {{ $average }} ) @endif </span>
             </div>
         </div>
 
         {{-- * Tail Compartment --}}
-        <div class="absolute bottom-[10%] grid items-end justify-between grid-cols-3 mt-24 text-center ">
-            <div class="">
-                <p class="mb-2 font-semibold "> Thamina Mohammed Khalaf </p>
-                <p> Documentation Unit Officer</p>
-            </div>
-            <div class="">
-                <p class="mb-2"> Prof. Dr
-                <p class="mb-2 font-semibold "> Zainab Ali Khalaf</p>
-                <p class="">Associate Dean for Scientific Affairs and Postgraduate Studies</p>
-                </p>
-            </div>
-            <div class="">
-                <p class="mb-2 ">
-                    Assistant Professor Dr
-                <p class="mb-2 font-semibold "> Salma Abdel-Baqi Mahmoud</p>
-                <p class=""> Dean of the College </p>
-                </p>
-            </div>
+        <div class="flex">
+            @if($selected2)
+            <livewire:pages.ui.doctable :student_id="$student_id" />
+            @endif
+
+            {{-- * Tail Compartment --}}
+            <livewire:pages.ui.docpeople />
+
+
         </div>
-    </div>
     <img class="absolute opacity-[30%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
 </page>
 

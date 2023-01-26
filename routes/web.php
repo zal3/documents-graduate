@@ -73,8 +73,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document/master', MasterDoc::class)->name('master');
     Route::get('/document/show-ar-doc/[{student_id}]/[{selected}]/[{selected2}]', ShowArDoc::class)->name('show-ar-doc');
     Route::get('/document/show-eng-doc/[{student_id}]/[{selected}]/[{selected2}]', ShowEngDoc::class)->name('show-eng-doc');
-    Route::get('/document/show-grad/[{student_id}]/[{selected}]/[{selected2}]', ShowGrad::class)->name('show-grad');
-    Route::get('/document/show-mast/[{student_id}]/[{selected}]/[{selected2}]', ShowMast::class)->name('show-mast');
+    Route::get('/document/show-grad/[{student_id}]/[{selected}]', ShowGrad::class)->name('show-grad');
+    Route::get('/document/show-mast/[{student_id}]/[{selected}]', ShowMast::class)->name('show-mast');
 
     //unid
     Route::get('/unid', Unid::class)->name('unid');

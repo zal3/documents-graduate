@@ -37,10 +37,10 @@
                         class="p-4 duration-150 border-[3px] border-dashed rounded-lg hover:border-solid hover:border-blue-300">
                         <img class="w-16 h-16 mx-auto mb-4 rounded-full" src="/img/developers/naba.jpg"
                             alt="team member">
-                        <h3 class="text-lg font-medium">Naba </h3>
+                        <h3 class="text-lg font-medium">Naba Majid</h3>
                         <p class="text-gray-600">Web Developer</p>
                         {{-- TODO Add Naba Github like + father's name --}}
-                        <a href="https://github.com/fatmanawfal"
+                        <a href="https://github.com/nabaa-majid"
                             class="inline-block mx-2 duration-150 hover:text-blue-500" target="_blank" rel="noopener">
                             @livewire('components.github')
                         </a>
@@ -54,5 +54,4 @@
                 بالأمانة والنزاهة.</p>
         </div>
     </div>
-
 </div>

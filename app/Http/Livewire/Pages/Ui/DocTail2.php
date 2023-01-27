@@ -4,10 +4,10 @@ namespace App\Http\Livewire\Pages\Ui;
 
 use Livewire\Component;
 
-class Docpeople extends Component
-{   public $selected2;
+class DocTail2 extends Component
+{
     public function render()
     {
-        return view('livewire.pages.ui.docpeople');
+        return view('livewire.pages.ui.doc-tail2');
     }
 }

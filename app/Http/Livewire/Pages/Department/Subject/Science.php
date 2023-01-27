@@ -4,41 +4,55 @@ namespace App\Http\Livewire\Pages\Department\Subject;
 
 use Livewire\Component;
 use App\Models\Subject;
-
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Science extends Component
-{    protected $listeners = ['$refresh', 'filterProjects'];
-    public   $stage , $course , $name_ar , $name_en , $unit;
-
+{      use LivewireAlert;
+    protected $listeners = ['$refresh','search', 'filterProjects','delete'];
+    public   $stage , $course , $name_ar , $name_en , $unit, $subject_id;
+    public $search ;
+    public function search($search)
+    {
+        $this->search = $search;
+    }  
     public function filterProjects($stage , $course )
     {
         $this->stage = $stage;
         $this->course = $course;
         
     }
-    public function add()
+    public function delete()
+    {   
+        Subject::findOrFail($this->subject_id)->delete();
+        $this->alert('success', 'تم الحذف ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        $this->emitUp('$refresh');
+        $this->emitTo('pages.science.subject', '$refresh');
+        redirect()->route('science-subject');
+
+
+    }
+
+    public function confirm($id)
     {
-        $this->validate([
-            'name_ar' => 'required',
-            'name_en' => 'required',
-            'unit' => 'required',
+        $this->subject_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف المادة ؟ ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
         ]);
-        Subject::create([
-            'name_ar' => $this->name_ar,
-            'name_en' => $this->name_en,
-            'department_id' => 1,
-            'stage' => $this->stage,
-            'unit' => $this->unit,
-            'course' => $this->course,
-        ]);
-        $this->name_ar = '';
-        $this->name_en = '';
-        $this->unit = '';
-        // $this->emit('refresh');
     }
     public function render()
     {
         if($this->stage && $this->course){
-            $subjects = Subject::where('department_id', 1)->where('stage', $this->stage)->where('course', $this->course)->get();
+            $subjects = Subject::where('department_id', 1)->where('stage', $this->stage)->where('course', $this->course)
+            ->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
         }
         else{
             $subjects = [];

@@ -5,10 +5,18 @@ use App\Models\Student;
 use Livewire\Component;
 
 class Information extends Component
-{
-    public function render()
+{protected $listeners = ['$refresh','search'];
+    
+    public $search ;
+    public function search($search)
     {
-        $students = Student::with('department')->where('department_id' , 2)->get();
-        return view('livewire.pages.department.student.information', compact('students'));
+        $this->search = $search;
+    }  
+    public function render()
+    {//unid where department_id = 1
+        $students = Student::whereHas('unid', function($query){
+            $query->where('department_id', 2);
+        })->with('unid')->where('name_ar', 'LIKE', '%'.$this->search.'%')->get();
+              return view('livewire.pages.department.student.information', compact('students'));
     }
 }

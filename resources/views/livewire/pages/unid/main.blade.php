@@ -1,164 +1,133 @@
-<div  class="mt-11 pr-14 pl-5">
-    <table class=" -mr-64 text-sm text-center text-gray-500">
-        <div class=" text-xl  text-center -mr-64 text-white bg-[#071F63] py-3">
-            الرقم الجامعي
-            <thead class="max-w-screen-2xl text-md text-gray-700  bg-[#FFC657]">
-                <tr>
-                    <th scope="col" class="py-3 text-white px-3">
-                        الرقم ىالجامعي
-                    </th>
-                    <th scope="col" class="py-3 text-white px-3">
-                        تاريخ الاصدار
-                    </th>
-                    <th scope="col" class="py-3 text-white px-3">
-                        الدراسة
-                    </th>
-                    <th scope="col" class="py-3 text-white px-3">
-                        الكورس
-                    </th>
-                    <th scope="col" class="py-3 text-white px-3">
-                        القسم
-                    </th>
-                    <th scope="col" class="py-3 text-white px-3">
-                        سنة التخرج
-                    </th>
-                    {{-- <th scope="col" class="py-3 text-white px-3">
-                        عدد الطلاب
-                    </th> --}}
-                    {{-- <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    <th scope="col" class="py-3 text-white px-3"></th> --}}
-                    {{-- <th scope="col" class="py-3 text-white px-3"></th> --}}
-                    <th scope="col" class="py-3 text-white px-3"></th>
-                    {{-- <th></th>
-                    <th></th> 
-                    <th></th>
-                    <th></th>--}}
-                    <th></th>
-                    <th></th>
-                    <th></th>
+<div class="">
 
-
-                </tr>
-            </thead>
-
-            <!-- {{-- <label for="name_en"
-            class="absolute text-2xl text-[#000]  duration-300 transform -translate-y-4 px-1 scale-75 mt-52 mr-64 z-10 origin-[0] right-2.5 "
-            dir="ltr">الأسم الرباعي بالأنجليزية</label><br>
-        <input id="name_en" type="text" wire:model.lazy="name_en"
-            class=" absolute bg-white  -translate-y-4  mt-64 mr-80  origin-[0] right-1 w-96 h-10 text-sm text-gray-900  rounded-lg border-1 border-gray-400  focus:ring-blue-500 focus:border-blue-500 block"
-             placeholder="الإسم الرباعي بالإنجليزية" />
-        @error('name_en')
-            <span class="text-red-600">{{ $message }}</span>
-        @enderror --}} -->
-
-            <tbody>
-                <tr class="bg-white border-b text-sm">
-
-                   
-
-                </tr>
-            </tbody>
-
-            <tfoot>
-                <tr class="bg-white border-b text-sm">
-                    <td class="py-3 px-3">
-                        {{-- <label for="subject" class="text-2xl text-[#000]">  </label> --}}
-                        <input id="order_university" type="text" wire:model.lazy="order_university"
-                            class="bg-white text-sm text-gray-900 rounded-lg border-1 border-gray-500 focus:ring-blue-500 focus:border-blue-500 block "
-                             placeholder="" />
-                        <!-- @error('order_university')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                        {{-- <label for="year"class="text-2xl text-[#000]">  </label><br> --}}
-                        <input id="date" type="text" wire:model.lazy="date"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500 focus:ring-blue-500 focus:border-blue-500 block "
-                             placeholder="" />
-                        <!-- @error('date')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                        {{-- <label for="degree" class="text-2xl text-[#000]">  </label><br> --}}
-                        <input id="study_type" type="text" wire:model.lazy="study_type"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500  focus:ring-blue-500 focus:border-blue-500 block "
-                             placeholder=" " />
-                        <!-- @error('study_type')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                        {{-- <label for="semester" class="text-2xl text-[#000]">  </label><br> --}}
-                        <input id="graduation_semester" type="text" wire:model.lazy="graduation_semester"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500  appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                             placeholder=" " />
-                        <!-- @error('graduation_semester')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                        {{-- <label for="semester" class="text-2xl text-[#000]">  </label><br> --}}
-                        <input id="department" type="text" wire:model.lazy="department"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500  appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                             placeholder=" " />
-                        <!-- @error('department')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                        {{-- <label for="semester" class="text-2xl text-[#000]">  </label><br> --}}
-                        <input id="study_year" type="text" wire:model.lazy="study_year"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500  appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                             placeholder=" " />
-                        <!-- @error('study_year')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                    <td class="py-3 px-3">
-                    
-                        <input id="students_num" type="text" wire:model.lazy="students_num"
-                            class="bg-white text-sm text-gray-900  rounded-lg border-1 border-gray-500  appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                             placeholder=" " />
-                        <!-- @error('students_num')
-                            <span class="text-red-600">{{ $message }}</span>
-                        @enderror -->
-                    </td>
-
-                </tr>
-            </tfoot>
+    <div class=" text-xl mr-2 px-9   text-white bg-[#071F63] py-4 flex justify-between items-center">
+        <div>
+            الامر الجامعي
         </div>
-    </table>
-
-    {{-- <button type="button" wire:click="showGradeModal"
-    class="py-2 px-2 text-base text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-yellow-400 focus:z-1 focus:ring-1 ">إضافة
-    مادة</button> --}}
-
-    <div  class="flex">
-        <button type="button" wire:click="addUniversityId"
-            class="absolute   scale-75  -mr-56 z-10  py-2 px-16 w-52 h-14 text-2xl font-medium text-white focus:outline-none rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:z-10 focus:ring-4 ">
-            حفظ
-        </button>
+        <div class="flex flex-col justify-between gap-2">
+            <livewire:pages.ui.search />
+            <div class="flex items-center">
+                <livewire:pages.ui.filter-unids class="" />
+                <a href="{{ route('add-unid') }}">
+                    <button
+                        class=" mx-auto transition duration-150 ease-in-out   bg-[#FFC657] rounded text-black px-4 sm:px-8 py-2 text-md">اضافة
+                        امر </button>
+                </a>
+            </div>
+        </div>
     </div>
 
+    <div class="inline-block min-w-full overflow-hidden align-middle bg-white rounded-bl-lg rounded-br-lg">
+        <table class="min-w-full text-center">
+            <thead>
+                <tr class=" bg-[#FFC657]">
+                    <th class="px-6 py-3 border-b-2 border-gray-300  leading-4 text-[#071F63] tracking-wider">#</th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        الامر الجامعي </th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        تاريخ الاصدار </th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        القسم</th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        الدراسة </th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        الدور </th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300  text-md leading-4 text-[#071F63] tracking-wider">
+                        سنة التخرج </th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300"></th>
+                </tr>
+            </thead>
+            <tbody class="bg-white p-9">
+                @foreach ($unids as $index => $unid)
+                    <tr class="bg-white p-9">
+                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="leading-5 text-gray-800 text-md">{{ $loop->index + 1 }}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                            <div class="leading-5 text-blue-900 text-md">{{ $unid->number }}</div>
+                        </td>
+                        <td
+                            class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
+                            {{ $unid->date }}
+                        </td>
+                        <td
+                            class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
+                            @if ($unid->department->id == 1)
+                                علوم الحاسوب
+                            @else
+                                نظم المعلومات
+                            @endif
+                        </td>
+
+                        <td
+                            class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
+                            @if ($unid->type == 0)
+                                صباحي
+                            @elseif($unid->type == 1)
+                                مسائي
+                            @endif
+                        <td
+                            class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
+                            @if ($unid->round == 1)
+                                الاول
+                            @elseif($unid->round == 2)
+                                الثاني
+                            @else
+                                الثالث
+                            @endif
+                        </td>
+                        <td
+                            class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
+                            @if ($unid->graduation_year == 1)
+                                2014-2015
+                            @elseif($unid->graduation_year == 2)
+                                2015-2016
+                            @elseif($unid->graduation_year == 3)
+                                2016-2017
+                            @elseif($unid->graduation_year == 4)
+                                2017-2018
+                            @elseif($unid->graduation_year == 5)
+                                2018-2019
+                            @elseif($unid->graduation_year == 6)
+                                2019-2020
+                            @elseif($unid->graduation_year == 7)
+                                2020-2021
+                            @elseif($unid->graduation_year == 8)
+                                2021-2022
+                            @elseif($unid->graduation_year == 9)
+                                2022-2023
+                            @elseif($unid->graduation_year == 10)
+                                2023-2024
+                            @elseif($unid->graduation_year == 11)
+                                2024-2025
+                            @elseif($unid->graduation_year == 12)
+                                2025-2026
+                            @elseif($unid->graduation_year == 13)
+                                2026-2027
+                            @elseif($unid->graduation_year == 14)
+                                2027-2028
+                            @elseif($unid->graduation_year == 15)
+                                2028-2029
+                            @elseif($unid->graduation_year == 16)
+                                2029-2030
+                            @endif
+                        </td>
+                        <td 
+                            class="px-6 py-4 flex gap-3 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                            <button wire:click="confirm({{ $unid->id }})">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                            <a href="{{ route('unidstu', $unid->id) }}"
+                                class="px-5 py-2 border-[#071F63] border text-[#071F63] rounded transition duration-300 hover:bg-[#071F63]  hover:text-white focus:outline-none">عرض
+                                التفاصيل </a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
-
-
-

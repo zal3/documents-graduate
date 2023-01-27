@@ -34,15 +34,15 @@
     <script src="{{ mix('resources/js/app.js') }}" defer></script>
 </head>
 
-<body id="home" class="h-screen  home" dir="rtl">
+<body id="home" class="h-screen home" dir="rtl">
     <!-- <x-jet-banner /> -->
-    <div class="min-h-screen  overflow-x-hidden overflow-y-hidden">
+    <div class="min-h-screen overflow-x-hidden overflow-y-hidden">
         <div class="grid ">
             @if (Route::currentRouteName() != 'home')
                 @livewire('components.sidebar')
             @endif
             <!-- Page Content -->
-            <main class="@if (Route::currentRouteName() != 'home')  mr-[210px] @endif">
+            <main class="@if (Route::currentRouteName() != 'home') mr-[210px] @endif">
                 {{ $slot }}
             </main>
         </div>

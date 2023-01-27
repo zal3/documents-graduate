@@ -2,13 +2,15 @@
 
 namespace App\Http\Livewire\Pages\Document;
 
+use App\Models\Degree;
 use Illuminate\http\Request;
 use App\Models\Student;
+use App\Models\Subject;
 use Livewire\Component;
 
 class EnglishDoc extends Component
 {
-    public $search, $studentSearch, $student_id, $students, $selected = 0, $name_en;
+    public  $search, $studentSearch, $student_id, $students, $selected = 0, $name_ar, $degree = [], $selected2 = 0;
 
     protected $listeners = ['$refresh'];
 
@@ -23,8 +25,29 @@ class EnglishDoc extends Component
             $selected = 1;
         else
             $selected = 0;
+            $selected2 = $this->selected2;
+        if ($selected2)
+            $selected2 = 1;
+        else
+            $selected2 = 0;
         // dd($selected);     
-        return redirect()->route('show-eng-doc', ['student_id' => $student_id, 'selected' => $selected]);
+        return redirect()->route('show-eng-doc', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
+    }
+    public function add(Degree $degree)
+    {
+        $this->validate([
+            'degree' => 'required',
+        ]);
+        // add  degree to degree table
+        foreach ($this->degree as $key => $value) {
+            $degree = Degree::create([
+                'student_id' => $this->student_id,
+                'subject_id' => $key,
+                'degree' => $value,
+            ]);
+            
+
+        }
     }
 
     public function render()
@@ -33,6 +56,11 @@ class EnglishDoc extends Component
             $search = '%' . $this->search . '%';
             $this->students = Student::where('name_en', 'LIKE', $search)->get();
         }
-        return view('livewire.pages.document.english-doc');
+        if ($this->student_id) {
+            $student = Student::find($this->student_id);
+            $subjects = Subject::where('department_id', $student->unid->department_id)->get();
+        } else
+            $subjects = Subject::all();
+        return view('livewire.pages.document.english-doc', compact('subjects'));
     }
 }

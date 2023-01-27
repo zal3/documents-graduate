@@ -25,7 +25,7 @@
                                 اضافة صورة الخريج
                             @endif
                         </span>
-                        <input wire:model.lazy="image_path" type="file" class="hidden" />
+                        <input wire:model.lazy="new_image" type="file" class="hidden" />
                     </label>
                     @error('image_path')
                     <span class="px-2 py-1 text-xs text-red-600 rounded-lg error bg-primary-100">لم

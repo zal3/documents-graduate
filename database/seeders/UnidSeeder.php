@@ -22,8 +22,8 @@ class UnidSeeder extends Seeder
             'number' => $i . '0000000',
             'date' => '2023-01-01',
             'type' => rand(0,1),
-            'graduation_year' => 0,
-            'round' => rand(0,2),
+            'graduation_year' => 1,
+            'round' => rand(1,3),
         ]);
     }
     }

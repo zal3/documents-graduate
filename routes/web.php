@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PdfController;
     use App\Http\Livewire\Pages\{
         Home\Main as Home,
         Document\Main as Document,
@@ -71,8 +72,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/document/english', EnglishDoc::class)->name('english');
     Route::get('/document/graduate', GraduateDoc::class)->name('graduate-doc');
     Route::get('/document/master', MasterDoc::class)->name('master');
-    Route::get('/document/show-ar-doc/[{student_id}]/[{selected}]', ShowArDoc::class)->name('show-ar-doc');
-    Route::get('/document/show-eng-doc/[{student_id}]/[{selected}]', ShowEngDoc::class)->name('show-eng-doc');
+    Route::get('/document/show-ar-doc/[{student_id}]/[{selected}]/[{selected2}]', ShowArDoc::class)->name('show-ar-doc');
+    Route::get('/document/show-eng-doc/[{student_id}]/[{selected}]/[{selected2}]', ShowEngDoc::class)->name('show-eng-doc');
     Route::get('/document/show-grad/[{student_id}]/[{selected}]', ShowGrad::class)->name('show-grad');
     Route::get('/document/show-mast/[{student_id}]/[{selected}]', ShowMast::class)->name('show-mast');
 
@@ -94,6 +95,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/graduate/add', AddGraduate::class)->name('add-graduate');
     Route::get('/graduate/edit/{id}', EditGraduate::class)->name('edit-graduate');
     Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
+
+    Route::get('pdf', [PdfController::class, 'index']);
 
 
 });

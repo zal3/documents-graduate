@@ -1,11 +1,5 @@
 <div
     class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
-    <div class="flex flex-col items-center justify-between">
-        <div class="">
-            <h2 class="mt-4 text-4xl font-bold leading-tight lg:text-5xl">وحدة وثائق التخرج</h2>
-        </div>
-        <img src="{{ asset('img/home/5853.jpg') }}" alt="Contact" class="w-full mt-12 lg:mt-16">
-    </div>
     <div class="flex flex-col items-center justify-between mt-0 ">
         <div>
             <img src="{{ asset('img/home/college.png') }}" alt="Contact" class="w-full ">
@@ -51,6 +45,10 @@
         <a href="{{ route('login') }}" type="button"
             class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]">
             الدخول</a>
+    </div>
+    <div class="flex flex-col items-center justify-between">
+        <h2 class="mt-4 text-4xl font-bold leading-tight lg:text-5xl">وحدة وثائق التخرج</h2>
+        <img src="{{ asset('img/home/5853.jpg') }}" alt="Contact" class="w-full mt-12 lg:mt-16">
     </div>
 </div>
 

@@ -31,12 +31,26 @@
                     <input id="default-checkbox" wire:model="selected" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="default-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع تسلسل </label>
                 </div>
-                <!-- <div class="flex items-center  gap-5">
-                    <input checked id="checked-checkbox" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <div class="flex items-center  gap-5">
+                    <input checked id="checked-checkbox" wire:model="selected2" type="checkbox" value="" class="w-6 h-6 text-[#071F63] bg-gray-100 border-gray-300 rounded focus:ring-[#071F63] dark:focus:ring-[#071F63] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checked-checkbox" class="ml-2 text-xl font-medium text-gray-900 dark:text-gray-300">وثيقة مع درجات </label>
-                </div> -->
+                </div>
             </div>
             <button type="submit" class="p-2 px-10 text-2xl  font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">طباعة</button>
         </div>
     </form>
+    @if ($selected2)
+    <form wire:submit.prevent="add">
+        @foreach ($subjects as $subject)
+        <div class="flex flex-col">
+            <label for="subject" class="text-sm text-gray-900"> {{ $subject->name_ar }} <label>
+                    <input type="text" id="subject" wire:model.lazy="degree.{{ $subject->id }}" class="text-sm text-gray-900 bg-white border-gray-400 rounded-lg border-1" placeholder="إدخل الدرجة " />
+                    @error('subject')
+                    <span class="text-red-600">{{ $message }}</span>
+                    @enderror
+        </div>
+        @endforeach
+        <button type="submit" class="p-2 px-10 text-2xl  font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">طباعة</button>
+    </form>
+    @endif
 </div>

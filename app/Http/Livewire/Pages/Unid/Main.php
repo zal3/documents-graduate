@@ -52,14 +52,8 @@ class Main extends Component
     }
     public function render()
     {
-        if($this->graduation_year){
-            $unids = Unid::where('graduation_year',$this->graduation_year)->get();
-        }elseif($this->department_id){
-            $unids = Unid::where('department_id',$this->department_id)->get();
-        }elseif($this->round){
-            $unids = Unid::where('round',$this->round)->get();
-        }elseif($this->type){
-            $unids = Unid::where('type',$this->type)->get();
+        if($this->graduation_year && $this->department_id && $this->round && $this->type){
+            $unids = Unid::where('graduation_year',$this->graduation_year )->where('department_id',$this->department_id )->where('round',$this->round )->where('type',$this->type )->get();
         }elseif($this->search){
             $unids = Unid::where('number','like','%'.$this->search.'%')->get();
         }else{

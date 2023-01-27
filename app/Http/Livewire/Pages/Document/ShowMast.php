@@ -16,7 +16,8 @@ class ShowMast extends Component
         $this->selected = $selected;
     }
     public function render()
-    {
-        return view('livewire.pages.document.show-mast');
+    {$student = Student::find($this->student_id);
+        $average=  $student->degrees->avg('degree');
+        return view('livewire.pages.document.show-mast', compact('average'));
     }
 }

@@ -67,14 +67,14 @@
                             class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
                             @if ($unid->type == 0)
                                 صباحي
-                            @else
+                            @elseif($unid->type == 1)
                                 مسائي
                             @endif
                         <td
                             class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
-                            @if ($unid->round == 0)
+                            @if ($unid->round == 1)
                                 الاول
-                            @elseif($unid->round == 1)
+                            @elseif($unid->round == 2)
                                 الثاني
                             @else
                                 الثالث
@@ -82,37 +82,37 @@
                         </td>
                         <td
                             class="px-6 py-4 leading-5 text-blue-900 whitespace-no-wrap border-b border-gray-500 text-md">
-                            @if ($unid->graduation_year == 0)
+                            @if ($unid->graduation_year == 1)
                                 2014-2015
-                            @elseif($unid->graduation_year == 1)
-                                2015-2016
                             @elseif($unid->graduation_year == 2)
-                                2016-2017
+                                2015-2016
                             @elseif($unid->graduation_year == 3)
-                                2017-2018
+                                2016-2017
                             @elseif($unid->graduation_year == 4)
-                                2018-2019
+                                2017-2018
                             @elseif($unid->graduation_year == 5)
-                                2019-2020
+                                2018-2019
                             @elseif($unid->graduation_year == 6)
-                                2020-2021
+                                2019-2020
                             @elseif($unid->graduation_year == 7)
-                                2021-2022
+                                2020-2021
                             @elseif($unid->graduation_year == 8)
-                                2022-2023
+                                2021-2022
                             @elseif($unid->graduation_year == 9)
-                                2023-2024
+                                2022-2023
                             @elseif($unid->graduation_year == 10)
-                                2024-2025
+                                2023-2024
                             @elseif($unid->graduation_year == 11)
-                                2025-2026
+                                2024-2025
                             @elseif($unid->graduation_year == 12)
-                                2026-2027
+                                2025-2026
                             @elseif($unid->graduation_year == 13)
-                                2027-2028
+                                2026-2027
                             @elseif($unid->graduation_year == 14)
-                                2028-2029
+                                2027-2028
                             @elseif($unid->graduation_year == 15)
+                                2028-2029
+                            @elseif($unid->graduation_year == 16)
                                 2029-2030
                             @endif
                         </td>

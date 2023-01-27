@@ -64,6 +64,7 @@
         </div>
     </div>
 
+    <button  type="submit" class="p-2 px-10 mt-10 mr-36 text-2xl w-40 font-medium text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">Print</button>
 
 </div>
 </div>

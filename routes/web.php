@@ -41,6 +41,7 @@ use App\Http\Controllers\PdfController;
 
     use App\Http\Livewire\Pages\Unid\{
         Add as AddUnid,
+        Unidstu as Unidstu ,
         // Edit as EditUnid,
         // Profile as ProfileUnid,
     };
@@ -80,6 +81,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //unid
     Route::get('/unid', Unid::class)->name('unid');
     Route::get('/unid/add', AddUnid::class)->name('add-unid');
+    Route::get('/unid/{unid_id}', Unidstu::class)->name('unidstu');
+
 
     //department
     Route::get('/department', Department::class)->name('department');

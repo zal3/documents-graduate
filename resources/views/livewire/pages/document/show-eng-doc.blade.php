@@ -98,7 +98,7 @@
                                 very good
                             @elseif($average <= 100)
                                 Excellent
-                            @endif ) and a graduation rate of ( {{ $average }} )
+                            @endif ) and a graduation rate of ( {{ number_format($average, 2) }} )
                         @endif
                     </span>
                 </div>

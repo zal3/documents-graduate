@@ -116,10 +116,14 @@
                                 2029-2030
                             @endif
                         </td>
-                        <td
-                            class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                        <td 
+                            class="px-6 py-4 flex gap-1 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
                             <button wire:click="confirm({{ $unid->id }})">
-                                <i class="fa-regular fa-trash-can"></i></button>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                            <a href="{{ route('unidstu', $unid->id) }}"
+                                class="px-5 py-2 border-[#071F63] border text-[#071F63] rounded transition duration-300 hover:bg-[#071F63]  hover:text-white focus:outline-none">عرض
+                                التفاصيل </a>
                         </td>
                     </tr>
                 @endforeach

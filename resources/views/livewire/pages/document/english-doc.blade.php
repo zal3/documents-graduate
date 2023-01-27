@@ -65,7 +65,7 @@
 
         <div class="grid grid-cols-1">
             <label for="subject" class="text-md font-bold text-gray-900 p-3 "> {{ $subject->name_en }} : <label>
-                    <input type="text" id="subject" required wire:model.lazy="degree.{{ $subject->id }}" class="text-sm w-28 text-gray-900 bg-white border-gray-400 rounded-lg border-1" placeholder="إدخل الدرجة " />
+                    <input type="text" id="subject" required wire:model.lazy="degree.{{ $subject->id }}" class="text-sm w-28 text-gray-900 bg-white border-gray-400 rounded-lg border-1" placeholder=" enter degree " />
         </div>
 
         @endforeach

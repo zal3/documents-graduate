@@ -81,7 +81,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //unid
     Route::get('/unid', Unid::class)->name('unid');
     Route::get('/unid/add', AddUnid::class)->name('add-unid');
-    Route::get('/unid/{unid_id}', Unidstu::class)->name('unidstu');
+    Route::get('/unid/{id}', Unidstu::class)->name('unidstu');
 
 
     //department

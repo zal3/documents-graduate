@@ -117,7 +117,7 @@
                             @endif
                         </td>
                         <td 
-                            class="px-6 py-4 flex gap-1 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                            class="px-6 py-4 flex gap-3 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
                             <button wire:click="confirm({{ $unid->id }})">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>

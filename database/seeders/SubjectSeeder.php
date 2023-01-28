@@ -71,7 +71,7 @@ class SubjectSeeder extends Seeder
             'stage' => 1,
             'unit' => 3,
         ]);
-
+// 7
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الاول ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -121,7 +121,7 @@ class SubjectSeeder extends Seeder
             'stage' => 1,
             'unit' => 3,
         ]);
-
+// 13
         ############# الكورس الاول مواد قسم الحاسوب  الصف الثاني ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -171,7 +171,7 @@ class SubjectSeeder extends Seeder
             'stage' => 2,
             'unit' => 2,
         ]);
-
+// 19
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الثاني ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -222,7 +222,7 @@ class SubjectSeeder extends Seeder
             'stage' => 2,
             'unit' => 3,
         ]);
-
+// 25
         ############# الكورس الاول مواد قسم الحاسوب  الصف الثالث ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -272,7 +272,7 @@ class SubjectSeeder extends Seeder
             'stage' => 3,
             'unit' => 3,
         ]);
-
+// 31
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الثالث ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -322,7 +322,7 @@ class SubjectSeeder extends Seeder
             'stage' => 3,
             'unit' => 3,
         ]);
-
+// 37
         ############# الكورس الاول مواد قسم الحاسوب  الصف الرابع ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -380,6 +380,7 @@ class SubjectSeeder extends Seeder
             'stage' => 4,
             'unit' => 3,
         ]);
+        // 44
         ############# الكورس الثاني مواد قسم الحاسوب  الصف الرابع ###########
         Subject::create([
             'department_id' => Department::first()->id,
@@ -429,7 +430,7 @@ class SubjectSeeder extends Seeder
             'stage' => 4,
             'unit' => 3,
         ]);
-
+// 50
         //////////////////  اضافة الكورسات والمواد للقسم الثاني /////////
         ############# الكورس الاول مواد قسم تكنولوجيا المعلومات   الصف الاول ###########
 
@@ -489,7 +490,7 @@ class SubjectSeeder extends Seeder
         // الهياكل المتقطعة
         // مبادئ نظم المعلومات
         // أساسيات تكنولوجيا المعلومات
-
+// 56
         Subject::create([
             'department_id' => Department::find(2)->id,
             'name_en' => ' Computer Programming 2',
@@ -531,7 +532,7 @@ class SubjectSeeder extends Seeder
             'stage' => 1,
             'unit' => 3,
         ]);
-
+// 61
         ############# الكورس الاول مواد قسم تكنولوجيا المعلومات   الصف الثاني ###########
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -581,7 +582,7 @@ class SubjectSeeder extends Seeder
             'stage' => 2,
             'unit' => 2,
         ]);
-
+// 67
         ############# الكورس الثاني مواد قسم تكنولوجيا المعلومات   الصف الثاني ###########
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -632,7 +633,7 @@ class SubjectSeeder extends Seeder
             'unit' => 2,
         ]);
 
-
+// 73
         ############# الكورس الاول مواد قسم تكنولوجيا المعلومات   الصف الثالث ###########
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -683,7 +684,7 @@ class SubjectSeeder extends Seeder
             'unit' => 2,
         ]);
 
-
+// 79
         ############# الكورس الثاني مواد قسم تكنولوجيا المعلومات   الصف الثالث ###########
         Subject::create([
             'department_id' => Department::find(2)->id,
@@ -725,7 +726,7 @@ class SubjectSeeder extends Seeder
             'stage' => 3,
             'unit' => 3,
         ]);
-
+// 84
 
         ############# الكورس الاول مواد قسم تكنولوجيا المعلومات   الصف الرابع ###########
         Subject::create([

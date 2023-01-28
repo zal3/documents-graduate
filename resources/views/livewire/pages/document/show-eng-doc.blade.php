@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center justify-center overflow-scroll">
     <div
-        class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#edeac9] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
+        class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#efeccb] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
         {{-- * Head Compartment --}}
         <livewire:pages.ui.dochead />
 
@@ -98,7 +98,7 @@
                                 very good
                             @elseif($average <= 100)
                                 Excellent
-                            @endif ) and a graduation rate of ( {{ $average }} )
+                            @endif ) and a graduation rate of ( {{ number_format($average, 2) }} )
                         @endif
                     </span>
                 </div>
@@ -107,7 +107,7 @@
 
         {{-- * Tail Compartment --}}
         @if (!$selected2)
-            <livewire:pages.ui.docpeople :selected2="$selected2" />
+            <livewire:pages.ui.doc-tail1 :selected2="$selected2" />
         @endif
         {{-- * WaterMark Compartment --}}
         <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
@@ -116,7 +116,7 @@
     {{-- * Second Page --}}
     @if ($selected2)
         <div
-            class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#edeac9] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
+            class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#efeccb] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
             <div class="flex flex-col justify-between px-4 mx-auto text-[12px] ">
                 <div class="flex">
                     <livewire:pages.ui.doctable :student_id="$student_id" />
@@ -124,7 +124,7 @@
 
                 {{-- * Tail Compartment --}}
                 <div class="flex">
-                    <livewire:pages.ui.docpeople :selected2="$selected2" />
+                    <livewire:pages.ui.doc-tail1 :selected2="$selected2" />
                 </div>
             </div>
 

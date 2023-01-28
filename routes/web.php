@@ -99,7 +99,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/graduate/edit/{id}', EditGraduate::class)->name('edit-graduate');
     Route::get('/graduate/profile/{id}', ProfileGraduate::class)->name('profile-graduate');
 
-    Route::get('pdf', [PdfController::class, 'index']);
+    Route::get('pdf/[{student_id}]/[{selected}]/[{selected2}]', [PdfController::class, 'index'])->name('pdf');
 
 
 });

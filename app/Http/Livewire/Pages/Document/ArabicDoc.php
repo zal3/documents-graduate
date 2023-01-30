@@ -12,7 +12,7 @@ use Livewire\Component;
 
 class ArabicDoc extends Component
 {
-    public $search, $studentSearch,$avare,$avareg, $student_id, $students, $selected = 0, $name_ar, $degree , $selected2 = 0;
+    public $search, $studentSearch,$avare,$avareg , $student_id, $students, $selected = 0, $name_ar, $degree , $selected2 = 0;
     use LivewireAlert;
 
     protected $listeners = ['$refresh'];
@@ -24,6 +24,7 @@ class ArabicDoc extends Component
         ]);
         $student_id = $this->student_id;
         $selected = $this->selected;
+        
         if ($selected)
             $selected = 1;
         else
@@ -33,7 +34,9 @@ class ArabicDoc extends Component
             $selected2 = 1;
         else
             $selected2 = 0;
-        return redirect()->route('show-ar-doc', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
+          
+           
+        return redirect()->route('generate', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
     }
     public function add(Degree $degree)
     {

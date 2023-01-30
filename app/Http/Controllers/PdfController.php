@@ -10,34 +10,34 @@ use Illuminate\Http\Request;
 class PdfController extends Controller
 { public $student_id;
     public $student;
-    public $selected , $selected2 , $gender , $average;
-    public function mount($student_id, $selected , $selected2)
-    {
-        $this->student_id = $student_id;
-        $this->student = Student::findOrFail($student_id);
-        $this->selected = $selected;
-        $this->selected2 = $selected2;
+    public $selected , $selected2 , $gender ;
+    
+    public function gg($student_id, $selected , $selected2){
+        $student_id = $student_id;
+        $student = Student::findOrFail($student_id);
+        $selected = $selected;
+        $selected2 = $selected2;
+        
+        return view('pdf\pdf_view' , compact('student_id','selected','selected2','student') );
     }
+
     public function index($student_id, $selected , $selected2) 
-    {
-        $this->student_id = $student_id;
-        $this->student = Student::findOrFail($student_id);
-        $this->selected = $selected;
-        $this->selected2 = $selected2;
-        $student = Student::find($this->student_id);
-        $average=  $student->degrees->avg('degree');
-        // $this->average=  $student->degrees->avg('degree');
-        $pdf = PDF::loadView('livewire.pages.document.show-ar-doc', [
+    { 
+        $student_id = $student_id;
+        $student = Student::findOrFail($student_id);
+        $selected = $selected;
+        $selected2 = $selected2; 
+        $pdf = PDF::loadView('pdf\pdf_view', [
             
-            'student_id' => $this->student_id,
-            'selected' => $this->selected,
-            'selected2' => $this->selected2,
-            'student' => $this->student,
+            'student_id' => $student_id,
+            'selected' => $selected,
+            'selected2' => $selected2,
+            'student' => $student,
             'gender'=> $this->gender,
             'title' => 'pdf',
             'description' => 'pdf',
             
         ]);
-        return $pdf->download('doc.pdf',compact('average'));
+        return $pdf->download('doc.pdf');
     }
 }

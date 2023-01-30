@@ -129,7 +129,7 @@
             {{-- * WaterMark Compartment --}}
             <img class="absolute opacity-[20%] z-0 h-[575px] top-[25%] left-[13.8%]" src="/img/it.svg" alt="water Mark">
         </div>
-        <div><a  href="{{ route('pdf') }}" class="btn btn-primary text-3xl">طباعه'</a></div>
+        <div><a  href="{{ route('pdf') , ['student_id'=> $student->id ,'selected2'=> $selected2  ,'selected'=> $selected] }}">nnnnnnnnnnnn</a></div>
 
         {{-- * Second Page --}}
         @if ($selected2)

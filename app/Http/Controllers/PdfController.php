@@ -21,7 +21,7 @@ class PdfController extends Controller
         return view('pdf\pdf_view' , compact('student_id','selected','selected2','student') );
     }
 
-    public function index($student_id, $selected , $selected2) 
+    public function index($student_id, $selected, $selected2) 
     { 
         $student_id = $student_id;
         $student = Student::findOrFail($student_id);

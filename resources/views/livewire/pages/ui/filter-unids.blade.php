@@ -25,7 +25,7 @@
         <select wire:model.lazy="department_id"
             class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر القسم</option>
-            <option value=" 1">علوم الحاسوب</option>
+            <option value=" 1 ">علوم الحاسوب</option>
             <option value=" 2 ">نظم المعلومات الحاسوبية</option>
         </select>
         <!-- الدور -->

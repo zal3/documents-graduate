@@ -52,7 +52,7 @@ class Main extends Component
     }
     public function render()
     {
-        if($this->graduation_year || $this->department_id || $this->round || $this->type){
+        if($this->graduation_year && $this->department_id && $this->round && $this->type){
             $unids = Unid::where('graduation_year',$this->graduation_year )->where('department_id',$this->department_id )->where('round',$this->round )->where('type',$this->type )->get();
         }elseif($this->search){
             $unids = Unid::where('number','like','%'.$this->search.'%')->get();

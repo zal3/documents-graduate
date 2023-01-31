@@ -20,16 +20,4 @@ class Degree extends Model
     {
         return $this->belongsTo(Subject::class);
     }
-    ### add ###
-    public function add($data)
-    {
-        $this->fill($data);
-        $this->save();
-    }
-    ### edit ###
-    public function edit($data)
-    {
-        $this->update($data);
-    }
-    ### End edit ###
 }

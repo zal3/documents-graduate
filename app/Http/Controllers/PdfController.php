@@ -3,27 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Degree;
 use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use PDF;
 use Illuminate\Http\Request;
 class PdfController extends Controller
 { public $student_id;
     public $student;
-    public $selected , $selected2;
-    public function mount($student_id, $selected , $selected2)
-    {
-        $this->student_id = $student_id;
-        $this->student = Student::findOrFail($student_id);
-        $this->selected = $selected;
-        $this->selected2 = $selected2;
+    public $selected , $selected2 , $gender ;
+    
+    public function gg($student_id, $selected , $selected2){
+        $student_id = $student_id;
+        $student = Student::findOrFail($student_id);
+        $selected = $selected;
+        $selected2 = $selected2;
+        
+        return view('pdf\pdf_view' , compact('student_id','selected','selected2','student') );
     }
-    public function index() 
-    {
-        $pdf = PDF::loadView('livewire.pages.ui.filter-students', [
-            'title' => 'CodeAndDeploy.com Laravel Pdf Tutorial',
-            'description' => 'This is an example Laravel pdf tutorial.',
-            'footer' => 'by <a href="https://codeanddeploy.com">codeanddeploy.com</a>'
+
+    public function index($student_id, $selected, $selected2) 
+    { 
+        $student_id = $student_id;
+        $student = Student::findOrFail($student_id);
+        $selected = $selected;
+        $selected2 = $selected2; 
+        $pdf = PDF::loadView('pdf\pdf_view', [
+            
+            'student_id' => $student_id,
+            'selected' => $selected,
+            'selected2' => $selected2,
+            'student' => $student,
+            'gender'=> $this->gender,
+            'title' => 'pdf',
+            'description' => 'pdf',
+            
         ]);
-        return $pdf->download('sample.pdf');
+        return $pdf->download('doc.pdf');
     }
 }

@@ -69,6 +69,8 @@
         </div>
 
         @endforeach
+        <label for="subject" class="text-md font-bold text-gray-900 p-3 "> إدخل المعدل   <label>
+        <input type="" name="student_id " class="p-2" wire:model.lazy="avareg" placeholder="إدخل المعدل "/>
         <button type="submit" class="mb-4 p-2 px-10 text-2xl  font-medium w-1/2 flex justify-center mx-auto text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">حفظ الدرجات </button>
 
     </form>

@@ -1,9 +1,7 @@
-<div
-    class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+<div class="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-20 m-auto rounded-lg countener md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
     <div class="flex flex-col items-center justify-between mt-0 ">
         <div>
             <img src="{{ asset('img/home/college.png') }}" alt="Contact" class="w-full ">
-
         </div>
         <div>
             <span calss="text-3xl font-bold">
@@ -12,7 +10,6 @@
         </div>
         <div>
             <!-- الصفحةالرئيسية -->
-
             <div class="svg-wrapper">
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
                     <rect id="shape" height="40" width="140" />
@@ -21,7 +18,6 @@
                     </div>
                 </svg>
             </div>
-
             <!-- المطورين -->
             <div class="svg-wrapper">
                 <svg height="40" width="140" xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +38,7 @@
             </div>
         </div>
         <!-- الدخول -->
-        <a href="{{ route('login') }}" type="button"
-            class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]">
+        <a href="{{ route('login') }}" type="button" class="mb-12 text-white text-center w-full p-3 text-sm font-bold tracking-wide uppercase rounded-full border bg-[#1E458A]">
             الدخول</a>
     </div>
     <div class="flex flex-col items-center justify-between">
@@ -51,7 +46,6 @@
         <img src="{{ asset('img/home/5853.jpg') }}" alt="Contact" class="w-full mt-12 lg:mt-16">
     </div>
 </div>
-
 <style scoped>
     .spot {
         position: absolute;

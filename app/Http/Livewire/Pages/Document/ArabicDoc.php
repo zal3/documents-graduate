@@ -12,7 +12,7 @@ use Livewire\Component;
 
 class ArabicDoc extends Component
 {
-    public $search, $studentSearch,$avare,$avareg , $student_id, $students, $selected = 0, $name_ar, $degree , $selected2 = 0;
+    public $search, $studentSearch, $avare, $avareg, $student_id, $students, $selected = 0, $name_ar, $degree, $selected2 = 0;
     use LivewireAlert;
 
     protected $listeners = ['$refresh'];
@@ -24,50 +24,42 @@ class ArabicDoc extends Component
         ]);
         $student_id = $this->student_id;
         $selected = $this->selected;
-        
+
         if ($selected)
             $selected = 1;
         else
             $selected = 0;
-            $selected2 = $this->selected2;
+        $selected2 = $this->selected2;
         if ($selected2)
             $selected2 = 1;
         else
             $selected2 = 0;
-          
-           
-        return redirect()->route('generate', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
+
+
+        return redirect()->route('show-ar-doc', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
     }
     public function add(Degree $degree)
     {
         $this->validate([
             'degree' => 'required',
         ]);
-//apdate 
-        
+
         foreach ($this->degree as $key => $value) {
             $degree = Degree::create([
                 'student_id' => $this->student_id,
                 'subject_id' => $key,
                 'degree' => $value,
             ]);
-        
         }
-        // $this->alert('success', 'تم اضافة الدرجات بنجاح', [
-        //     'position' => 'top',
-        //     'timer' => 3000,
-        //     'toast' => true,
-        // ]);
         $this->avare = Degree::where('student_id', $this->student_id)->avg('degree');
         $this->avareg = floatval($this->avareg);
-        if($this->avareg != $this->avare){
+        if ($this->avareg != $this->avare) {
             $this->alert('warning', 'تم اضافة الدرجات بنجاح لكن لم يتم اضافة الدرجة العامة لانها لا تساوي معدل الدرجات', [
                 'position' => 'top',
                 'timer' => 3000,
                 'toast' => true,
             ]);
-        }
-        else{
+        } else {
             $this->alert('success', 'تم اضافة الدرجات بنجاح', [
                 'position' => 'top',
                 'timer' => 3000,

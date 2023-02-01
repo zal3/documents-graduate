@@ -11,10 +11,9 @@
                     اختر الطالب </label>
                 </label>
                 <div class="flex w-2/3 gap-2">
-                    <input wire:model="search" type="text" class="block w-2/3 p-2 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="اسم الطالب">
-
+                    <input wire:model="search" required type="text" class="block w-2/3 p-2 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="اسم الطالب">
                     @if ($search)
-                    <select wire:model="student_id" class="border border-gray-300 px-9 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <select wire:model="student_id" required class="border border-gray-300 px-9 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                         <option value="" selected>اختر الطالب </option>
                         @foreach ($students as $student)
                         <option value="{{$student->id}}">{{$student->name_ar}}</option>
@@ -22,9 +21,6 @@
                     </select>
                     @endif
                 </div>
-                <!-- @error('task.project_id')
-                        <p class="text-red-500 text-s ">{{__('ui.this_field_is_required')}}</p>
-                        @enderror -->
             </div>
             <div class="my-16">
                 <div class="flex items-center mb-4 gap-5">
@@ -41,9 +37,7 @@
     </form>
     @if ($selected2)
     <form wire:submit.prevent="add" class=" grid grid-cols-1   justify-center items-center m-auto px-10">
-        <!-- foreach on subject course      -->
         @csrf
-
         @foreach ($subjects as $subject)
         @if ($subject->id == 1) <div class="flex border-y border-black w-full text-lg font-bold"> السنة الاولى الفصل الاول </div> @endif
         @if ($subject->id == 7) <div class="flex border-y border-black w-full text-lg font-bold"> السنة الاولى الفصل الثاني </div> @endif
@@ -61,19 +55,14 @@
         @if ($subject->id == 79) <div class="flex border-y border-black w-full text-lg font-bold"> السنة الثالثة الفصل الثاني </div> @endif
         @if ($subject->id == 84) <div class="flex border-y border-black w-full text-lg font-bold"> السنة الرابعة الفصل الاول </div> @endif
         @if ($subject->id == 88) <div class="flex border-y border-black w-full text-lg font-bold"> السنة الرابعة الفصل الثاني </div> @endif
-
-
         <div class="grid grid-cols-1">
             <label for="subject" class="text-md font-bold text-gray-900 p-3 "> {{ $subject->name_ar }} : <label>
                     <input type="text" id="subject" required wire:model.lazy="degree.{{ $subject->id }}" class="text-sm w-28 text-gray-900 bg-white border-gray-400 rounded-lg border-1" placeholder="إدخل الدرجة " />
         </div>
-
         @endforeach
-        <label for="subject" class="text-md font-bold text-gray-900 p-3 "> إدخل المعدل   <label>
-        <input type="" name="student_id " class="p-2" wire:model.lazy="avareg" placeholder="إدخل المعدل "/>
-        <button type="submit" class="mb-4 p-2 px-10 text-2xl  font-medium w-1/2 flex justify-center mx-auto text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">حفظ الدرجات </button>
-
+        <label for="subject" class="text-md font-bold text-gray-900 p-3 "> إدخل المعدل <label>
+                <input type="" name="student_id " class="p-2" wire:model.lazy="avareg" placeholder="إدخل المعدل " />
+                <button type="submit" class="mb-4 p-2 px-10 text-2xl  font-medium w-1/2 flex justify-center mx-auto text-white focus:outline-none  rounded-lg border bg-yellow-400 hover:bg-yellow-500 focus:ring-[#071F63] focus:ring-4 ">حفظ الدرجات </button>
     </form>
-
     @endif
 </div>

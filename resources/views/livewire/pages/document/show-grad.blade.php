@@ -9,7 +9,7 @@
                 <div> </div>
                 <div class="items-center text-center">
                     <h2 class="text-xl font-semibold text-center">تأييد تخرج </h2>
-                    <h2 class="text-xl font-semibold text-center">الى/من يمهمه الامر</h2>
+                    <h2 class="text-xl font-semibold text-center">الى/من يهمه الامر</h2>
                     {{-- @if ($selected)
                         رقم التسلسل : <span class="font-semibold text-center "> {{ $student->id }}</span>
                     @endif --}}

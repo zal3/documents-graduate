@@ -18,7 +18,7 @@
                 </div>
             </a>
         </div>
-        
+
         <div class=" bg-white mt-9  ml-44 border-4 border-[#FFCA28]  hover:border-[#071F63]  w-3/4 max-h-28 rounded-lg hover:transform transition duration-500 ease-in-out transform  hover:scale-105">
             <a href="{{ route('graduate-doc') }}">
                 <div class="p-5 mr-24">

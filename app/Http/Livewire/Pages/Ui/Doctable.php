@@ -19,7 +19,6 @@ class Doctable extends Component
         }
         else
             $subjects = Subject::all();
-            //degree
             $this->degree = Degree::where('student_id', $student->id)->get();
         return view('livewire.pages.ui.doctable', compact('subjects'));
     }

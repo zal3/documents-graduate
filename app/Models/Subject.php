@@ -19,10 +19,6 @@ class Subject extends Model
     {
         return $this->hasOne(Degree::class);
     }
-    // public function students()
-    // {
-    //     return $this->belongsToMany(Student::class, 'student_subject')->withPivot(['degree']);
-    // }
     ### End Relation ###
 
     ### add ###

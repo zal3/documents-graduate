@@ -1,8 +1,7 @@
 <div>
     <div class="grid items-center grid-cols-5 gap-2 mt-1 text-sm">
         <!-- سنه التخرج -->
-        <select wire:model.lazy="graduation_year"
-            class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
+        <select wire:model.lazy="graduation_year" class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر سنة التخرج</option>
             <option value="1">2014-2015</option>
             <option value="2">2015-2016</option>
@@ -22,15 +21,13 @@
             <option value="16">2029-2030</option>
         </select>
         <!-- القسم -->
-        <select wire:model.lazy="department_id"
-            class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
+        <select wire:model.lazy="department_id" class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر القسم</option>
             <option value=" 1 ">علوم الحاسوب</option>
             <option value=" 2 ">نظم المعلومات الحاسوبية</option>
         </select>
         <!-- الدور -->
-        <select wire:model.lazy="round" required
-            class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
+        <select wire:model.lazy="round" required class="text-sm text-gray-900 bg-white border border-gray-500 rounded-lg w-36 ">
             <option value="">إختر الدور</option>
             <option value=" 1 ">الأول</option>
             <option value=" 2 ">الثاني</option>

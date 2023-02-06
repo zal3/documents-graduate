@@ -5,10 +5,11 @@ namespace App\Http\Livewire\Pages\Unid;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\{Unid};
+
 class Add extends Component
 {
     use LivewireAlert;
-    public $number ,$date ,$department_id ,$type ,$round ,$graduation_year;
+    public $number, $date, $department_id, $type, $round, $graduation_year;
     protected $rules = [
         'number' => 'required',
         'date' => 'required',

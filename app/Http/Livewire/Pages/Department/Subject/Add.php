@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Department\Subject;
+
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 use Livewire\Component;
 use App\Models\Subject;
 
 class Add extends Component
-{    use LivewireAlert;
+{
+    use LivewireAlert;
     protected $listeners = ['$refresh'];
-    public   $stage , $course , $name_ar , $name_en , $unit;
+    public   $stage, $course, $name_ar, $name_en, $unit;
 
     public function add()
     {
@@ -17,6 +19,8 @@ class Add extends Component
             'name_ar' => 'required',
             'name_en' => 'required',
             'unit' => 'required',
+            'stage' => 'required',
+            'course' => 'required',
         ]);
         Subject::create([
             'name_ar' => $this->name_ar,

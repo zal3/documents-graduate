@@ -7,7 +7,7 @@
                     <p class="text-gray-400">المعدل</p>
                 </div>
                 <div>
-                    <p class="font-bold text-gray-700 text-xl">@if($student->unid->type == 0) الاول @elseif ($student->type == 1) الثاني @else الثالث @endif</p>
+                    <p class="font-bold text-gray-700 text-xl">@if($student->unid->round == 1) الاول @elseif ($student->unid->round == 2) الثاني @else الثالث @endif</p>
                     <p class="text-gray-400">الدور</p>
                 </div>
                 <div>

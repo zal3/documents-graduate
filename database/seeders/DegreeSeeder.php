@@ -15,18 +15,20 @@ class DegreeSeeder extends Seeder
      */
     public function run()
     {
-        $students = Student::all();
-        $subjects = Subject::all();
 
-        // for($i = 0; $i < $students->count(); $i++){
-        //     for($j = 0; $j < $subjects->count(); $j++){
-        //         Degree::create([
-        //             'student_id' => $students[$i]->id,
-        //             'subject_id' => $subjects[$j]->id,
-        //             'degree' => rand(0, 100),
-        //         ]);
-        //     }
-        // }
+        
+       $students = Student::all();
+         $subjects = Subject::all();
+        foreach ($students as $student) {
+            foreach ($subjects as $subject) {
+                Degree::create([
+                    'student_id' => $student->id,
+                    'subject_id' => $subject->id,
+                    'degree' => rand(1, 100)
+                ]);
+            }
+        }
+    
 
     }
 }

@@ -3,73 +3,71 @@
         <div>
             مواد قسم نظم المعلومات </div>
         <div class="grid items-start grid-cols-2 text-black mr-9">
-            <select wire:model="stage"
-                class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
+            <select wire:model="stage" class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
                 <option value="0">المرحلة </option>
                 <option value="1">الاولى </option>
                 <option value="2"> الثانية</option>
                 <option value="3"> الثالثة</option>
                 <option value="4"> الرابعة</option>
             </select>
-            <select wire:model="course"
-                class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
+            <select wire:model="course" class="w-40 py-2 text-sm border border-gray-900 focus:border-gray-500 focus:bg-white focus:ring-0">
                 <option value="0">الكورس</option>
                 <option value="1">الاول</option>
                 <option value="2"> الثاني</option>
             </select>
         </div>
         <a href="{{ route('add-subject2') }}">
-            <button
-                class=" bg-[#FFC657] mx-auto transition duration-150 ease-in-out rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm">اضافة
+            <button class=" bg-[#FFC657] mx-auto transition duration-150 ease-in-out rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm">اضافة
                 مادة </button>
         </a>
     </div>
     <div class="inline-block min-w-full overflow-hidden align-middle bg-white rounded-bl-lg rounded-br-lg">
         <table class="min-w-full text-center">
-           
+            @if ($subjects)
+            <thead>
+                <tr class="bg-[#FFC657] text-[#071f63]">
+                    <th class="px-6 py-3 leading-4 tracking-wider text-right border-b-2 border-gray-300">
+                        #
+                    </th>
+                    <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                        اسم المادة
+                    </th>
+                    <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
+                        الوحدة
+                    </th>
+                    <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
 
-                @if ($subjects)
-                    <thead>
-                        <tr class="bg-[#FFC657] text-[#071f63]">
-                            <th class="px-6 py-3 leading-4 tracking-wider text-right border-b-2 border-gray-300">
-                                #
-                            </th>
-                            <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
-                                اسم المادة
-                            </th>
-                            <th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
-                                الوحدة
-                            </th><th class="px-6 py-3 leading-4 tracking-wider text-center border-b-2 border-gray-300">
-                                
-                            </th>
-                        </tr>
-                    </thead>
-                @endif
-                <tbody class="bg-white p-9">
-                    @foreach ($subjects as $index => $subject)
-                        <tr class="bg-white p-9">
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                                <div class="flex items-center">
-                                    <div>
-                                        <div class="text-sm leading-5 text-gray-800">{{ $loop->index + 1 }}</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                                <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                                <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
-                            </td>
-                            <td
-                                class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
-                                <button wire:click="confirm({{ $subject->id }})">
-                                    <i class="fa-regular fa-trash-can"></i></button>
-                            </td>
-                            
-                        </tr>
-                    @endforeach
-                </tbody>
+                    </th>
+                </tr>
+            </thead>
+            @endif
+            <tbody class="bg-white p-9">
+                @forelse ($subjects as $index => $subject)
+                <tr class="bg-white p-9">
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                        <div class="flex items-center">
+                            <div>
+                                <div class="text-sm leading-5 text-gray-800">{{ $loop->index + 1 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                        <div class="text-sm leading-5 text-blue-900">{{ $subject->name_ar }}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                        <div class="text-sm leading-5 text-blue-900">{{ $subject->unit }}</div>
+                    </td>
+                    <td class="px-6 py-4 text-lg leading-5 text-red-600 whitespace-no-wrap border-b border-gray-500">
+                        <button wire:click="confirm({{ $subject->id }})">
+                            <i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="4" class="text-center text-3xl pt-12 font-bold  text-[#071F63]">اختر المرحلة والكورس </td>
+                </tr>
+                @endforelse
+            </tbody>
         </table>
     </div>
 </div>

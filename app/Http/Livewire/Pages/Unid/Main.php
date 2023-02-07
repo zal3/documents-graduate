@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Unid;
+
 use App\Models\{Unid};
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -9,13 +10,13 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Main extends Component
 {
     use LivewireAlert;
-    protected $listeners = [ '$refresh','delete','search', 'filterUnids'];
-    public $unid_id ,$number ,$date ,$department_id ,$type ,$round ,$graduation_year , $search ;
+    protected $listeners = ['$refresh', 'delete', 'search', 'filterUnids'];
+    public $unid_id, $number, $date, $department_id, $type, $round, $graduation_year, $search;
     public function search($search)
     {
         $this->search = $search;
-    }    
-    public function filterUnids($type ,$round  , $department_id , $graduation_year)
+    }
+    public function filterUnids($type, $round, $department_id, $graduation_year)
     {
         $this->type = $type;
         $this->round = $round;
@@ -23,7 +24,7 @@ class Main extends Component
         $this->graduation_year = $graduation_year;
     }
     public function delete()
-    {   
+    {
         Unid::findOrFail($this->unid_id)->delete();
         $this->alert('success', 'تم الحذف ', [
             'position' => 'top',
@@ -33,8 +34,6 @@ class Main extends Component
         $this->emitUp('$refresh');
         $this->emitTo('pages.unid.add', '$refresh');
         redirect()->route('unid');
-
-
     }
 
     public function confirm($id)
@@ -52,13 +51,13 @@ class Main extends Component
     }
     public function render()
     {
-        if($this->graduation_year && $this->department_id && $this->round && $this->type){
-            $unids = Unid::where('graduation_year',$this->graduation_year )->where('department_id',$this->department_id )->where('round',$this->round )->where('type',$this->type )->get();
-        }elseif($this->search){
-            $unids = Unid::where('number','like','%'.$this->search.'%')->get();
-        }else{
+        if ($this->graduation_year || $this->department_id || $this->round || $this->type) {
+            $unids = Unid::where('graduation_year', $this->graduation_year)->where('department_id', $this->department_id)->where('round', $this->round)->where('type', $this->type)->get();
+        } elseif ($this->search) {
+            $unids = Unid::where('number', 'like', '%' . $this->search . '%')->get();
+        } else {
             $unids = Unid::all();
         }
-        return view('livewire.pages.unid.main',compact('unids'));
+        return view('livewire.pages.unid.main', compact('unids'));
     }
 }

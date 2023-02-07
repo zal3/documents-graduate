@@ -25,12 +25,12 @@ class EnglishDoc extends Component
             $selected = 1;
         else
             $selected = 0;
-            $selected2 = $this->selected2;
+        $selected2 = $this->selected2;
         if ($selected2)
             $selected2 = 1;
         else
             $selected2 = 0;
-        // dd($selected);     
+
         return redirect()->route('show-eng-doc', ['student_id' => $student_id, 'selected' => $selected, 'selected2' => $selected2]);
     }
     public function add(Degree $degree)
@@ -38,15 +38,13 @@ class EnglishDoc extends Component
         $this->validate([
             'degree' => 'required',
         ]);
-        // add  degree to degree table
+
         foreach ($this->degree as $key => $value) {
             $degree = Degree::create([
                 'student_id' => $this->student_id,
                 'subject_id' => $key,
                 'degree' => $value,
             ]);
-            
-
         }
     }
 

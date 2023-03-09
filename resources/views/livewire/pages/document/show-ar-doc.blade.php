@@ -1,5 +1,6 @@
 <div class="flex flex-col items-center justify-center overflow-scroll">
-    <div class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#efeccb] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
+    <a href="/exportPDF" class="btn bt-s text-2xl"> export pdf </a>
+<div class="relative w-[21cm] h-[29.7cm] flex flex-col bg-[#efeccb] m-[15px] mb-0 shadow-lg shadow-[(0, 0, 0, 0.5)] border-2 border-dashed border-black">
         {{-- * Head Compartment --}}
         <livewire:pages.ui.dochead />
         {{-- * Body Compartment --}}
